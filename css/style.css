@@ -1,0 +1,24 @@
+
+
+
+
+/* main */
+
+/* first section */
+
+/* second section */
+.first-section-container{
+display: flex;
+column-gap: 15px;
+}
+.img-first-section{
+ max-width: 100px;
+}
+.name-first-section{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    max-width: 120px;
+}
+
