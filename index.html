@@ -6,27 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+    </style>
 </head>
 
 <body class="bg-dark text-white">
-    <div class="container-sm d-flex flex-column align-items-center">
-        <div class="div">
-            <div class="album-img-area mt-5">
+    <div class="container">
+        <div>
+
+            <div class="d-flex justify-content-center album-img-area mb-3 mt-5">
                 <img src="https://picsum.photos/200" alt="" class="album-img">
             </div>
-            <div class="album-info">
+            <div class="album-info mb-3">
                 <div class="main-title">Gioventù Bruciata</div>
                 <div class="secondary-title">Pinguini Tattici Nucleari</div>
                 <div class="grey-text">Album • 2017</div>
             </div>
-            <div class="controllers d-flex justify-content-between">
-                <div class="controllers">
 
+            <div class="controllers-container d-flex justify-content-between">
+                <div class="controllers">
+                    <i class="bi bi-suit-heart"></i>
+                    <i class="bi bi-arrow-down-circle"></i>
+                    <i class="bi bi-three-dots-vertical"></i> 
                 </div>
                 <div class="controllers">
-                    
+                    <i class="bi bi-shuffle"></i> 
+                    <i class="bi bi-play-circle-fill"></i> 
                 </div>
             </div>
+
+        </div>
+        <div class="list">
+            <ul class="song-list list-group">
+                <li class="song-item d-flex justify-content-between align-items-center">
+                    <div class="song-item-info">
+                        <p class="list-main-title">Montanelli - Intro</p>
+                        <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                    </div>
+                    <div class="song-item-menu-icon">
+                        <i class="bi bi-three-dots-vertical"></i> 
+                    </div>
+                </li>
+                <li class="song-item"></li>
+                <li class="song-item"></li>
+                <li class="song-item"></li>
+            </ul>
         </div>
     </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
