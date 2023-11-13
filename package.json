@@ -1,11 +1,6 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.2",
-<<<<<<< HEAD
     "bootstrap-icons": "^1.11.1"
-=======
-    "bootstrap-icons": "^1.11.1",
-    "icons": "^1.0.0"
->>>>>>> 4d5d4ac4fe7d5ec4eedcda7a18273c823ab25206
   }
 }
