@@ -1,4 +1,6 @@
-const ARTIST_URL = "https://striveschool-api.herokuapp.com/api/deezer/artist/"
+const url = "https://api.spotify.com/v1/browse/categories"
+const token = "Bearer BQAxrTFOJcOiOj4RbuywRUHm3BPEUTiw4Yov8q4dDgQoHW1NRtKvroCW_U_Dkrh7Qu8Qt4uEukPV1uO4XJ_cIrm1X9eTJ9w_XY5_cA6j2X7rtSMzkTU"
+
 
 class Alert {
     constructor(title, text, icon){
@@ -14,51 +16,53 @@ class Alert {
 
 
 
-async function getArtist (query) {
-    try{
-        return await fetch (ARTIST_URL + query)
-        .then(res => res.json())
-    } catch (error) {
-        Swal.fire({
-            title: "C'è un problema nel caricamento artisti, vuoi ricaricare la pagina?",
-            showDenyButton: true,
-            showCancelButton: false,
-            confirmButtonText: "Ricarica",
-            denyButtonText: `Non ricaricare`
-          }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-              Swal.fire("La pagina si sta ricaricando","","success");
-              setTimeout(() => {location.reload()}, 3000)
-            } else if (result.isDenied) {
-              Swal.fire("Continua la tua navigazione!", "", "");
+async function getCategories () {
+    return await fetch (url,
+        {
+            headers : {
+                "Content-Type": "application/json",
+                Authorization : token   
             }
-          });    }
+        })
+    .then(res => res.json())
 }
 
-async function renderInitialSongs(){
+async function renderCategories(){
     
     
     
     let target = document.querySelector('.home-artists-area')
+    let categories = await getCategories()
+    console.log(categories.categories.items[0]);
 
-    for (let i = 0; i < 6; i++) {
-        let query = Math.floor(Math.random() * 150)
-        let artist = await getArtist(query)
-        console.log(artist);
-
+    for (let i = 0 ; i < 6; i++) {
         let clone = cloneHomeMusicCard()
-        
         let img = clone.querySelector('.img-first-section')
         let artistName = clone.querySelector('.name-first-section')
 
-        artistName.innerText = artist.name
-        img.src = artist.picture_medium
+        img.src = categories.categories.items[i].icons[0].url
+        artistName.innerText = categories.categories.items[i].name
         target.append(clone)
+    }
 
-}    
+
+    // for (let i = 0; i < 6; i++) {
+    //     let query = Math.floor(Math.random() * 150)
+    //     let artist = await getCategories(query)
+    //     console.log(artist);
+
+    //     let clone = cloneHomeMusicCard()
+        
+    //     let img = clone.querySelector('.img-first-section')
+    //     let artistName = clone.querySelector('.name-first-section')
+
+    //     artistName.innerText = artist.name
+    //     img.src = artist.picture_medium
+    //     target.append(clone)
+
+// }    
 }
-renderInitialSongs();
+renderCategories();
 
 function cloneHomeMusicCard () {
     let temp = document.querySelector('#home-artist-card')
