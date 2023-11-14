@@ -40,3 +40,38 @@
     box-sizing: border-box;
     box-shadow: 2px 2px 5px black;
    }
+
+
+   /*  player  */
+
+   .player{
+    display: flex;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+   }
+
+   .icons-player{
+    display: flex;
+    font-size: 20px;
+    justify-content: flex-end;
+   }
+
+   .container-footer{
+
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+
+   }
+
+   .home-icon{
+    font-size: 20px;
+    align-items: center;
+   }
+
+   .icons-frase{
+
+    
+   }
