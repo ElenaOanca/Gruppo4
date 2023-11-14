@@ -8,143 +8,303 @@
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <title>Document</title>
     <style>
-        body{
-            color:white;
+        body {
+            color: white;
             background-color: black;
 
         }
 
-      .af{color: white;}
+        .af {
+            color: white;
+        }
     </style>
 </head>
 
 <body>
 
 
-    <div>
-        <img src="assets/imgs/pinguiniTatticiNucleari.png" width="100%" alt="">
-     <!-- <h1>Pinguini Tattici Nucleari</h1> -->
-    </div>
 
-    <div>
-        <p>3.90000000 ascoltattori mensili</p>
-        <div class="row mb-3">
-            <div class="col-3 text-center">Seguiti</div>
-            <div class="col-2 text-end"><i class="bi bi-three-dots-vertical"></i></div>
-            <div class="col-5 text-end"><i class="bi bi-shuffle"></i></div>
-            <div class="col-2 text-center"><i class="bi bi-play-circle-fill"></i></div>
-        </div>
-    </div>
 
-    <div class="row mb-3">
-        <div class="col-3 text-center "><img src="assets/imgs/main/image-1.jpg" width="70" height="70" > <i class="bi bi-suit-heart-fill"></i></div>
-        <div class="col-9">
-            <p>Brani che ti piacciono</p>
-            <p>8 brani di Pinguini tattici Nucleari</p>
-           
-        </div>
-    </div>
-
-    <p class="m-5">Popolari</p>
-    <div class="row mb-3">
-        <div class="col-1 text-end">1</div>
-        <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
-        <div class="col-7">
-            <p>Ricordi</p>
-            <p>323265562</p>
-        </div>
-        <div class="col-2"><i class="bi bi-three-dots-vertical"></i></div>
-    </div>
-
-    <div class="row mt-3 ">
-        <div class="col-1 text-end">2</div>
-        <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
-        <div class="col-7">
-            <p>Giovani Wannabei</p>
-            <p>323265562</p>
-        </div>
-        <div class="col-2 text-start"><i class="bi bi-three-dots-vertical"></i></div>
-    </div>
-
-    <div class="row mb-3">
-        <div class="col-1 text-end">2</div>
-        <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
-        <div class="col-7">
-            <p>Giovani Wannabei</p>
-            <p>323265562</p>
-        </div>
-        <div class="col-2"><i class="bi bi-three-dots-vertical"></i></div>
-    </div>
-
-    <div class="row mb-3">
-        <div class="col-1 text-end">2</div>
-        <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
-        <div class="col-7">
-            <p>Giovani Wannabei</p>
-            <p>323265562</p>
-        </div>
-        <div class="col-2"><i class="bi bi-three-dots-vertical"></i></div>
-    </div>
-
-    <div class="row mb-3">
-        <div class="col-1 text-end">2</div>
-        <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
-        <div class="col-7">
-            <p>Giovani Wannabei</p>
-            <p>323265562</p>
-        </div>
-        <div class="col-2"><i class="bi bi-three-dots-vertical"></i></div>
-    </div>
-
-    <div class="row mb-3">
-        <div class="col-1 text-end">3</div>
-        <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
-        <div class="col-7">
-            <p>RiPastello Bianco</p>
-            <p>323265562</p>
-        </div>
-        <div class="col-2"><i class="bi bi-three-dots-vertical"></i></div>
-    </div>
-
-    <div>
-        <div class="row mb-5  bg-dark">
-            <div class="col-6 text-center">Nome canzone</div>
-            <div class="col-1 offset-2"><i class="bi bi-music-player"></i></div>
-            <div class="col-1"><i class="bi bi-heart"></i></div>
-            <div class="col-1 mb-5"><i class="bi bi-play-fill"></i></div>
-        </div>
-    </div>
-    <footer class="mt-5">
-        <div class=" fixed-bottom bg-black">
-            <div class=" col-12">
-                <div class="row text-center">
-                    <div class="col-4 "> <i class="bi bi-house-door-fill"></i></div>
-                    <div class="col-4"><i class="bi bi-search"></i></div>
-                    <div class="col-4"> <i class="bi bi-collection"></i></div>
-                    
+    <div class="row ">
+        <!--parte sinistra-->
+        <div class=" d-none col-lg-3  ">
+            <div class="container bg-black text-white maxX custom-scrollbar">
+                <div>
+                    <i class="bi bi-three-dots p-3"></i>
                 </div>
-                <div class="row text-center">
-                    <div class="col-4">  <a class="navbar-brand text-white" href="#">Home</a></div>
-                    <div class="col-4"><a class="navbar-brand text-white" href="#">Cerca</a></div>
-                    <div class="col-4">  <a class="navbar-brand text-white" href="#">La tua libreria</a></div>
+
+                <div class="nav flex-column mt-3">
+                    <a class="nav-link active text-white" href="#">
+                        <i class="bi bi-house-door-fill m-1"></i>
+                        Home
+                    </a>
+
+                    <a class="nav-link text-white" href="#">
+                        <i class="bi bi-search m-1"></i>
+                        Cerca
+                    </a>
+
+                    <a class="nav-link text-white mb-5" href="#">
+                        <i class="bi bi-collection-fill m-1"></i>
+                        La tua libreria
+                    </a>
+
+                    <a class="nav-link active text-white" href="#">
+                        <i class="bi bi-plus-square m-1"></i>
+                        Crea playlist
+                    </a>
+
+                    <a class="nav-link text-white" href="#">
+                        <i class="bi bi-heart-fill m-1"></i>
+                        Brani che piacciono
+                    </a>
+
+                    <a class="nav-link text-white" href="#">
+                        <i class="bi bi-bookmark-fill m-1"></i>
+                        I tuoi episodi
+                    </a>
                 </div>
-            
+                <hr>
+
+                <div class="text-white mt-5">
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <div class="row">
+                        <div class="col-11">
+                            <p>Lorem ipsum dolor, sit amet consecte</p>
+                        </div>
+                        <div class="col-1">
+                            <i class="bi bi-file-arrow-down-fill icon-right "></i>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <div class="row">
+                        <div class="col-11">
+                            <p>Lorem ipsum dolor, sit amet consecte</p>
+                        </div>
+                        <div class="col-1">
+                            <i class="bi bi-file-arrow-down-fill icon-right "></i>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <div class="row">
+                        <div class="col-11">
+                            <p>Lorem ipsum dolor, sit amet consecte</p>
+                        </div>
+                        <div class="col-1">
+                            <i class="bi bi-file-arrow-down-fill icon-right "></i>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <div class="row">
+                        <div class="col-11">
+                            <p>Lorem ipsum dolor, sit amet consecte</p>
+                        </div>
+                        <div class="col-1">
+                            <i class="bi bi-file-arrow-down-fill icon-right "></i>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <div class="row">
+                        <div class="col-11">
+                            <p>Lorem ipsum dolor, sit amet consecte</p>
+                        </div>
+                        <div class="col-1">
+                            <i class="bi bi-file-arrow-down-fill icon-right "></i>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <div class="row">
+                        <div class="col-11">
+                            <p>Lorem ipsum dolor, sit amet consecte</p>
+                        </div>
+                        <div class="col-1">
+                            <i class="bi bi-file-arrow-down-fill icon-right "></i>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                    <p>Lorem ipsum dolor, sit amet consecte</p>
+                </div>
+
             </div>
-          </div>
+        </div>
 
 
-          
-    </footer>
+        <!--parte centrale-->
+        <div class="col-6">
+            <div>
+                <img src="assets/imgs/pinguiniTatticiNucleari.png" width="100%" alt="">
+                <!-- <h1>Pinguini Tattici Nucleari</h1> -->
+            </div>
+            <!--sezione mobile per nav following-->
+            <div class="d-lg-none">
+                <p>3.90000000 ascoltattori mensili</p>
+                <div class="row sm-3 mb-3">
+                    <div class="col-3 text-center">Seguiti</div>
+                    <div class="col-2 text-end"><i class="bi bi-three-dots-vertical"></i></div>
+                    <div class="col-5 text-end"><i class="bi bi-shuffle"></i></div>
+                    <div class="col-2 text-center"><i class="bi bi-play-circle-fill"></i></div>
+                </div>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+
+
+            <!--sezione lg per nav following-->
+            <div class="d-xs-none">
+                <p>3.90000000 ascoltattori mensili</p>
+                <div class="row">
+                    <div class="col-1 text-center"><i class="bi bi-play-circle-fill"></i></div>
+                    <div class="col-2 text-start"><button class="bg-black text-white">Following</button></div>
+                    <div class="col-1 text-start"><i class="bi bi-three-dots"></i></div>
+                   
+                  
+                </div>
+            </div>
+
+
+
+            
+
+
+
+
+            
+
+            <div class="row mb-3">
+                <div class="col-3 text-center "><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
+                <div class="col-9">
+                    <p>Brani che ti piacciono</p>
+                    <p>8 brani di Pinguini tattici Nucleari</p>
+                    <i class="bi bi-suit-heart-fill"></i>
+                </div>
+            </div>
+
+            <p>Popolari</p>
+            <div class="row mb-3">
+                <div class="col-1 text-center">1</div>
+                <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
+                <div class="col-7">
+                    <p>Ricordi</p>
+                    <p>323265562</p>
+                </div>
+                <div class="col-2"><i class="bi bi-three-dots-vertical"></i></div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-1 text-center">2</div>
+                <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
+                <div class="col-7">
+                    <p>Giovani Wannabei</p>
+                    <p>323265562</p>
+                </div>
+                <div class="col-2 text-start"><i class="bi bi-three-dots-vertical"></i></div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-1 text-end">2</div>
+                <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
+                <div class="col-7">
+                    <p>Giovani Wannabei</p>
+                    <p>323265562</p>
+                </div>
+                <div class="col-2"><i class="bi bi-three-dots-vertical"></i></div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-1 text-end">2</div>
+                <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
+                <div class="col-7">
+                    <p>Giovani Wannabei</p>
+                    <p>323265562</p>
+                </div>
+                <div class="col-2"><i class="bi bi-three-dots-vertical"></i></div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-1 text-end">2</div>
+                <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
+                <div class="col-7">
+                    <p>Giovani Wannabei</p>
+                    <p>323265562</p>
+                </div>
+                <div class="col-2"><i class="bi bi-three-dots-vertical"></i></div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-1 text-end">3</div>
+                <div class="col-2"><img src="assets/imgs/main/image-1.jpg" width="70" height="70"></div>
+                <div class="col-7">
+                    <p>RiPastello Bianco</p>
+                    <p>323265562</p>
+                </div>
+                <div class="col-2"><i class="bi bi-three-dots-vertical"></i></div>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-6">Nome canzone</div>
+                    <div class="col-1 offset-2"><i class="bi bi-music-player"></i></div>
+                    <div class="col-1"><i class="bi bi-heart"></i></div>
+                    <div class="col-1"><i class="bi bi-play-fill"></i></div>
+                </div>
+            </div>
+            <footer>
+                <div class=" fixed-bottom bg-black">
+                    <div class=" col-12">
+                        <div class="row text-center">
+                            <div class="col-4 "> <i class="bi bi-house-door-fill"></i></div>
+                            <div class="col-4"><i class="bi bi-search"></i></div>
+                            <div class="col-4"> <i class="bi bi-collection"></i></div>
+
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-4"> <a class="navbar-brand text-white" href="#">Home</a></div>
+                            <div class="col-4"><a class="navbar-brand text-white" href="#">Cerca</a></div>
+                            <div class="col-4"> <a class="navbar-brand text-white" href="#">La tua libreria</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+        <!-- parte destra-->
+        <div class="  d-none col-lg-3"></div>
+    </div>
+
+
+  
 </body>
 
 </html>
