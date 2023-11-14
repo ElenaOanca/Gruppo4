@@ -1,37 +1,5 @@
 
-/* nav bar home page */
-.nascondi-annunci-text{
-    position: absolute;
-    top: 0;
-    right: 10px;
-    background-color: darkgray;
-    padding: 5px 15px;
-    border-radius: 20px;
-}
-.text-brano{
-    width: 100%;
-}
-.buttons{
-    display: flex;
-    column-gap: 25px;
-}
+/* UNICA PARTE DI CSS PRESENTE DIRETTAMENTE NELLA PAGINA INDEX NEL TAG HEAD
+GIUSTO PER RENDERE VISIBILE LA GRID DELLA PAGINA */
 
-/* main */
-
-/* first section */
-
-/* second section */
-.first-section-container{
-display: flex;
-column-gap: 15px;
-}
-.img-first-section{
- max-width: 100px;
-}
-.name-first-section{
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-}
 

@@ -11,6 +11,41 @@
     <title>Spotify</title>
 </head>
 
+<style>
+/* HOME PAGE DEKSTOP */
+    /* NASCONDI ANNUNCI BRANO IN ASCOLTO DEKSTOP */
+.nascondi-annunci-text{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: darkgray;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+.text-brano{
+    width: 100%;
+}
+.buttons{
+    display: flex;
+    column-gap: 25px;
+}
+
+/* HOME PAGE MOBILE  */
+.first-section-container{
+display: flex;
+column-gap: 15px;
+}
+.img-first-section{
+ max-width: 100px;
+}
+.name-first-section{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+</style>
+
 <body>
     <div class="container text-white bg-secondary py-5 ">
         <header id="header"> <!--flex column  row gap -->
@@ -35,10 +70,13 @@
                 </div>
             </div>
 
+            <!-- BRANO IN ASCOLTO  VISIBILE SOLO NELLA VERSIONE DEKSTOP -->
                 <div class="container-brano d-flex bg-dark bg-gradient">
+                    <!-- CONTAINER IMMAGINE -->
                     <div class="container-img-brano  ">
                         <img src="assets/imgs/main/image-4.jpg" alt="" class="img-brano py-4 px-3">
                     </div>
+                    <!-- CONTAINER TESTO ACCANTO ALL'IMMGAINE -->
                     <div class="text-brano py-3 px-2">
                         <div class="text-uppercase position-relative">
                             <p class="text fw-bold">
@@ -63,18 +101,19 @@
                             <a href="#" class="btn-salva border p-2 px-4 rounded-4"> Salva </a>
                             <i class="bi bi-three-dots"></i>
                         </div>
-
-
                     </div>
                 </div>
             </div>
 
+
+            <!-- SEZIONE BUONASERA -->
             <div> <!-- flex con between tra buonasera e icone -->
                 <div class="flex-lg-start">
                     <h3>
                         Buonasera
                     </h3>
                 </div>
+                <!-- ICONE ACCANTO BUONASERA MOBILE, DEKSTOP SCOMPAIONO -->
                 <div class="d-lg-none"> <!--3 icone impostazioni flex -->
                     <i class="bi bi-bell"></i>
                     <i class="bi bi-clock-history"></i>
@@ -84,6 +123,7 @@
         </header>
 
         <main id="main">
+            <!--SEZIONE PRESENTE SOLO IN MOBILE  -->
             <div class="container-main"> <!-- flex column con gap row-->
                 <div class="d-flex d-lg-none">
                     <p class="offset-1 col-3">
@@ -93,6 +133,8 @@
                         Podcast e show
                     </p>
                 </div>
+
+                <!-- CARD IMMAGINE CON TESTO -->
                 <section class="row gx-lg-2 "> <!-- col-6 flex mobile   -->
                     <div class="   col-6 mb-3 col-lg-4  first-section-container"> <!-- flex  column gap-->
                         <img src="assets/imgs/main/image-1.jpg" alt="" class="img-first-section  rounded-start-4">
@@ -100,41 +142,53 @@
                         <p class="name-first-section"> <!-- flex  align items center-->
                             Lorem ipsum
                         </p>
+                        <!-- 3 PUNTINI ORIZZONTALI PRESENTI SOLO ALL'HOVER -->
                         <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
                     </div>
-                    <div class="   col-6 mb-3 col-lg-4  first-section-container"> <!-- flex  column gap-->
-                        <img src="assets/imgs/main/image-2.jpg" alt="" class="img-first-section rounded-start-4">
+
+                      <div class="   col-6 mb-3 col-lg-4  first-section-container"> <!-- flex  column gap-->
+                        <img src="assets/imgs/main/image-1.jpg" alt="" class="img-first-section  rounded-start-4">
+                        <!--rounded-start-->
                         <p class="name-first-section"> <!-- flex  align items center-->
                             Lorem ipsum
                         </p>
+                        <!-- 3 PUNTINI ORIZZONTALI PRESENTI SOLO ALL'HOVER -->
                         <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
                     </div>
                     <div class="   col-6 mb-3 col-lg-4  first-section-container"> <!-- flex  column gap-->
-                        <img src="assets/imgs/main/image-3.jpg" alt="" class="img-first-section rounded-start-4">
+                        <img src="assets/imgs/main/image-1.jpg" alt="" class="img-first-section  rounded-start-4">
+                        <!--rounded-start-->
                         <p class="name-first-section"> <!-- flex  align items center-->
                             Lorem ipsum
                         </p>
+                        <!-- 3 PUNTINI ORIZZONTALI PRESENTI SOLO ALL'HOVER -->
                         <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
                     </div>
                     <div class="   col-6 mb-3 col-lg-4  first-section-container"> <!-- flex  column gap-->
-                        <img src="assets/imgs/main/image-4.jpg" alt="" class="img-first-section rounded-start-4">
+                        <img src="assets/imgs/main/image-1.jpg" alt="" class="img-first-section  rounded-start-4">
+                        <!--rounded-start-->
                         <p class="name-first-section"> <!-- flex  align items center-->
                             Lorem ipsum
                         </p>
+                        <!-- 3 PUNTINI ORIZZONTALI PRESENTI SOLO ALL'HOVER -->
                         <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
                     </div>
                     <div class="   col-6 mb-3 col-lg-4  first-section-container"> <!-- flex  column gap-->
-                        <img src="assets/imgs/main/image-5.jpg" alt="" class="img-first-section rounded-start-4">
+                        <img src="assets/imgs/main/image-1.jpg" alt="" class="img-first-section  rounded-start-4">
+                        <!--rounded-start-->
                         <p class="name-first-section"> <!-- flex  align items center-->
                             Lorem ipsum
                         </p>
+                        <!-- 3 PUNTINI ORIZZONTALI PRESENTI SOLO ALL'HOVER -->
                         <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
                     </div>
                     <div class="   col-6 mb-3 col-lg-4  first-section-container"> <!-- flex  column gap-->
-                        <img src="assets/imgs/main/image-6.jpg" alt="" class="img-first-section rounded-start-4">
+                        <img src="assets/imgs/main/image-1.jpg" alt="" class="img-first-section  rounded-start-4">
+                        <!--rounded-start-->
                         <p class="name-first-section"> <!-- flex  align items center-->
                             Lorem ipsum
                         </p>
+                        <!-- 3 PUNTINI ORIZZONTALI PRESENTI SOLO ALL'HOVER -->
                         <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
                     </div>
                 </section>
@@ -143,7 +197,7 @@
                 <section class="d-lg-none playlist-card-sm-md">
                     <div class="container container-playlist my-3"> <!-- rounded -->
                         <div> <!-- immagine  e p flex e column gap-->
-                            <img src="" alt="">
+                            <img src="assets/imgs/main/image-6.jpg" alt="">
                             <p class="playlist">
                                 Playlist
                             </p>
@@ -167,7 +221,7 @@
 
                     <div class="container container-playlist my-3"> <!-- rounded -->
                         <div> <!-- immagine  e p flex e column gap-->
-                            <img src="" alt="">
+                            <img src="assets/imgs/main/image-6.jpg" alt="">
                             <p class="playlist">
                                 Playlist
                             </p>
@@ -195,13 +249,14 @@
                         <p class="text fw-bold">
                             Altro di ciò che ti piace
                         </p>
-                        <p class="nascondi-annunci-text text-uppercase">
+                        <p class="text-uppercase">
                             visualizza tutto
                         </p>
                     </div>
-
+                    <!-- CONTAINER CARDS SEZIONE PRESENTE SOLO DEKSTOP -->
                     <div class="container text-center ">
                         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                            <!-- QUI SOTTO TROVERAI UNA SOLA CARD -->
                             <div class="col">
                                 <div class="p-3  bg-transparent">
                                     <div class="card border border-0">
@@ -217,6 +272,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- QUI SOTTO TROVERAI UNA SOLA CARD -->
                             <div class="col">
                                 <div class="p-3  bg-transparent">
                                     <div class="card border border-0">
@@ -232,6 +288,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- QUI SOTTO TROVERAI UNA SOLA CARD -->
                             <div class="col">
                                 <div class="p-3  bg-transparent">
                                     <div class="card border border-0">
@@ -247,6 +304,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- QUI SOTTO TROVERAI UNA SOLA CARD -->
                             <div class="col">
                                 <div class="p-3  bg-transparent">
                                     <div class="card border border-0">
@@ -262,6 +320,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- QUI SOTTO TROVERAI UNA SOLA CARD -->
                             <div class="col">
                                 <div class="p-3  bg-transparent">
                                     <div class="card border border-0">
@@ -283,6 +342,7 @@
             </div>
         </main>
 
+        <!-- FOOTER PRENDERE DA QUALCUNO COMPLETO -->
         <footer id="footer">
             <div class="container-footer-fixed">
                 <div class="player">
