@@ -16,15 +16,15 @@
             padding: 0;
         }
 
-        .little-round-image img {
+        .round-image img {
             border-radius: 100%;
         }
 
         @media screen and (min-width : 978px) {
             .main-title {
-                font-size : 80px;
+                font-size: 80px;
             }
-            
+
         }
     </style>
 </head>
@@ -33,18 +33,23 @@
     <div class="container">
         <header>
 
-            <div class="header-container d-lg-flex align-items-center">
+            <div class="header-container d-lg-flex align-items-end">
                 <div class="d-flex justify-content-center album-img-area mb-3 mt-5">
                     <img src="https://picsum.photos/200" alt="" class="album-img">
                 </div>
-                <div class="album-info mb-3 lh-lg-2">
-                    <div class="main-title">Gioventù Bruciata</div>
-                    <div class="secondary-title"><span class="little-round-image"><img src="https://picsum.photos/20"
-                                alt=""></span>Pinguini Tattici Nucleari</div>
-                    <div class="grey-text">Album • 2017</div>
+                <div class="album-info mb-3 lh-lg-2 ms-3">
+                    <div class="d-none d-md-none d-lg-block">Album</div>
+                    <div class="main-title" id="album-title">Gioventù Bruciata</div>
+                    <div class="d-lg-flex gap-2">
+                        <div class="secondary-title" id="artist-name"><span class="round-image mx-2" id="artist-img"><img
+                                    src="https://picsum.photos/20" alt=""></span>Pinguini Tattici Nucleari</div>
+                        <div class="grey-text d-lg-flex gap-2"><span class="d-lg-none">Album</span> • <span class=""
+                                id="album-year">2017</span><span class="d-none d-lg-block" id="tracks-count">12
+                                brani</span><span class="d-none d-lg-block" id="album-length">53min 20sec</span></div>
+                    </div>
                 </div>
 
-                <div class="controllers-container d-flex justify-content-between">
+                <div class="controllers-container d-flex  d-lg-none justify-content-between">
                     <div class="controllers">
                         <i class="bi bi-suit-heart"></i>
                         <i class="bi bi-arrow-down-circle"></i>
@@ -59,7 +64,7 @@
             </div>
         </header>
 
-        <div class="list">
+        <div class="mobile-list d-lg-none">
             <ul class="song-list list-group">
                 <li class="song-item d-flex justify-content-between align-items-center">
                     <div class="song-item-info">
@@ -90,8 +95,8 @@
                 </li>
                 <li class="song-item d-flex justify-content-between align-items-center">
                     <div class="song-item-info">
-                        <p class="list-main-title">lasagne</p>
-                        <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                        <p  class="list-main-title">lasagne</p>
+                        <p  class="list-second-title">Pinguini Tattici Nucleari</p>
                     </div>
                     <div class="song-item-menu-icon">
                         <i class="bi bi-three-dots-vertical"></i>
@@ -99,6 +104,43 @@
                 </li>
             </ul>
         </div>
+
+        <table class="desktop-table">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>TITOLO</td>
+                    <td>RIPRODUZIONI</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="song-item-info">
+                            <p class="list-main-title">Sciare</p>
+                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="song-item-info">
+                            <p class="list-main-title">Polpette</p>
+                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="song-item-info">
+                            <p class="list-main-title">lasagne</p>
+                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <footer>
             <div class="playing-info-area">
                 <span class="song-info">sdcvsdfvdfgbgfbfg</span>
