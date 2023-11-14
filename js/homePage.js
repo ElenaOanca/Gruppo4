@@ -1,5 +1,5 @@
 const url = "https://api.spotify.com/v1/browse/categories"
-const token = "Bearer BQAxrTFOJcOiOj4RbuywRUHm3BPEUTiw4Yov8q4dDgQoHW1NRtKvroCW_U_Dkrh7Qu8Qt4uEukPV1uO4XJ_cIrm1X9eTJ9w_XY5_cA6j2X7rtSMzkTU"
+const token = "Bearer BQChn4wkik5G4NmflPRJhVbBJDZsBWfvHwYBtQ4qMNmmlN9bVgAM374jvTubU0ZUIU57bI2KBaX2t4S8wtZnhx7mNUN4BoPNpCeq_XZQ6ADus5L-u1I"
 
 
 class Alert {
@@ -43,24 +43,7 @@ async function renderCategories(){
         img.src = categories.categories.items[i].icons[0].url
         artistName.innerText = categories.categories.items[i].name
         target.append(clone)
-    }
-
-
-    // for (let i = 0; i < 6; i++) {
-    //     let query = Math.floor(Math.random() * 150)
-    //     let artist = await getCategories(query)
-    //     console.log(artist);
-
-    //     let clone = cloneHomeMusicCard()
-        
-    //     let img = clone.querySelector('.img-first-section')
-    //     let artistName = clone.querySelector('.name-first-section')
-
-    //     artistName.innerText = artist.name
-    //     img.src = artist.picture_medium
-    //     target.append(clone)
-
-// }    
+    }  
 }
 renderCategories();
 

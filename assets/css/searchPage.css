@@ -40,3 +40,44 @@
     box-sizing: border-box;
     box-shadow: 2px 2px 5px black;
    }
+
+  .container-risultati{
+    margin: 20px 0;
+    background-color: purple;
+    display: flex;
+    padding: 15px;
+    border-radius: 100px;
+    justify-content: space-between;
+  }
+  .img-risultati{
+    border-radius: 100%;
+    width: 50px;
+}
+.img-risultati:hover{
+  cursor: pointer;
+box-shadow: 1px 1px 5px black;
+}
+.nomi-risultati{
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nomi-risultati:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.btn-risultati{
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  border-radius: 100px;
+  padding: 13px;
+  box-shadow: 1px 1px 5px black;
+}
+.btn-risultati:hover{
+  text-decoration: underline;
+  box-shadow: none;
+  cursor: pointer;
+
+}
