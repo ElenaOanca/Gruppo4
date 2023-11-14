@@ -21,3 +21,10 @@ column-gap: 15px;
     font-size: 20px;
 }
 
+/* DEKSTOP VERSION ALBUM SECTION */
+.nascondi-annunci-text{
+    position: absolute;
+    top: 0;
+    right: -150px;
+
+}
