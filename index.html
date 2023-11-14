@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
     <title>Spotify</title>
 </head>
 <body>
@@ -37,76 +38,15 @@
             Podcast e show
         </p>
     </div>
-    <section class="row">   <!-- col-6 flex mobile   -->
-        <div class="col-6 mb-3 first-section-container"> <!-- flex  column gap-->
-            <img src="assets/imgs/main/image-1.jpg" alt="" class="img-first-section  rounded-start-4"> <!--rounded-start-->
-            <p class="name-first-section"> <!-- flex  align items center-->
-                Lorem ipsum
-            </p>
-            <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
-        </div>
-        <div class="col-6 mb-3 first-section-container"> <!-- flex  column gap-->
-            <img src="assets/imgs/main/image-2.jpg" alt="" class="img-first-section rounded-start-4">
-            <p class="name-first-section"> <!-- flex  align items center-->
-                Lorem ipsum
-            </p>
-            <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
-        </div>
-        <div class="col-6 mb-3 first-section-container"> <!-- flex  column gap-->
-            <img src="assets/imgs/main/image-3.jpg" alt="" class="img-first-section rounded-start-4">
-            <p class="name-first-section"> <!-- flex  align items center-->
-                Lorem ipsum
-            </p>
-            <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
-        </div>
-        <div class="col-6 mb-3 first-section-container"> <!-- flex  column gap-->
-            <img src="assets/imgs/main/image-4.jpg" alt="" class="img-first-section rounded-start-4">
-            <p class="name-first-section"> <!-- flex  align items center-->
-                Lorem ipsum
-            </p>
-            <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
-        </div>
-        <div class="col-6 mb-3 first-section-container"> <!-- flex  column gap-->
-            <img src="assets/imgs/main/image-5.jpg" alt="" class="img-first-section rounded-start-4">
-            <p class="name-first-section"> <!-- flex  align items center-->
-                Lorem ipsum
-            </p>
-            <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
-        </div>
-        <div class="col-6 mb-3 first-section-container"> <!-- flex  column gap-->
-            <img src="assets/imgs/main/image-6.jpg" alt="" class="img-first-section rounded-start-4">
-            <p class="name-first-section"> <!-- flex  align items center-->
-                Lorem ipsum
-            </p>
-            <i class="bi bi-three-dots d-flex align-items-center text-success  icon-first-section"></i>
-        </div>
+    <section class="row home-artists-area">   <!-- col-6 flex mobile   -->
+  
     </section>
 
-    <section>
-        <div class="container container-playlist"> <!-- rounded -->
-            <div> <!-- immagine  e p flex e column gap-->
-                <img src="" alt="">
-                <p class="playlist">
-                    Playlist
-                </p>
-                <p class="name-playlist">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                </p>
-            </div>
-            <div> <!-- space between -->
-                <div>
-                    <i class="bi bi-heart-fill"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
-                </div>
-                <div> <!-- space between -->
-                    <p> <!-- sarà generata da js -->
-                        16 brani
-                    </p>
-                    <i class="bi bi-play-circle"></i>
-                </div>
-            </div>
-        </div>
-    </section>
+    <template id="home-artist-card">
+        <div class="col-6 mb-3 first-section-container"> <!-- flex  column gap-->
+            <img  alt="" class="img-first-section  rounded-start-4"> <!--rounded-start-->
+            <p class="name-first-section"> <!-- flex  align items center-->
+    </template>
 
     <section>
         <div class="container container-playlist"> <!-- rounded -->
@@ -173,6 +113,7 @@
 
 <script src="js/homePage.js"></script>
  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>   
+ <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>
