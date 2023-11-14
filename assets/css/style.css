@@ -1,6 +1,20 @@
 
-
-
+/* nav bar home page */
+.nascondi-annunci-text{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: darkgray;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+.text-brano{
+    width: 100%;
+}
+.buttons{
+    display: flex;
+    column-gap: 25px;
+}
 
 /* main */
 
@@ -21,10 +35,3 @@ column-gap: 15px;
     font-size: 20px;
 }
 
-/* DEKSTOP VERSION ALBUM SECTION */
-.nascondi-annunci-text{
-    position: absolute;
-    top: 0;
-    right: -150px;
-
-}
