@@ -10,10 +10,13 @@
 font-size: 25px;
 color: var(--ColorWhite);
 }
-/* RIGA CON IMMAGINE ROTONDA E NOME ARTISTA */
 
+/*  SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM */
+.grey-text{
+    color: var(--ColorGrey);
+}
 
-
+/* SEZIONE CONTROLLERS MOBILE */
 
 
 
