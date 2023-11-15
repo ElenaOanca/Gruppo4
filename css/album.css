@@ -15,6 +15,9 @@ color: var(--ColorWhite);
 .album-img{
     box-shadow: 0px  0px 15px black;
 }
+.round-image {
+    border-radius: 100%;
+}
 /*SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM */
 .grey-text{
     color: var(--ColorGrey);
@@ -88,27 +91,16 @@ color: var(--ColorWhite);
 .nav-icon i{
     font-size: 22px;
 }
-
-
-
-
-
-
-
-
-
-
-.round-image {
-    border-radius: 100%;
-}
-
+/* BREKPOINT */
 @media screen and (min-width : 978px) {
     .main-title {
         font-size: 80px;
     }
-
 }
-
+/* SEZIONE AMICI */
 .user-name {
     overflow-x: hidden;
 }
+/* FINE ALBUM MOBILE */
+/* INIZIO ALBUM DESKTOP */
+/* SEZIONE NAV DI SX */
