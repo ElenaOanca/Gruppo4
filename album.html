@@ -16,15 +16,19 @@
             padding: 0;
         }
 
-        .little-round-image img {
+        .round-image {
             border-radius: 100%;
         }
 
         @media screen and (min-width : 978px) {
             .main-title {
-                font-size : 80px;
+                font-size: 80px;
             }
-            
+
+        }
+
+        .user-name {
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -32,24 +36,58 @@
 <body class="bg-dark text-white">
     <div class="container">
         <header>
+            <!-- NAV BAR PER DESKTOP -->
+            <div class="d-none d-lg-flex justify-content-between mt-2">
+                <!-- SEZIONE FRECCIE NAV -->
+                <div><i class="bi bi-arrow-left-circle-fill"></i><i class="bi bi-arrow-right-circle-fill"></i></div>
+                <!-- SEZIONE PULSANTE DX DROPDOWN -->
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://picsum.photos/20" class="round-image" alt="user profile img">
+                        Davide D'Amario
+                    </button>
+                    <!-- MENÙ A TENDINA -->
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">My Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Exit</a></li>
+                    </ul>
 
-            <div class="header-container d-lg-flex align-items-center">
+                </div>
+            </div>
+
+            <!-- CONTAINER ALBUM INFO SIA MOBILE SIA DESKTOP -->
+            <div class="header-container d-lg-flex align-items-end">
                 <div class="d-flex justify-content-center album-img-area mb-3 mt-5">
                     <img src="https://picsum.photos/200" alt="" class="album-img">
                 </div>
-                <div class="album-info mb-3 lh-lg-2">
-                    <div class="main-title">Gioventù Bruciata</div>
-                    <div class="secondary-title"><span class="little-round-image"><img src="https://picsum.photos/20"
-                                alt=""></span>Pinguini Tattici Nucleari</div>
-                    <div class="grey-text">Album • 2017</div>
+                <div class="album-info mb-3 lh-lg-2 ms-3">
+                    <!-- SCRITTA ALBUM SI SPOSTA CON DISPLAY NONE IN BASE AI BREAKPOINT -->
+                    <div class="d-none d-md-none d-lg-block">Album</div>
+                    <!-- NOME ALBUM -->
+                    <div class="main-title" id="album-title">Gioventù Bruciata</div>
+                    <!-- CONTAINER PER INFO TESTUALI ALBUM -->
+                    <div class="d-lg-flex gap-2">
+                        <!-- RIGA CON IMMAGINE ROTONDA E NOME ARTISTA -->
+                        <div class="secondary-title" id="artist-name"><span class="mx-2" id="artist-img"><img
+                                    class="round-image" src="https://picsum.photos/20" alt=""></span>Pinguini Tattici
+                            Nucleari</div>
+                        <!-- SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM -->
+                        <div class="grey-text d-lg-flex gap-2"><span class="d-lg-none">Album</span> • <span class=""
+                                id="album-year">2017</span><span class="d-none d-lg-block" id="tracks-count">12
+                                brani</span><span class="d-none d-lg-block" id="album-length">53min 20sec</span></div>
+                    </div>
                 </div>
 
-                <div class="controllers-container d-flex justify-content-between">
+                <!-- SEZIONE CONTROLLERS MOBILE -->
+                <div class="controllers-container d-flex  d-lg-none justify-content-between">
+                    <!-- SEZIONE CONTROLLERS MOBILE SX -->
                     <div class="controllers">
                         <i class="bi bi-suit-heart"></i>
                         <i class="bi bi-arrow-down-circle"></i>
                         <i class="bi bi-three-dots-vertical"></i>
                     </div>
+                    <!-- SEZIONE CONTROLLERS MOBILE DX -->
                     <div class="controllers">
                         <i class="bi bi-shuffle"></i>
                         <i class="bi bi-play-circle-fill"></i>
@@ -58,8 +96,9 @@
 
             </div>
         </header>
-
-        <div class="list">
+        <!--CONTAINER CANZONI DELL'ALBUM IN MOBILE -->
+        <div class="mobile-list d-lg-none">
+            <!-- LISTA CANZONI DELL'ALBUM IN MOBILE -->
             <ul class="song-list list-group">
                 <li class="song-item d-flex justify-content-between align-items-center">
                     <div class="song-item-info">
@@ -99,8 +138,81 @@
                 </li>
             </ul>
         </div>
+        <!-- SEZIONE CON TABELLA E CONTROLLERS PER DESKTOP  -->
+        <div class="d-none d-lg-block">
+            <div class="desktop-controllers">
+                <i class="bi bi-play-circle-fill"></i>
+                <i class="bi bi-suit-heart"></i>
+                <i class="bi bi-arrow-down-circle"></i>
+                <i class="bi bi-three-dots"></i>
+            </div>
+
+            <!-- TABELLA CANZONI ALBUM IN DESKTOP -->
+            <table class="desktop-table table table-dark">
+                <!-- INTESTAZIONE TABELLA -->
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>TITOLO</td>
+                        <td>RIPRODUZIONI</td>
+                        <td><i class="bi bi-clock"></i></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="song-id">1</td>
+                        <td>
+                            <div class="song-item-info">
+                                <p class="list-main-title">Sciare</p>
+                                <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                            </div>
+                        </td>
+                        <td class="reproductions">12098310</td>
+                        <td class="song-length">1:35</td>
+                    </tr>
+                    <tr>
+                        <td class="song-id">1</td>
+                        <td>
+                            <div class="song-item-info">
+                                <p class="list-main-title">Sciare</p>
+                                <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                            </div>
+                        </td>
+                        <td class="reproductions">12098310</td>
+                        <td class="song-length">1:35</td>
+                    </tr>
+                    <tr>
+                        <td class="song-id">1</td>
+                        <td>
+                            <div class="song-item-info">
+                                <p class="list-main-title">Sciare</p>
+                                <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                            </div>
+                        </td>
+                        <td class="reproductions">12098310</td>
+                        <td class="song-length">1:35</td>
+                    </tr>
+                    <tr>
+                        <td class="song-id">1</td>
+                        <td>
+                            <div class="song-item-info">
+                                <p class="list-main-title">Sciare</p>
+                                <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                            </div>
+                        </td>
+                        <td class="reproductions">12098310</td>
+                        <td class="song-length">1:35</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <p>lorem*40</p>
+            
+        </div>
+        <!-- FOOTER -->
         <footer>
-            <div class="playing-info-area">
+            <!-- PLAYER BAR IN MOBILE -->
+            <div class="playing-info-area d-lg-none">
                 <span class="song-info">sdcvsdfvdfgbgfbfg</span>
                 <span class="controllers">
                     <i class="bi bi-pc-display"></i>
@@ -108,8 +220,9 @@
                     <i class="bi bi-play-fill"></i>
                 </span>
             </div>
+            <!-- NAV BAR IN MOBILE -->
             <nav>
-                <div class="nav-bar d-flex text-center justify-content-around">
+                <div class="nav-bar d-flex d-lg-none text-center justify-content-around">
                     <div class="nav-icon">
                         <i class="bi bi-house-door-fill"></i>
                         <p>Home</p>
