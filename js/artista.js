@@ -1,8 +1,40 @@
 const url = " https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg"
 
+
+class SpotifyApi {
+    tokenBody
+    token
+    constructor(grantType,clientId, clientSecret){
+        this.getToken(grantType,clientId, clientSecret)
+
+ }
+ async getToken(grantType,clientId, clientSecret){
+    return await fetch ("https://accounts.spotify.com/api/token",
+    {
+        method : "POST",
+        headers : {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body : `grant_type=${grantType}&client_id=${clientId}&client_secret=${clientSecret}`
+    })
+.then(res => res.json())
+
+}
+accounts = {
+    async getUsers (){
+        spotifyApi.getToken()
+    }
+}
+}
+
+
+ const spotifyApi = new SpotifyApi('client_credentials','9d5ca7a25f3943c29e70a563595298d0','67bf58d590e04daaaeacc44c24f31c77');
+
 checkCookie()
 const token = leggiCookie()
+spotifyApi.getToken()
 
+spotifyApi.accounts.getUsers();
 
 
 /**** SEZIONE TOKEN & COOKIES */
@@ -79,10 +111,11 @@ async function getArtists () {
 
 async function renderArtist(){
     let artist = await getArtists();
-console.log(artist);
 
-let img = document.querySelector('#artist-img-album-big');
-img.src = artist.images[2].url
+const windowWidth = window.innerWidth;
+let img = document.getElementById('artist-img-album-'+(windowWidth>670?"lg":"sm"));
+
+img.src = artist.images[0].url
 
  
 }
@@ -109,7 +142,8 @@ console.log(artist.followers);//funziona
 
 let follower = document.querySelector('#follower');
 follower.textContent = artist.followers.total +' ascoltattori mensili';
-
+const windowWidth = window.innerWidth;
+// follower.style.background = windowWidth>670?"trnsparent":"linear-gradient(0deg, black, grey 60%)"
  
 }
 
@@ -117,3 +151,29 @@ renderFollower();
 
 
 //SEZIONE PER PRENDERE LE TRACKS E METTERLE NELLE CARD 
+
+
+async function getArtists () {
+    return await fetch (url + ${'top-tracks'},
+        {
+            headers : {
+                "Content-Type": "application/json",
+                Authorization : `Bearer ${token}`   
+            }
+        })
+    .then(res => res.json())
+}
+
+async function renderArtist(){
+    let artist = await getArtists();
+    console.log(artist);
+
+const windowWidth = window.innerWidth;
+let img = document.getElementById('artist-img-album-'+(windowWidth>670?"lg":"sm"));
+
+img.src = artist.images[0].url
+
+ 
+}
+
+renderArtist();
