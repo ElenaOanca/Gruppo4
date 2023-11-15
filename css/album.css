@@ -1,0 +1,21 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.round-image {
+    border-radius: 100%;
+}
+
+@media screen and (min-width : 978px) {
+    .main-title {
+        font-size: 80px;
+    }
+
+}
+
+.user-name {
+    overflow-x: hidden;
+}
