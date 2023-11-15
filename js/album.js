@@ -1,4 +1,5 @@
 const albumsUrl = "https://api.spotify.com/v1/albums/";
+const playBackCountUrl = "https://spotify-track-streams-playback-count1.p.rapidapi.com/tracks/spotify_track_streams?spotify_track_id="
 checkCookie();
 let token =  leggiCookie();
 
@@ -23,7 +24,7 @@ async function getAlbumTracks (id) {
         }
     }).then(res => res.json())
     }
-    
+
 /**** funzione renderizzazione album */
 async function renderAlbumHeader(id) {
     let album = await getAlbum(id)
@@ -53,22 +54,25 @@ async function renderAlbumHeader(id) {
  async function renderAlbumTracks(id) {
     let tracks = await getAlbumTracks(id)
     let target = document.querySelector('#tracks-list-tabel');
-    let clone = cloneTrackTableItem()
-
-
+ 
     console.log(tracks);
 
-    tracks.items.forEach(track => {
-    let clone = cloneTrackTableItem()
+    tracks.items.forEach((track) => {
+    let clone = cloneTemplate("#track-table-item")
     let trackId = clone.querySelector('.track-number');
     let title = clone.querySelector('.track-title');
     let artists = clone.querySelector('.track-artists');
-    let reproductions = clone.querySelector('.reproductions');
     let length = clone.querySelector('.track-length');
     
-    
+    let clone2 = cloneTemplate("#tracks-mobile-list")
+    let title2 = clone2.querySelector('.track-title');
+    let artists2 = clone2.querySelector('.track-artists');
+
+
     trackId.innerText = track.track_number;
     title.innerText = track.name;
+    title2.innerText = track.name;
+    artists.innerText = track.artists.map(artist => artist.name).join(', ');
     artists.innerText = track.artists.map(artist => artist.name).join(', ');
     length.innerText = millisToMinutesAndSeconds(track.duration_ms);
     target.append(clone);
@@ -78,8 +82,9 @@ async function renderAlbumHeader(id) {
 
  renderAlbumTracks(id)
 
-function cloneTrackTableItem () {
-    let temp = document.querySelector('#track-table-item')
+
+function cloneTemplate (template) {
+    let temp = document.querySelector(template)
     return temp.content.cloneNode(true)
 }
 
@@ -129,7 +134,7 @@ function leggiCookie() {
 
 function checkCookie(){
         if (!leggiCookie()) {
-            scriviCookie();
+            location.href
         }
     }
 
