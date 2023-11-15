@@ -120,3 +120,20 @@ background: linear-gradient(148deg, rgba(62,33,167,1) 19%, rgba(255,255,255,1) 6
     background-color: #004537;
     border-radius: 3px;
 }
+
+/* SEZIONE CENTRALE NAV IN ALTO CON LE FRECCE E IL DROPDOWN */
+.bt{
+    border: 0;
+    border-radius: 100%;
+    padding: 4px 10px;
+    opacity: 0.6;
+}
+
+.bt:hover{
+    opacity: 1;
+}
+
+.dropdown-toggle{
+    border-radius: 15px;
+    align-items: center;
+}
