@@ -62,9 +62,16 @@ ul{
     align-items: center;
 }
 
-.playing-info-area .controllers i{
+.playing-info-area i{
     font-size: 28px;
     margin-left: 20px;
+}
+
+
+.bi.bi-play-fill.play{
+font-size: 35px; 
+padding: 0;
+color: var(--ColorWhite);
 }
 
 
