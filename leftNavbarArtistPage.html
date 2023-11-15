@@ -9,35 +9,48 @@
     <title>Document</title>
     
     <style>
-        .icon-right {
-            float: right;
-            
-        }
+      
         .maxX{
             max-width: 400px;
             overflow-y: scroll;
 
             
           }
+         
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb color */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+}
+
+/* Set the width of the scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Specific styles for the container with the custom-scrollbar class */
+.maxX::-webkit-scrollbar-track {
+    background: #c06f6f; /* Track color for .maxX */
+}
+
+.maxX::-webkit-scrollbar-thumb {
+    background: #4CAF50; /* Thumb color for .maxX */
+}
+
         
      
-     .custom-scrollbar {
-            max-width: 400px;
-            overflow-y: scroll;
-        }
-
-        
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 25px;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background-color: blue;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background-color: red;
-        }    
+    
+      
+      
     </style>
 </head>
 
@@ -58,7 +71,7 @@
                 Cerca
             </a>
 
-            <a class="nav-link text-white" href="#">
+            <a class="nav-link text-white mb-5" href="#">
                 <i class="bi bi-collection-fill m-1"></i>
                 La tua libreria
             </a>
@@ -78,6 +91,7 @@
                 I tuoi episodi
             </a>
         </div>
+        <hr>
 
         <div class="text-white mt-5">
             <p>Lorem ipsum dolor, sit amet consecte</p>
@@ -86,23 +100,38 @@
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <i class="bi bi-file-arrow-down-fill icon-right"></i>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <i class="bi bi-file-arrow-down-fill icon-right"></i>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <i class="bi bi-file-arrow-down-fill icon-right"></i>
+            <div class="row">
+                <div class="col-11">
+                <p>Lorem ipsum dolor, sit amet consecte</p>  
+            </div> 
+            <div class="col-1">
+                <i class="bi bi-file-arrow-down-fill icon-right "></i>
+            </div>
+            </div>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
+            <div class="row">
+                <div class="col-11">
+                <p>Lorem ipsum dolor, sit amet consecte</p>  
+            </div> 
+            <div class="col-1">
+                <i class="bi bi-file-arrow-down-fill icon-right "></i>
+            </div>
+            </div>
+          
+            <p>Lorem ipsum dolor, sit amet consecte</p>
+            <div class="row">
+                <div class="col-11">
+                <p>Lorem ipsum dolor, sit amet consecte</p>  
+            </div> 
+            <div class="col-1">
+                <i class="bi bi-file-arrow-down-fill icon-right "></i>
+            </div>
+            </div>
+           
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
@@ -110,17 +139,43 @@
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
-            <i class="bi bi-file-arrow-down-fill icon-right"></i>
+            <p>Lorem ipsum dolor, sit amet consecte</p>
+            <p>Lorem ipsum dolor, sit amet consecte</p>
+            <p>Lorem ipsum dolor, sit amet consecte</p>
+            <p>Lorem ipsum dolor, sit amet consecte</p>
+            <div class="row">
+                <div class="col-11">
+                <p>Lorem ipsum dolor, sit amet consecte</p>  
+            </div> 
+            <div class="col-1">
+                <i class="bi bi-file-arrow-down-fill icon-right "></i>
+            </div>
+            </div>
+          
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
+            <div class="row">
+                <div class="col-11">
+                <p>Lorem ipsum dolor, sit amet consecte</p>  
+            </div> 
+            <div class="col-1">
+                <i class="bi bi-file-arrow-down-fill icon-right "></i>
+            </div>
+            </div>
+           
             <p>Lorem ipsum dolor, sit amet consecte</p>
-            <i class="bi bi-file-arrow-down-fill icon-right"></i>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <p>Lorem ipsum dolor, sit amet consecte</p>
-            <i class="bi bi-file-arrow-down-fill icon-right"></i>
+            <div class="row">
+                <div class="col-11">
+                <p>Lorem ipsum dolor, sit amet consecte</p>  
+            </div> 
+            <div class="col-1">
+                <i class="bi bi-file-arrow-down-fill icon-right "></i>
+            </div>
+            </div>
+            
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
             <p>Lorem ipsum dolor, sit amet consecte</p>
