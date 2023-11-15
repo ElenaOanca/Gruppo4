@@ -104,3 +104,19 @@ color: var(--ColorWhite);
 /* FINE ALBUM MOBILE */
 /* INIZIO ALBUM DESKTOP */
 /* SEZIONE NAV DI SX */
+.bi.bi-heart-fill{
+padding: 4px;
+border-radius: 3px;
+background: rgb(62,33,167);
+background: linear-gradient(148deg, rgba(62,33,167,1) 19%, rgba(255,255,255,1) 62%);
+}
+
+.bi.bi-plus-square{
+    padding: 4px;
+}
+
+.bi.bi-bookmark-fill{
+    padding: 4px;
+    background-color: #004537;
+    border-radius: 3px;
+}
