@@ -1,9 +1,10 @@
-const url = "https://api.spotify.com/v1/browse/categories"
+const catUrl = "https://api.spotify.com/v1/browse/categories"
+const playlistUrl = "https://api.spotify.com/v1/browse/featured-playlists?country=IT&locale=it_IT"
 checkCookie()
-const token = leggiCookie()
+const token =  leggiCookie()
 
 
-
+// SEZIONE CLASSE OGGETTI
 class Alert {
     constructor(title, text, icon){
         this.title = title
@@ -17,9 +18,9 @@ class Alert {
 }
 
 
-
+// FUNZIONE PRENDI CATEGORIE
 async function getCategories () {
-    return await fetch (url,
+    return await fetch (catUrl,
         {
             headers : {
                 "Content-Type": "application/json",
@@ -29,13 +30,21 @@ async function getCategories () {
     .then(res => res.json())
 }
 
+let catArray = [];
+
+// FUNZIONE RENDERIZZA CATEGORIE
 async function renderCategories(){
     
     let target = document.querySelector('.home-artists-area')
     let categories = await getCategories()
+    categories.categories.items.forEach(category => {
+        catArray.push(category.name)
+    })
+
+    console.log(catArray);
 
     for (let i = 0 ; i < 6; i++) {
-        let clone = cloneHomeMusicCard()
+        let clone = cloneCategoriesCard()
         let img = clone.querySelector('.img-first-section')
         let artistName = clone.querySelector('.name-first-section')
 
@@ -45,14 +54,56 @@ async function renderCategories(){
     }
   
 }
-
+// LANCIO FUNZIONE RENDERIZZA categorie
 renderCategories();
 
-function cloneHomeMusicCard () {
-    let temp = document.querySelector('#home-artist-card')
+
+// FUNZIONE CLONA CARD categorie
+function cloneCategoriesCard () {
+    let temp = document.querySelector('#home-categories-card')
     return temp.content.cloneNode(true)
 }
 
+async function getPlaylists () {
+        return await fetch (playlistUrl ,
+            {
+                headers : {
+                    "Content-Type": "application/json",
+                    Authorization : `Bearer ${token}`   
+                }
+            })
+        .then(res => res.json())
+}
+
+async function renderPlaylists () {
+    let target = document.querySelector('.container-playlist')
+    let playlists = await getPlaylists()
+
+   
+    for (let i = 0; i < 6; i++) {
+    let clone = clonePlaylistsCard()
+
+    let img = clone.querySelector('.playlist-img')
+    let title = document.querySelector('.playlist-title')
+    let name = clone.querySelector('.playlist-name')
+    let desc = clone.querySelector('.playlist-desc')
+    
+    img.src = playlists.playlists.items[i].images[0].url
+    name.innerText = playlists.playlists.items[i].name
+    desc.innerText = playlists.playlists.items[i].description
+
+    target.append(clone);
+    }
+    
+    title.innerText = playlists.message;
+}
+
+renderPlaylists();
+// FUNZIONE CLONA CARD PLAYLIST
+function clonePlaylistsCard () {
+    let temp = document.querySelector('#playlist-card')
+    return temp.content.cloneNode(true)
+}
 /**** SEZIONE TOKEN & COOKIES */
 
 async function getToken () {
@@ -83,14 +134,14 @@ async function scriviCookie() {
 
 
 
- function leggiCookie() {
+function leggiCookie() {
     let allCookies = document.cookie;
     let cookie = 'token';
 
     let arr = allCookies.split('; ');
 
     let res = '';
-    
+
     for(let i = 0; i < arr.length; i++) {
 
        chiave = arr[i].split('=')[0];//"token"
@@ -101,7 +152,7 @@ async function scriviCookie() {
          }
     }}
 
-    function checkCookie(){
+function checkCookie(){
         if (!leggiCookie()){
             scriviCookie();
             return

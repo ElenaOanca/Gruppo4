@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
@@ -42,38 +42,29 @@
   
     </section>
 
-    <template id="home-artist-card">
+    <template id="home-categories-card">
         <div class="col-6 mb-3 first-section-container"> <!-- flex  column gap-->
             <img  alt="" class="img-first-section  rounded-start-4"> <!--rounded-start-->
             <p class="name-first-section"> <!-- flex  align items center-->
     </template>
 
     <section>
-        <div class="container container-playlist"> <!-- rounded -->
-            <div> <!-- immagine  e p flex e column gap-->
-                <img src="" alt="">
-                <p class="playlist">
-                    Playlist
-                </p>
-                <p class="name-playlist">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                </p>
-            </div>
-            <div> <!-- space between -->
-                <div>
-                    <!-- cuore e tre puntini con space between con una max-width -->
-                </div>
-                <div> <!-- space between -->
-                    <p> <!-- sarà generata da js -->
-                        16 brani
-                    </p>
-                    <!--icona play -->
-                </div>
-            </div>
+        <div class="container container-playlist row"> <!-- rounded -->
+         <h4 class="playlist-title"></h4>
+
         </div>
     </section>
- </div>
 </main>
+
+<template id="playlist-card">
+    <div class="col-3"> <!-- immagine  e p flex e column gap-->
+        <img class="playlist-img img-fluid" alt="">
+        <p class="playlist-name">
+        </p>
+        <p class="playlist-desc ">
+        </p>
+    </div>
+</template>
 
  <footer id="footer">
     <div class="container-footer-fixed">
