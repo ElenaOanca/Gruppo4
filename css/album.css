@@ -11,6 +11,10 @@
 font-size: 25px;
 color: var(--ColorWhite);
 }
+/* ALBUM IMMAGINE */
+.album-img{
+    
+}
 
 /*  SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM */
 .grey-text{
@@ -26,6 +30,7 @@ color: var(--ColorWhite);
 .controllers i:hover{
     color: var(--ColorWhite)
 }
+
 .bi.bi-play-circle-fill{
     font-size: 40px;
 }
