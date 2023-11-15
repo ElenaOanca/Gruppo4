@@ -19,8 +19,8 @@ color: var(--ColorWhite);
     border-radius: 100%;
 }
 /*SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM */
-.grey-text{
-    color: var(--ColorGrey);
+.tempo-totale{
+    opacity: 0.5;
 }
 /* RIGA CON IMMAGINE ROTONDA E NOME ARTISTA */
 .secondary-title a{
@@ -153,5 +153,5 @@ background: linear-gradient(148deg, rgba(62,33,167,1) 19%, rgba(255,255,255,1) 6
     padding: 4px 10px;
     border-radius: 100%;
     background-color: var(--ColorGreen);
-    
 }
+
