@@ -16,115 +16,333 @@
             padding: 0;
         }
 
-        .little-round-image img {
+        .round-image {
             border-radius: 100%;
         }
 
         @media screen and (min-width : 978px) {
             .main-title {
-                font-size : 80px;
+                font-size: 80px;
             }
-            
+
+        }
+
+        .user-name {
+            overflow-x: hidden;
         }
     </style>
 </head>
 
 <body class="bg-dark text-white">
-    <div class="container">
-        <header>
-
-            <div class="header-container d-lg-flex align-items-center">
-                <div class="d-flex justify-content-center album-img-area mb-3 mt-5">
-                    <img src="https://picsum.photos/200" alt="" class="album-img">
-                </div>
-                <div class="album-info mb-3 lh-lg-2">
-                    <div class="main-title">Gioventù Bruciata</div>
-                    <div class="secondary-title"><span class="little-round-image"><img src="https://picsum.photos/20"
-                                alt=""></span>Pinguini Tattici Nucleari</div>
-                    <div class="grey-text">Album • 2017</div>
+    <div class="row">
+        <!-- SEZIONE NAV DI SX -->
+         <div class="d-none d-lg-block col-lg-2 bg-black">
+            <div class="container text-white">
+                <div>
+                    <i class="bi bi-three-dots p-3"></i>
                 </div>
 
-                <div class="controllers-container d-flex justify-content-between">
-                    <div class="controllers">
-                        <i class="bi bi-suit-heart"></i>
-                        <i class="bi bi-arrow-down-circle"></i>
-                        <i class="bi bi-three-dots-vertical"></i>
-                    </div>
-                    <div class="controllers">
-                        <i class="bi bi-shuffle"></i>
-                        <i class="bi bi-play-circle-fill"></i>
-                    </div>
+                <div class="nav flex-column mt-3">
+                    <a class="nav-link active text-white" href="#">
+                        <i class="bi bi-house-door-fill m-1"></i>
+                        Home
+                    </a>
+
+                    <a class="nav-link text-white" href="#">
+                        <i class="bi bi-search m-1"></i>
+                        Cerca
+                    </a>
+
+                    <a class="nav-link text-white mb-5" href="#">
+                        <i class="bi bi-collection-fill m-1"></i>
+                        La tua libreria
+                    </a>
+
+                    <a class="nav-link active text-white" href="#">
+                        <i class="bi bi-plus-square m-1"></i>
+                        Crea playlist
+                    </a>
+
+                    <a class="nav-link text-white" href="#">
+                        <i class="bi bi-heart-fill m-1"></i>
+                        Brani che piacciono
+                    </a>
+
+                    <a class="nav-link text-white" href="#">
+                        <i class="bi bi-bookmark-fill m-1"></i>
+                        I tuoi episodi
+                    </a>
                 </div>
+
+                <hr>
+
+                <!--ul con li per la navbar con d-none su un li per l'icona-->
+                <ul class="text-white mt-5">
+                    <li class=" d-flex justify-content-between">
+                        <p>Lorem ipsum dolor, sit amet consecte</p>
+                        <i class="bi bi-file-arrow-down-fill icon-right "></i>
+                    </li>
+                    <li class=" d-flex justify-content-between ">
+                        <p>Lorem ipsum dolor, sit amet consecte</p>
+                        <i class="bi bi-file-arrow-down-fill icon-right  d-none"></i>
+                    </li>
+                </ul>
 
             </div>
-        </header>
-
-        <div class="list">
-            <ul class="song-list list-group">
-                <li class="song-item d-flex justify-content-between align-items-center">
-                    <div class="song-item-info">
-                        <p class="list-main-title">Montanelli - Intro</p>
-                        <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                    </div>
-                    <div class="song-item-menu-icon">
-                        <i class="bi bi-three-dots-vertical"></i>
-                    </div>
-                </li>
-                <li class="song-item d-flex justify-content-between align-items-center">
-                    <div class="song-item-info">
-                        <p class="list-main-title">Sciare</p>
-                        <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                    </div>
-                    <div class="song-item-menu-icon">
-                        <i class="bi bi-three-dots-vertical"></i>
-                    </div>
-                </li>
-                <li class="song-item d-flex justify-content-between align-items-center">
-                    <div class="song-item-info">
-                        <p class="list-main-title">Polpette</p>
-                        <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                    </div>
-                    <div class="song-item-menu-icon">
-                        <i class="bi bi-three-dots-vertical"></i>
-                    </div>
-                </li>
-                <li class="song-item d-flex justify-content-between align-items-center">
-                    <div class="song-item-info">
-                        <p class="list-main-title">lasagne</p>
-                        <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                    </div>
-                    <div class="song-item-menu-icon">
-                        <i class="bi bi-three-dots-vertical"></i>
-                    </div>
-                </li>
-            </ul>
         </div>
-        <footer>
-            <div class="playing-info-area">
-                <span class="song-info">sdcvsdfvdfgbgfbfg</span>
-                <span class="controllers">
-                    <i class="bi bi-pc-display"></i>
-                    <i class="bi bi-heart"></i>
-                    <i class="bi bi-play-fill"></i>
-                </span>
-            </div>
-            <nav>
-                <div class="nav-bar d-flex text-center justify-content-around">
-                    <div class="nav-icon">
-                        <i class="bi bi-house-door-fill"></i>
-                        <p>Home</p>
-                    </div>
-                    <div class="nav-icon">
-                        <i class="bi bi-search"></i>
-                        <p>Cerca</p>
-                    </div>
-                    <div class="nav-icon">
-                        <i class="bi bi-collection"></i>
-                        <p>La tua libreria</p>
+        <!-- SEZIONE CENTRALE -->
+        <div class="container mid-section col-lg-8">
+            <header>
+                <!-- NAV BAR PER DESKTOP -->
+                <div class="d-none d-lg-flex justify-content-between mt-2">
+                    <!-- SEZIONE FRECCIE NAV -->
+                    <div><i class="bi bi-arrow-left-circle-fill"></i><i class="bi bi-arrow-right-circle-fill"></i></div>
+                    <!-- SEZIONE PULSANTE DX DROPDOWN -->
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://picsum.photos/20" class="round-image" alt="user profile img">
+                            Davide D'Amario
+                        </button>
+                        <!-- MENÙ A TENDINA -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Exit</a></li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-        </footer>
+                <!-- CONTAINER ALBUM INFO SIA MOBILE SIA DESKTOP -->
+                <div class="header-container d-lg-flex align-items-end">
+                    <div class="d-flex justify-content-center position-relative album-img-area mb-3 mt-5">
+                        <i class="bi bi-arrow-left position-absolute top-0 start-0"></i>
+                        <img src="https://picsum.photos/200" alt="" class="album-img">
+                    </div>
+                    <div class="album-info mb-3 lh-lg-2 ms-3">
+                        <!-- SCRITTA ALBUM SI SPOSTA CON DISPLAY NONE IN BASE AI BREAKPOINT -->
+                        <div class="d-none d-md-none d-lg-block">Album</div>
+                        <!-- NOME ALBUM -->
+                        <div class="main-title" id="album-title">Gioventù Bruciata</div>
+                        <!-- CONTAINER PER INFO TESTUALI ALBUM -->
+                        <div class="d-lg-flex gap-2">
+                            <!-- RIGA CON IMMAGINE ROTONDA E NOME ARTISTA -->
+                            <div class="secondary-title" id="artist-name"><span class="mx-2" id="artist-img"><img
+                                        class="round-image" src="https://picsum.photos/20" alt=""></span>Pinguini Tattici
+                                Nucleari</div>
+                            <!-- SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM -->
+                            <div class="grey-text d-lg-flex gap-2"><span class="d-lg-none">Album</span> • <span class=""
+                                    id="album-year">2017</span><span class="d-none d-lg-block" id="tracks-count">12
+                                    brani</span><span class="d-none d-lg-block" id="album-length">53min 20sec</span></div>
+                        </div>
+                    </div>
+                    <!-- SEZIONE CONTROLLERS MOBILE -->
+                    <div class="controllers-container d-flex  d-lg-none justify-content-between">
+                        <!-- SEZIONE CONTROLLERS MOBILE SX -->
+                        <div class="controllers">
+                            <i class="bi bi-suit-heart"></i>
+                            <i class="bi bi-arrow-down-circle"></i>
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <!-- SEZIONE CONTROLLERS MOBILE DX -->
+                        <div class="controllers">
+                            <i class="bi bi-shuffle"></i>
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--CONTAINER CANZONI DELL'ALBUM IN MOBILE -->
+            <div class="container mobile-list d-lg-none">
+                <!-- LISTA CANZONI DELL'ALBUM IN MOBILE -->
+                <ul class="song-list list-group">
+                    <li class="song-item d-flex justify-content-between align-items-center">
+                        <div class="song-item-info">
+                            <p class="list-main-title">Montanelli - Intro</p>
+                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                        </div>
+                        <div class="song-item-menu-icon">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                    </li>
+                    <li class="song-item d-flex justify-content-between align-items-center">
+                        <div class="song-item-info">
+                            <p class="list-main-title">Sciare</p>
+                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                        </div>
+                        <div class="song-item-menu-icon">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                    </li>
+                    <li class="song-item d-flex justify-content-between align-items-center">
+                        <div class="song-item-info">
+                            <p class="list-main-title">Polpette</p>
+                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                        </div>
+                        <div class="song-item-menu-icon">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                    </li>
+                    <li class="song-item d-flex justify-content-between align-items-center">
+                        <div class="song-item-info">
+                            <p class="list-main-title">lasagne</p>
+                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                        </div>
+                        <div class="song-item-menu-icon">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- SEZIONE CON TABELLA E CONTROLLERS PER DESKTOP  -->
+            <div class="d-none d-lg-block">
+                <div class="desktop-controllers">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <i class="bi bi-suit-heart"></i>
+                    <i class="bi bi-arrow-down-circle"></i>
+                    <i class="bi bi-three-dots"></i>
+                </div>
+                <!-- TABELLA CANZONI ALBUM IN DESKTOP -->
+                <table class="desktop-table table table-dark">
+                    <!-- INTESTAZIONE TABELLA -->
+                    <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>TITOLO</td>
+                            <td>RIPRODUZIONI</td>
+                            <td><i class="bi bi-clock"></i></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="song-id">1</td>
+                            <td>
+                                <div class="song-item-info">
+                                    <p class="list-main-title">Sciare</p>
+                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                                </div>
+                            </td>
+                            <td class="reproductions">12098310</td>
+                            <td class="song-length">1:35</td>
+                        </tr>
+                        <tr>
+                            <td class="song-id">1</td>
+                            <td>
+                                <div class="song-item-info">
+                                    <p class="list-main-title">Sciare</p>
+                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                                </div>
+                            </td>
+                            <td class="reproductions">12098310</td>
+                            <td class="song-length">1:35</td>
+                        </tr>
+                        <tr>
+                            <td class="song-id">1</td>
+                            <td>
+                                <div class="song-item-info">
+                                    <p class="list-main-title">Sciare</p>
+                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                                </div>
+                            </td>
+                            <td class="reproductions">12098310</td>
+                            <td class="song-length">1:35</td>
+                        </tr>
+                        <tr>
+                            <td class="song-id">1</td>
+                            <td>
+                                <div class="song-item-info">
+                                    <p class="list-main-title">Sciare</p>
+                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
+                                </div>
+                            </td>
+                            <td class="reproductions">12098310</td>
+                            <td class="song-length">1:35</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- FOOTER -->
+            <footer>
+                <!-- PLAYER BAR IN MOBILE -->
+                <div class="playing-info-area d-lg-none">
+                    <span class="song-info">sdcvsdfvdfgbgfbfg</span>
+                    <span class="controllers">
+                        <i class="bi bi-pc-display"></i>
+                        <i class="bi bi-heart"></i>
+                        <i class="bi bi-play-fill"></i>
+                    </span>
+                </div>
+                <!-- NAV BAR IN MOBILE -->
+                <nav>
+                    <div class="nav-bar d-flex d-lg-none text-center justify-content-around">
+                        <div class="nav-icon">
+                            <i class="bi bi-house-door-fill"></i>
+                            <p>Home</p>
+                        </div>
+                        <div class="nav-icon">
+                            <i class="bi bi-search"></i>
+                            <p>Cerca</p>
+                        </div>
+                        <div class="nav-icon">
+                            <i class="bi bi-collection"></i>
+                            <p>La tua libreria</p>
+                        </div>
+                    </div>
+                </nav>
+            </footer>
+        </div>
+        <!-- SEZIONE NAV DI DX -->
+        <div class="col-lg-2 d-none d-lg-block bg-black">
+            <div class="container">
+                <div class="d-flex justify-content-between">
+                        <p>Attività amici</p>
+                    <div class="controller-section-friends">
+                        <button><i class="bi bi-x-lg"></i></button>
+                        <button><i class="bi bi-person-add"></i></button>
+                    </div>
+                </div>
+                <!-- SEZIONE CARD ATTIVITA` AMICI -->
+                <div class="friends-card row">
+                    <div class="col-2">
+                        <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
+                    </div>
+                    <div class="col-8">
+                        <p class="m-0 friend-user-name">Charlie Hookham</p>
+                        <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
+                        <i class="bi bi-disc friend-song"></i><span> EP III</span>
+                    </div>
+                    <div class="col-2 p-0">
+                        <p class="friend-last-played">4 ore</p>
+                    </div>
+                </div>
+                <!-- SEZIONE CARD ATTIVITA` AMICI -->
+                <div class="friends-card row">
+                    <div class="col-2">
+                        <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
+                    </div>
+                    <div class="col-8">
+                        <p class="m-0 friend-user-name">Charlie Hookham</p>
+                        <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
+                        <i class="bi bi-disc friend-song"></i><span> EP III</span>
+                    </div>
+                    <div class="col-2 p-0">
+                        <p class="friend-last-played">4 ore</p>
+                    </div>
+                </div>
+                <!-- SEZIONE CARD ATTIVITA` AMICI -->
+                <div class="friends-card row">
+                    <div class="col-2">
+                        <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
+                    </div>
+                    <div class="col-8">
+                        <p class="m-0 friend-user-name">Charlie Hookham</p>
+                        <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
+                        <i class="bi bi-disc friend-song"></i><span> EP III</span>
+                    </div>
+                    <div class="col-2 p-0">
+                        <p class="friend-last-played">4 ore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
