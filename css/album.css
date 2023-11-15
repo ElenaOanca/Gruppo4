@@ -14,7 +14,7 @@ color: var(--ColorWhite);
 .album-img{
     box-shadow: 0px  0px 15px black;
 }
-/*  SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM */
+/*SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM */
 .grey-text{
     color: var(--ColorGrey);
 }
@@ -23,8 +23,6 @@ color: var(--ColorWhite);
     text-decoration: none;
     color: var(--ColorWhite);
 }
-
-
 /* SEZIONE CONTROLLERS MOBILE */
 .controllers i{
     font-size: 23px;
@@ -49,7 +47,9 @@ color: var(--ColorWhite);
 .list-main-title{
     margin-bottom: 0px;
 }
-
+.song-item:hover{
+    color: var(--ColorGreen);
+}
 .list-second-title{
 color: var(--ColorGrey);
 }
