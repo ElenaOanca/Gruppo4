@@ -66,7 +66,7 @@ ul{
 /* PLAYER BAR */
 .playing-info-area{
     justify-content: end;
-    padding: 20px;
+    padding: 12px;
     background-color: #262626;
     border-radius: 15px;
     display: flex;
@@ -90,6 +90,14 @@ color: var(--ColorWhite);
 /* NAV BAR IN MOBILE */
 .nav-icon i{
     font-size: 22px;
+}
+.nav-icon p{
+    margin-bottom: 15px;
+}
+
+.nav-bar{
+    background: rgb(62,33,167);
+    background: linear-gradient(180deg, rgba(62,33,167,0) 0%, rgba(0,0,0,1) 40%);
 }
 /* BREKPOINT */
 @media screen and (min-width : 978px) {
@@ -154,4 +162,37 @@ background: linear-gradient(148deg, rgba(62,33,167,1) 19%, rgba(255,255,255,1) 6
     border-radius: 100%;
     background-color: var(--ColorGreen);
 }
+/* TABELLA ALBUM DESKTOP */
+.table>:not(caption)>*>* {
+    padding: 0;
+}
 
+td.song-id{
+    text-align: center;
+}
+
+.song-id,td{
+    border-bottom: 0;
+}
+
+td.reproductions{
+    color: var(--ColorGrey);
+    padding-top: 25px;
+}
+
+td.song-length{
+    color: var(--ColorGrey);
+    padding-top: 25px;
+}
+
+thead tr td{
+    border-bottom: 1px solid var(--ColorGrey);
+}
+
+/* SEZIONE NAV DI DX */
+.controller-section-friends button{
+    border: 0;
+    background: none;
+    color: var(--ColorGrey);
+    font-size: 20px;
+}
