@@ -4,6 +4,7 @@
     --ColorWhite: white;
     --ColorGrey: grey;
     --ColorGreen:green;
+    --ColorBlack:black;
 }
 /* FRECCIA SINISTRA MOBILE */
 .bi.bi-arrow-left{
@@ -74,17 +75,15 @@ ul{
     margin-left: 20px;
 }
 
-
 .bi.bi-play-fill.play{
 font-size: 35px; 
 padding: 0;
 color: var(--ColorWhite);
 }
 
-
-
-
-
+.controllers .bi.bi-heart:hover{
+    color: var(--ColorGreen);
+}
 
 
 
