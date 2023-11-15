@@ -136,4 +136,22 @@ background: linear-gradient(148deg, rgba(62,33,167,1) 19%, rgba(255,255,255,1) 6
 .dropdown-toggle{
     border-radius: 15px;
 }
-/* SEZIONE CENTRALE PER DESKTOP */
+/* SEZIONE CENTRALE CONTROLLERS DESKTOP */
+.desktop-controllers{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.desktop-controllers a{
+    color: var(--ColorWhite);
+    margin-right: 20px;
+}
+.desktop-controllers a:hover{
+    color: var(--ColorGreen);
+}
+
+.bi.bi-play-fill.play{
+    padding: 4px 10px;
+    border-radius: 100%;
+    background-color: var(--ColorGreen);
+    
+}
