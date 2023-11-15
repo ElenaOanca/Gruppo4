@@ -170,7 +170,7 @@ async function renderTracks() {
     // for (let index = 0; index < tracks.tracks.length; index++) {
     //     if (index >= 8) break; // Esce dal ciclo  8 elementi
     let tableBody = document.querySelector('.desktop-table tbody');
-    tracks.tracks.slice(0,8).forEach((track, index) => { 
+    tracks.tracks.slice(0,5).forEach((track, index) => { 
         
         let row = document.createElement('tr');
 
@@ -211,6 +211,50 @@ async function renderTracks() {
 
         // Aggiunta della riga completa al corpo della tabella
         tableBody.appendChild(row);
+
+
+          // Per schermi lg
+    let lgTableBody = document.querySelector('.lg-table tbody');
+    tracks.tracks.slice(0,5).forEach((track, index) => { 
+        let row = document.createElement('tr');
+    
+        let songIdCell = document.createElement('td');
+        songIdCell.className = 'songId';
+        songIdCell.textContent = index + 1;
+        row.appendChild(songIdCell);
+
+        // Aggiunta dell'immagine dell'album
+        let imageCell = document.createElement('td');
+        let img = document.createElement('img');
+        img.src = track.album.images[0].url;
+        img.width = 50;
+        img.alt = track.name;
+        imageCell.appendChild(img);
+        row.appendChild(imageCell);
+
+        // Aggiunta del nome e della popolarità della canzone
+        let songInfoCell = document.createElement('td');
+        let songName = document.createElement('p');
+        songName.className = 'list-second-title titoloCanzone';
+        songName.textContent = track.name;
+        songInfoCell.appendChild(songName);
+
+        let songPopularity = document.createElement('p');
+        songPopularity.className = 'ascolti';
+        songPopularity.textContent = `${track.popularity} Popolarità`;
+        songInfoCell.appendChild(songPopularity);
+        row.appendChild(songInfoCell);
+
+        // Aggiunta dell'icona dei tre punti
+        let iconCell = document.createElement('td');
+        let icon = document.createElement('i');
+        icon.className = 'bi bi-three-dots-vertical';
+        iconCell.appendChild(icon);
+        row.appendChild(iconCell);
+
+        // Aggiunta della riga completa al corpo della tabella lg
+        lgTableBody.appendChild(row);
+    });
     });
 }
 
