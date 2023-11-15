@@ -5,7 +5,6 @@
     --ColorGrey: grey;
     --ColorGreen:green;
 }
-
 /* FRECCIA SINISTRA MOBILE */
 .bi.bi-arrow-left{
 font-size: 25px;
@@ -15,12 +14,10 @@ color: var(--ColorWhite);
 .album-img{
     box-shadow: 0px  0px 15px black;
 }
-
 /*  SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM */
 .grey-text{
     color: var(--ColorGrey);
 }
-
 /* SEZIONE CONTROLLERS MOBILE */
 .controllers i{
     font-size: 23px;
@@ -31,19 +28,50 @@ color: var(--ColorWhite);
     color: var(--ColorWhite)
 }
 /* TASTO PLAY BIANCO A VERDE */
-.bi.bi-play-circle-fill{
-    font-size: 40px;
+.bi.bi-caret-right-fill{
+    padding: 4px 12px;
+    font-size: 30px;
     color: var(--ColorWhite);
+    border-radius: 100%;
+    background-color: var(--ColorGreen);
 }
-.bi.bi-play-circle-fill:hover{
-    color: var(--ColorGreen);
+.bi.bi-caret-right-fill:hover{
+    cursor: pointer;
+}
+/* LISTA CANZONI DELL'ALBUM IN MOBILE */
+.list-main-title{
+    margin-bottom: 0px;
 }
 
-ul {
+.list-second-title{
+color: var(--ColorGrey);
+}
+/* LISTE GENERALI DI TUTTO HTML */
+ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+/* PLAYER BAR */
+.playing-info-area{
+    justify-content: center;
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.playing-info-area .controllers i{
+    font-size: 28px;
+    margin-left: 10px;
+    margin-right: 13px;
+}
+
+
+
+
+
 
 .round-image {
     border-radius: 100%;
