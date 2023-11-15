@@ -1,5 +1,7 @@
 const url = "https://api.spotify.com/v1/browse/categories"
-const token = "Bearer BQAxrTFOJcOiOj4RbuywRUHm3BPEUTiw4Yov8q4dDgQoHW1NRtKvroCW_U_Dkrh7Qu8Qt4uEukPV1uO4XJ_cIrm1X9eTJ9w_XY5_cA6j2X7rtSMzkTU"
+checkCookie()
+const token = leggiCookie()
+
 
 
 class Alert {
@@ -21,7 +23,7 @@ async function getCategories () {
         {
             headers : {
                 "Content-Type": "application/json",
-                Authorization : token   
+                Authorization : `Bearer ${token}`   
             }
         })
     .then(res => res.json())
@@ -29,11 +31,8 @@ async function getCategories () {
 
 async function renderCategories(){
     
-    
-    
     let target = document.querySelector('.home-artists-area')
     let categories = await getCategories()
-    console.log(categories.categories.items[0]);
 
     for (let i = 0 ; i < 6; i++) {
         let clone = cloneHomeMusicCard()
@@ -44,27 +43,67 @@ async function renderCategories(){
         artistName.innerText = categories.categories.items[i].name
         target.append(clone)
     }
-
-
-    // for (let i = 0; i < 6; i++) {
-    //     let query = Math.floor(Math.random() * 150)
-    //     let artist = await getCategories(query)
-    //     console.log(artist);
-
-    //     let clone = cloneHomeMusicCard()
-        
-    //     let img = clone.querySelector('.img-first-section')
-    //     let artistName = clone.querySelector('.name-first-section')
-
-    //     artistName.innerText = artist.name
-    //     img.src = artist.picture_medium
-    //     target.append(clone)
-
-// }    
+  
 }
+
 renderCategories();
 
 function cloneHomeMusicCard () {
     let temp = document.querySelector('#home-artist-card')
     return temp.content.cloneNode(true)
 }
+
+/**** SEZIONE TOKEN & COOKIES */
+
+async function getToken () {
+    return await fetch ("https://accounts.spotify.com/api/token",
+        {
+            method : "POST",
+            headers : {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body : "grant_type=client_credentials&client_id=3d95631fa2714b63a86360548af955cd&client_secret=8f03a40917cb4cca9c4c5a9c476fa168"
+        })
+   .then(res => res.json())
+
+}
+
+
+async function scriviCookie() {
+    let token = await getToken()
+    let now = new Date();//Date crea un oggetto data contenente data ed ora attuali
+    now.getHours()//ora attuale
+    now.setHours(now.getHours() + 1 );//All'ora attuale aggiungo un'ora
+
+
+    let scadenza = `expires= + ${now.toUTCString()}`;//converto la data nel formato utc, richiesto per il corretto funzionamento del cookie. esempio: Wed, 14 Jun 2017 07:00:00 GMT
+
+    document.cookie =`token =${token.access_token};${scadenza}`;
+ } 
+
+
+
+ function leggiCookie() {
+    let allCookies = document.cookie;
+    let cookie = 'token';
+
+    let arr = allCookies.split('; ');
+
+    let res = '';
+    
+    for(let i = 0; i < arr.length; i++) {
+
+       chiave = arr[i].split('=')[0];//"token"
+       valore = arr[i].split('=')[1];//valore token
+        if(cookie == chiave){
+           res = valore;
+           return res;
+         }
+    }}
+
+    function checkCookie(){
+        if (!leggiCookie()){
+            scriviCookie();
+            return
+        }
+    }
