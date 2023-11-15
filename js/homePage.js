@@ -1,7 +1,7 @@
 const catUrl = "https://api.spotify.com/v1/browse/categories"
 const playlistUrl = "https://api.spotify.com/v1/browse/featured-playlists?country=IT&locale=it_IT"
-checkCookie()
-const token =  leggiCookie()
+let token =  checkCookie()
+
 
 
 // SEZIONE CLASSE OGGETTI
@@ -34,7 +34,7 @@ let catArray = [];
 
 // FUNZIONE RENDERIZZA CATEGORIE
 async function renderCategories(){
-    
+
     let target = document.querySelector('.home-artists-area')
     let categories = await getCategories()
     categories.categories.items.forEach(category => {
@@ -80,7 +80,7 @@ async function renderPlaylists () {
     let playlists = await getPlaylists()
 
    
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 8; i++) {
     let clone = clonePlaylistsCard()
 
     let img = clone.querySelector('.playlist-img')
@@ -91,11 +91,11 @@ async function renderPlaylists () {
     img.src = playlists.playlists.items[i].images[0].url
     name.innerText = playlists.playlists.items[i].name
     desc.innerText = playlists.playlists.items[i].description
+    title.innerText = playlists.message;
 
     target.append(clone);
     }
     
-    title.innerText = playlists.message;
 }
 
 renderPlaylists();
@@ -116,7 +116,6 @@ async function getToken () {
             body : "grant_type=client_credentials&client_id=3d95631fa2714b63a86360548af955cd&client_secret=8f03a40917cb4cca9c4c5a9c476fa168"
         })
    .then(res => res.json())
-
 }
 
 
@@ -126,13 +125,10 @@ async function scriviCookie() {
     now.getHours()//ora attuale
     now.setHours(now.getHours() + 1 );//All'ora attuale aggiungo un'ora
 
-
     let scadenza = `expires= + ${now.toUTCString()}`;//converto la data nel formato utc, richiesto per il corretto funzionamento del cookie. esempio: Wed, 14 Jun 2017 07:00:00 GMT
 
     document.cookie =`token =${token.access_token};${scadenza}`;
  } 
-
-
 
 function leggiCookie() {
     let allCookies = document.cookie;
@@ -153,8 +149,8 @@ function leggiCookie() {
     }}
 
 function checkCookie(){
-        if (!leggiCookie()){
+    let res = leggiCookie();
+        if (!res){
             scriviCookie();
-            return
-        }
+        } return res;
     }
