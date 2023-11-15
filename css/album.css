@@ -84,7 +84,10 @@ color: var(--ColorWhite);
 .controllers .bi.bi-heart:hover{
     color: var(--ColorGreen);
 }
-
+/* NAV BAR IN MOBILE */
+.nav-icon i{
+    font-size: 22px;
+}
 
 
 
