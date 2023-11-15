@@ -1,10 +1,15 @@
 /* INIZIO MOBILE ALBUM */
+/* ROOT per i colori */
+:root{
+    --ColorWhite: white;
+    --ColorGrey: grey;
+}
 
-
-
-
-
-
+/* FRECCIA SINISTRA MOBILE */
+.bi.bi-arrow-left{
+font-size: 25px;
+color: var(--ColorWhite);
+}
 
 
 ul {
