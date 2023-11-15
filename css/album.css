@@ -3,7 +3,7 @@
 :root{
     --ColorWhite: white;
     --ColorGrey: grey;
-    --ColorGreen:green:
+    --ColorGreen:green;
 }
 
 /* FRECCIA SINISTRA MOBILE */
@@ -13,7 +13,7 @@ color: var(--ColorWhite);
 }
 /* ALBUM IMMAGINE */
 .album-img{
-    box-shadow: 0px  0px 25px black;
+    box-shadow: 0px  0px 15px black;
 }
 
 /*  SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM */
@@ -30,11 +30,14 @@ color: var(--ColorWhite);
 .controllers i:hover{
     color: var(--ColorWhite)
 }
-
+/* TASTO PLAY BIANCO A VERDE */
 .bi.bi-play-circle-fill{
     font-size: 40px;
+    color: var(--ColorWhite);
 }
-
+.bi.bi-play-circle-fill:hover{
+    color: var(--ColorGreen);
+}
 
 ul {
     list-style-type: none;
