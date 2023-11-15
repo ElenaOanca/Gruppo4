@@ -1,11 +1,11 @@
-const QUERY_URL = "https://api.spotify.com/v1/search?q=";
-const token = "Bearer BQCssO8UTDbIV-9A75hRAMwrlXj252jt_BzrrXpQXlKJWzAsqNPpGT8p2Z9-RoGQvzgAAOzms4Sbq8lqjU_IwV8GkTqk_wuGxQYuZu9gzUmLaMR0cl0"
+const url = "https://api.spotify.com/v1/search?q=";
+const token = "Bearer BQBhvjWDFRVTSzGryAErK8fcey4DKBYh8RT8Z3qhObeuzbEqLBobSAQ-WkfbmwFL1IicXEkFdDn102M2u-ousrIZkccE_6kY9NfcjdtT1qq_yg_DW9E"
 
 const searchBox = document.querySelector('.searchForm input');
 
 
-async function searchByQuery (query) {
-    return await fetch (`${QUERY_URL}${query}&type=artist` , {
+async function searchByQueryArtist (query) {
+    return await fetch (`${url}${query}&type=artist` , {
         headers : {
             "Content-Type": "application/json",
             Authorization : token
@@ -14,38 +14,86 @@ async function searchByQuery (query) {
     .then(res => res.json())
 }
 
-searchBox.addEventListener('keydown', async (e) => {
-    if (e.keyCode === 13) {
-        // Il tasto "Enter" è stato premuto
-        let results = await searchByQuery(searchBox.value);
-        console.log(results);
-        let target = document.querySelector('.targetSearch')
-        let clone = cloneSearchResults()
-        let img = clone.querySelector('.img-risultati')
-        let artistName = clone.querySelector('.nomi-risultati')
-        let btn = clone.querySelector('.btn-risultati')
-    
-        for (let i = 0 ; i <6 ; i++) {
-           if (img.src = results.artists.items[i].images[0].url) {
-            img.src = results.artists.items[i].images[0].url
-           } else{
-            img.src = 'https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc'
-           }
-            artistName.innerText = `Ascolta ${results.artists.items[i].name}`
-            btn.href = results.artists.items[i].uri
-            btn.innerText = 'Ascolta ora'
-            target.append(clone)
-            searchBox.value =''
+async function searchByQuerySong(query) {
+    return await fetch (`${url}${query}&type=track` , {
+        headers : {
+            "Content-Type": "application/json",
+            Authorization : token
         }
-
-    } else {
-        return
-
-    }
-});
-
-function cloneSearchResults () {
-    let temp = document.querySelector('#risultatoSearchPage')
-    return temp.content.cloneNode(true)
+        })
+    .then(res => res.json())
 }
+
+
+
+
+async function renderArtistsSearch() {
+    searchBox.addEventListener('keydown', async (e) => {
+        if (e.keyCode === 13) {
+            let artist = await searchByQueryArtist(searchBox.value);
+            let target = document.querySelector('.targetSearchArtisti');
+            let titleSearch = document.querySelector('.title-searchArtist');
+            
+            titleSearch.innerText = 'Artisti';
+            
+            
+                let items = artist.artists.items;
+                items.forEach(item => {
+                    if (item.popularity > 50){
+                        let temp = document.querySelector('#risultatoSearchPage')
+                        let clone =  temp.content.cloneNode(true)
+                                let img = clone.querySelector('.img-artist');
+                                let btn = clone.querySelector('.btn-artist');
+                                let name = clone.querySelector('.nome-artist');
+        
+                                img.src = item.images[0].url;
+                                btn.href = "artista.html?id=" + item.id;
+                                btn.innerText = 'Ascolta ora';
+                                name.innerText = item.name;
+                                searchBox.value = '';
+                                target.append(clone);
+                    } 
+                    return 
+                });
+        }
+    });
+}
+
+renderArtistsSearch();
+
+
+async function renderSongsSearch() {
+    searchBox.addEventListener('keydown', async (e) => {
+        if (e.keyCode === 13) {
+            let song = await searchByQuerySong(searchBox.value);
+            let target = document.querySelector('.targetSearchsong');
+            let titleSearchSong = document.querySelector('.title-searchSong');
+            console.log(song);
+            titleSearchSong.innerText = 'Canzoni correlate';
+            let items = song.tracks.items
+            items.forEach((item) => {
+                if (item.popularity > 50){
+                    let temp = document.querySelector('#risultatoSearchPageSong')
+                    let clone= temp.content.cloneNode(true)
+                    
+                            let img = clone.querySelector('.img-song');
+                            let btn = clone.querySelector('.btn-song');
+                            let name = clone.querySelector('.nomi-song');
+                        console.log(clone);
+                                img.src = item.album.images[0].url;
+                                btn.href = "album.html?id=" + item.id;
+                                btn.innerText = 'Ascolta ora';
+                                name.innerText = item.name;
+                                searchBox.value = '';
+                                target.append(clone);
+                       
+                        }
+            })
+        }
+    });
+}
+
+renderSongsSearch();
+
+
 

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  
+
 
   <div class="container bg-dark text-white pb-5">
     <h3 class="p-2 fs-1 fw-bold">Cerca</h3>
@@ -20,17 +20,37 @@
       <i class="bi bi-search searchIcons text-white"></i>
       <input type="text" class="searchValue text-white" placeholder="Cosa vuoi ascoltare?">
     </div>
-  
-
-  <div class="targetSearch">
-   
-  </div>
 
 
+    <div class="targetSearchArtisti row">
+      <h2 class="title-searchArtist mt-2 fs-1 text-center"> </h2>
+    </div>
 
 
+    <template id="risultatoSearchPage">
+      <!-- artist cotnent --> 
+      <div class="p-3 ms-2 mt-2 col-11  col-md-5 col-lg-4 single-card">
+        <p class="frase-card text-white fw-bold fs-5 nome-artist">
+        </p>
+        <img src="assets/imgs/search/image-2.jpg" alt="" class="img-artist ">
+        <a href="#" class="btn-artist mt-3"> </a>
+      </div>
+    </template>
+
+    <div class="targetSearchsong ">
+      <h2 class="title-searchSong mt-2 fs-1 text-center"> </h2>
+    </div>
 
 
+<template id="risultatoSearchPageSong">
+    <div class="col-12 col-6-md col-4-lg container-song">
+      <img src="" alt="" class="img-song">
+        <p class="nomi-song"> </p>
+        <a href="#" class="btn-song">  </a>
+      
+
+      </div>
+</template>
 
     <div>
       <h3 class="text-center mt-4 mb-3">Sfoglia tutto</h3>
@@ -43,7 +63,7 @@
             <p class="frase-card text-white fw-bold fs-5">
               Podcast
             </p>
-            <img src="assets/imgs/search/image-2.jpg" alt="" class="img-card">
+            <img src="assets/imgs/search/image-2.jpg" alt="" class="img-artist">
           </div>
         </div>
 
@@ -52,23 +72,17 @@
             <p class="frase-card text-white fw-bold fs-5">
               Create per te
             </p>
-            <img src="assets/imgs/search/image-4.jpg" alt="" class="img-card">
+            <img src="assets/imgs/search/image-4.jpg" alt="" class="img-artist">
           </div>
         </div>
 
 
+      </div>
     </div>
   </div>
-</div> 
 
 
-<template id="risultatoSearchPage">
-    <div class="col-12 col-6-md col-4-lg container-risultati">
-      <img src="assets/imgs/search/image-6.jpg" alt="" class="img-risultati"> 
-      <p class="nomi-risultati">   </p>
-      <a href="#" class="btn-risultati"> </a> 
-    </div>
-</template>
+
 
 
   <script src="js/search.js"></script>

@@ -1,18 +1,14 @@
-
-
 .searchForm {
   position: relative;
-  
 }
-.searchIcons{
+.searchIcons {
   position: absolute;
   font-size: 30px;
   top: 12px;
   left: 17px;
   color: silver;
-
 }
-.searchValue{
+.searchValue {
   background-color: #1b1b1b;
   padding: 17px;
   color: white;
@@ -23,61 +19,77 @@
   border-radius: 10px;
 }
 
-
- .single-card{
+.single-card {
   position: relative;
   height: 130px;
   border-radius: 7px;
   overflow: hidden;
- }
-   .img-card{
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-    right: -20px;
-    transform: rotate(25deg);
-    border-radius: 20px;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 5px black;
-   }
+  background: linear-gradient(45deg, black, transparent);
+}
+.img-artist {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  transform: rotate(25deg);
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px black;
+}
 
-  .container-risultati{
-    margin: 20px 0;
-    background-color: purple;
-    display: flex;
-    padding: 15px;
-    border-radius: 100px;
-    justify-content: space-between;
-  }
-  .img-risultati{
-    border-radius: 100%;
-    width: 50px;
+.container-song {
+  display: flex;
+  background: linear-gradient(45deg, black, transparent);
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 100px;
+  column-gap: 20px;
 }
-.img-risultati:hover{
+.img-song {
+  border-radius: 100%;
+  width: 50px;
+}
+.img-song:hover {
   cursor: pointer;
-box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 1px 5px black;
 }
-.nomi-risultati{
-  font-size: 26px;
+.nomi-song {
+  font-size: 10px;
   font-weight: bold;
   margin: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.nomi-risultati:hover{
+.nomi-song:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-.btn-risultati{
-  background-color: green;
-  color: white;
-  text-decoration: none;
-  border-radius: 100px;
-  padding: 13px;
-  box-shadow: 1px 1px 5px black;
+.btn-song {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 0px 8px;
+    box-shadow: 1px 1px 5px black;
+    margin: 10px;
 }
-.btn-risultati:hover{
+.btn-song:hover {
   text-decoration: underline;
   box-shadow: none;
   cursor: pointer;
+}
 
+.btn-artist {
+  background-color: green;
+  position: absolute;
+  bottom: 12px;
+  color: white;
+  margin-top: 205px;
+  text-decoration: none;
+  border-radius: 100px;
+  padding: 5px 8px;
+  box-shadow: 1px 1px 5px black;
 }
