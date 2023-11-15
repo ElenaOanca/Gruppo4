@@ -7,18 +7,17 @@
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/circular-font.css">
   <link rel="stylesheet" href="assets/css/searchPage.css">
   <title>Search Page</title>
 </head>
 
 <body>
-
-
-  <div class="container bg-dark text-white pb-5">
-    <h3 class="p-2 fs-1 fw-bold">Cerca</h3>
+  <div class="container text-white pb-5 main-container">
+    <h3 class="pt-5 pb-3 fs-1 cercaTitle">Cerca</h3>
     <div class="searchForm">
       <i class="bi bi-search searchIcons text-white"></i>
-      <input type="text" class="searchValue text-white" placeholder="Cosa vuoi ascoltare?">
+      <input type="text" class="searchValue text-white rounded-0" placeholder="Cosa vuoi ascoltare?">
     </div>
 
 <div class="container">
@@ -40,17 +39,35 @@
 
 
     <div>
-      <h3 class="text-center mt-4 mb-3">Sfoglia tutto</h3>
+      <h3 class="text-center mt-4 sfogliaTitle">Sfoglia tutto</h3>
     </div>
     <div class="container-cards">
 
-      <div class="row gy-3 my-3 container-cards">
+      <div class="row gy-3 my-2 container-cards">
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="p-3   single-card bg-warning">
-            <p class="frase-card text-white fw-bold fs-5">
+          <div class="p-2 single-card bg-warning">
+            <p class="frase-card text-white fw-bold">
               Podcast
             </p>
             <img src="assets/imgs/search/image-2.jpg" alt="" class="img-artist">
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="p-2  single-card bg-primary">
+            <p class="frase-card text-white fw-bold">
+              Create per te
+            </p>
+            <img src="assets/imgs/search/image-4.jpg" alt="" class="img-card">
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="p-3  single-card bg-warning">
+            <p class="frase-card text-white fw-bold fs-5">
+              Podcast
+            </p>
+            <img src="assets/imgs/search/image-2.jpg" alt="" class="img-card">
           </div>
         </div>
 
@@ -59,52 +76,71 @@
             <p class="frase-card text-white fw-bold fs-5">
               Create per te
             </p>
-            <img src="assets/imgs/search/image-4.jpg" alt="" class="img-artist">
+            <img src="assets/imgs/search/image-4.jpg" alt="" class="img-card">
           </div>
         </div>
 
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="p-3   single-card bg-warning">
+            <p class="frase-card text-white fw-bold fs-5">
+              Podcast
+            </p>
+            <img src="assets/imgs/search/image-2.jpg" alt="" class="img-card">
+          </div>
+        </div>
 
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="p-3  single-card bg-success">
+            <p class="frase-card text-white fw-bold fs-5">
+              Create per te
+            </p>
+            <img src="assets/imgs/search/image-4.jpg" alt="" class="img-card">
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="p-3  single-card bg-warning">
+            <p class="frase-card text-white fw-bold fs-5">
+              Podcast
+            </p>
+            <img src="assets/imgs/search/image-2.jpg" alt="" class="img-card">
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="p-3  single-card bg-success">
+            <p class="frase-card text-white fw-bold fs-5">
+              Create per te
+            </p>
+            <img src="assets/imgs/search/image-4.jpg" alt="" class="img-card">
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="p-3  single-card bg-warning">
+            <p class="frase-card text-white fw-bold fs-5">
+              Podcast
+            </p>
+            <img src="assets/imgs/search/image-2.jpg" alt="" class="img-card">
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="p-3  single-card bg-success">
+            <p class="frase-card text-white fw-bold fs-5">
+              Create per te
+            </p>
+            <img src="assets/imgs/search/image-4.jpg" alt="" class="img-card">
+          </div>
+        </div>
       </div>
+      
+
+     
     </div>
   </div>
 
 
-  <!-- template section  -->
-  <template id="risultatoSearchPage">
-    <!-- artist cotnent -->
-    <div class="col-12 col-md-6 col-lg-3  p-3 my-3 single-card">
-      <p class="frase-card text-white fw-bold fs-5 nome-artist">
-      </p>
-      <img src="assets/imgs/search/image-2.jpg" alt="" class="img-artist ">
-      <a href="#" class="btn-artist mt-3"> </a>
-    </div>
-
-
-
-  </template>
-  <template id="risultatoSearchPageSong">
-    <div class="col-12 col-md-6 col-lg-3  container-song">
-      <img src="" alt="" class="img-song">
-      <p class="nomi-song"> </p>
-      <a href="#" class="btn-song"> </a>
-
-
-    </div>
-  </template>
-
-  <template id="risultatoSearchAlbum">
-
-    <div class="card col-12 col-md-6 col-lg-3 bg-dark p-0 rounded-2 text-white my-5">
-      <img src="" class="card-img-top img-album" alt="...">
-      <div class="card-body  ">
-        <h5 class="card-title nome-album"></h5>
-        <p class="card-text releaseDate-album">Some quick example text to build on the card title and make up the bulk
-          of the card's content.</p>
-        <a href="#" class="btn btn-success btn-album"></a>
-      </div>
-    </div>
-  </template>
-  <script src="js/search.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

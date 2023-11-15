@@ -1,9 +1,31 @@
+.main-container{
+  background-color: #121212;
+  height: 100%;
+}   
+
+.searchValue,
+.title-player p,
+.bi-play-fill:hover,
+.bi-speaker:hover,
+.bi-heart:hover,
+.icons-frase:hover {
+  color:white;
+}
+
+   /*form di ricerca*/
 .searchForm {
   position: relative;
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+  
 }
-.searchIcons {
+
+   /*icona form*/
+.searchIcons{
   position: absolute;
-  font-size: 30px;
+  font-size: 25px;
   top: 12px;
   left: 17px;
   color: silver;
@@ -11,18 +33,36 @@
 .searchValue {
   background-color: #1b1b1b;
   padding: 17px;
-  color: white;
-  padding-left: 59px;
-  font-size: 23px;
+
+  padding-left: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
   border: none;
   width: 100%;
   border-radius: 10px;
 }
 
-.single-card {
+   /*card centro pagina */
+
+.cercaTitle{
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-BoldItalic.otf);
+    font-weight: 700;
+    font-style: normal;
+   }
+
+.sfogliaTitle {
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Medium.otf);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+   }
+
+.single-card{
   position: relative;
-  height: 130px;
-  border-radius: 7px;
+  height: 80px;
+  border-radius: 3px;
   overflow: hidden;
   background: linear-gradient(45deg, black, transparent);
 }
@@ -94,3 +134,120 @@
   box-shadow: 1px 1px 5px black;
 }
 
+
+
+.frase-card {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+  position: relative;
+  z-index: 1;
+  font-size: 0.8rem;
+ }
+
+.img-card{
+    width: 60px;
+    position: absolute;
+    bottom: 0px;
+    right: -15px;
+    transform: rotate(25deg);
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px black;
+    z-index: 0;
+}
+
+   /*  player position fixed */
+
+   .container-footer-fixed {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+   }
+
+   .player{
+    display: flex;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #282828f5;
+    color: rgba(255, 255, 255, 0.603);
+    height: 50px;
+   }
+
+   /*titolo canzone nel player*/
+
+   .title-player {
+    flex: 1;
+    text-align:center;
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Medium.otf);
+    font-weight: 500;
+    font-style: normal;
+   }
+
+   .title-player p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+   }
+
+   /*icone laterali player*/
+
+   .icons-player{
+    font-size: 25px;
+    display:flex;
+    gap: 10px;
+    padding-right: 10px;
+   }
+
+   .bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
+    cursor:pointer;
+   }
+   
+
+   .bi-speaker, .bi-heart{
+    color: rgba(255, 255, 255, 0.603);
+   }
+
+   /*navbar fondo pagina */
+
+   .navbarBottom{
+
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    color:rgba(255, 255, 255, 0.656);
+
+   }
+   
+      /*icone navbar fondo pagina */
+
+   .home-icon{
+    font-size: 20px;
+    align-items: center;
+   }
+
+   .icons-frase {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    font-size: 25px;
+  }
+  
+  .icons-frase p {
+    margin-top: -5px;
+    font-size: 0.7rem;
+  }
+
+  @media (min-width: 992px) {
+   .main-container {
+    height: 100vh;
+   }
+  }
