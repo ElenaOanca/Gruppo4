@@ -169,9 +169,9 @@ async function renderArtist(){
     console.log(artist);
 
 const windowWidth = window.innerWidth;
-let img = document.getElementById('artist-img-album-'+(windowWidth>670?"lg":"sm"));
+// let img = document.getElementById(''+(windowWidth>670?"lg":"sm"));
 
-img.src = artist.images[0].url
+// img.src = artist..url
 
  
 }
