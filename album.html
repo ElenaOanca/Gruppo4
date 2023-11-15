@@ -211,53 +211,24 @@
                             <td><i class="bi bi-clock"></i></td>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td class="song-id">1</td>
-                            <td>
-                                <div class="song-item-info">
-                                    <p class="list-main-title">Sciare</p>
-                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                                </div>
-                            </td>
-                            <td class="reproductions">12098310</td>
-                            <td class="song-length">1:35</td>
-                        </tr>
-                        <tr>
-                            <td class="song-id">1</td>
-                            <td>
-                                <div class="song-item-info">
-                                    <p class="list-main-title">Sciare</p>
-                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                                </div>
-                            </td>
-                            <td class="reproductions">12098310</td>
-                            <td class="song-length">1:35</td>
-                        </tr>
-                        <tr>
-                            <td class="song-id">1</td>
-                            <td>
-                                <div class="song-item-info">
-                                    <p class="list-main-title">Sciare</p>
-                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                                </div>
-                            </td>
-                            <td class="reproductions">12098310</td>
-                            <td class="song-length">1:35</td>
-                        </tr>
-                        <tr>
-                            <td class="song-id">1</td>
-                            <td>
-                                <div class="song-item-info">
-                                    <p class="list-main-title">Sciare</p>
-                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                                </div>
-                            </td>
-                            <td class="reproductions">12098310</td>
-                            <td class="song-length">1:35</td>
-                        </tr>
+                    <tbody id="tracks-list-tabel">
+
                     </tbody>
                 </table>
+
+                <template id="track-table-item">
+                    <tr>
+                        <td class="track-number"></td>
+                        <td>
+                            <div class="track-item-info">
+                                <p class="track-title"></p>
+                                <p class="track-artists"></p>
+                            </div>
+                        </td>
+                        <td class="reproductions"></td>
+                        <td class="track-length"></td>
+                    </tr>
+                </template>
             </div>
             <!-- FOOTER -->
             <footer>
@@ -344,6 +315,7 @@
             </div>
         </div>
     </div>
+    <script src="js/album.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
