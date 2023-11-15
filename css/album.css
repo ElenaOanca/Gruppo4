@@ -54,7 +54,7 @@ ul{
 }
 /* PLAYER BAR */
 .playing-info-area{
-    justify-content: center;
+    justify-content: end;
     padding: 20px;
     background-color: #262626;
     border-radius: 15px;
@@ -64,9 +64,21 @@ ul{
 
 .playing-info-area .controllers i{
     font-size: 28px;
-    margin-left: 10px;
-    margin-right: 13px;
+    margin-left: 20px;
 }
+/* ICONA PLAY DELLA NAV DEL MOBILE */
+.bi.bi-play-fill{
+    font-size: 28px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
