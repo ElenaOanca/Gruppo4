@@ -1,6 +1,7 @@
 const catUrl = "https://api.spotify.com/v1/browse/categories"
 const playlistUrl = "https://api.spotify.com/v1/browse/featured-playlists?country=IT&locale=it_IT"
-let token =  checkCookie()
+checkCookie();
+let token =  leggiCookie();
 
 
 
@@ -149,8 +150,7 @@ function leggiCookie() {
     }}
 
 function checkCookie(){
-    let res = leggiCookie();
-        if (!res){
+        if (!leggiCookie()) {
             scriviCookie();
-        } return res;
+        }
     }
