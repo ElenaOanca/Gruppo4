@@ -18,6 +18,13 @@ color: var(--ColorWhite);
 .grey-text{
     color: var(--ColorGrey);
 }
+/* RIGA CON IMMAGINE ROTONDA E NOME ARTISTA */
+.secondary-title a{
+    text-decoration: none;
+    color: var(--ColorWhite);
+}
+
+
 /* SEZIONE CONTROLLERS MOBILE */
 .controllers i{
     font-size: 23px;
