@@ -1,6 +1,5 @@
 .main-container{
   background-color: #121212;
-  height: 100%;
 }   
 
 .searchValue,
@@ -246,8 +245,79 @@
     font-size: 0.7rem;
   }
 
-  @media (min-width: 992px) {
-   .main-container {
-    height: 100vh;
-   }
+
+
+  .single-card {
+    position: relative;
+    height: 130px;
+    border-radius: 7px;
+    overflow: hidden;
+    background: linear-gradient(45deg, black, transparent);
+  }
+  .img-artist {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    transform: rotate(25deg);
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px black;
+  }
+  
+  .container-song {
+    display: flex;
+    background: linear-gradient(45deg, black, transparent);
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 100px;
+    column-gap: 20px;
+  }
+  .img-song {
+    border-radius: 100%;
+    width: 50px;
+  }
+  .img-song:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+  }
+  .nomi-song {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .nomi-song:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .btn-song {
+      background-color: green;
+      color: white;
+      text-decoration: none;
+      border-radius: 100px;
+      padding: 0px 8px;
+      box-shadow: 1px 1px 5px black;
+      margin: 10px;
+  }
+  .btn-song:hover {
+    text-decoration: underline;
+    box-shadow: none;
+    cursor: pointer;
+  }
+  
+  .btn-artist {
+    background-color: green;
+    position: absolute;
+    bottom: 12px;
+    color: white;
+    margin-top: 205px;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 5px 8px;
+    box-shadow: 1px 1px 5px black;
   }

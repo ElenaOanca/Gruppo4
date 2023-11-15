@@ -1,5 +1,5 @@
 const url = "https://api.spotify.com/v1/search?q=";
-const token = "Bearer BQB64Se3a6Q1wPM-LOOR0YmaB059rc9HqL-PQvJkCSh-ZQndyiXDVCvE2Z93IGGplVBPinewd21yoN2Lx1m-th0iHcuoOrAJT9xX9mD7xVVYW7hwhZ4"
+const token = "Bearer BQCqrKXvv7kuHoKKArmebT5LJtD7Mno5dBqtnVjqJ-DDnGfotV9M1x-eZiu6UHv3vg8B8Jdi-Nq8bhHzGPaJzVNQ3X1yFhLOPe0b2V9GFnFB0h3PcqI"
 
 const searchBox = document.querySelector('.searchForm input');
 
@@ -75,6 +75,7 @@ async function renderSongsSearch() {
             let song = await searchByQuerySong(searchBox.value);
             let target = document.querySelector('.targetSearchsong');
             target.innerHTML = '';
+            console.log(song);
             let title = document.querySelector('#title-song');
             title.classList.remove('d-none')
             let items = song.tracks.items
@@ -118,7 +119,7 @@ async function renderAlbumSearch() {
             let items = album.albums.items;
             console.log(album);
             // Definisci il breakpoint
-            const breakpoint = 768;
+           
 
             for (let index = 0; index < 4; index++) {
                 // Clona il contenuto del template con ID 'risultatoSearchAlbum'
@@ -134,7 +135,7 @@ async function renderAlbumSearch() {
                 
                 
                 
-                img.src = items[index].images[2].url;
+                img.src = items[index].images[1].url;
                 name.innerText = items[index].name;
                 releaseDate.innerText = `L'album è stato pubblicato nel ${items[index].release_date}`;
                 btn.href = "album.html?id=" + items[index].id;
