@@ -12,7 +12,13 @@ body {
     background-size:100%;
     padding: 0;
     margin: 0;
+    font-weight: 700;
 }
+#artist-lg-name{
+    font-weight: 900;
+    font-family:   'Arial Narrow Bold', sans-serif;
+}
+
 #artist-header{
     height : 50%;
     background-repeat: no-repeat;
@@ -37,6 +43,10 @@ body {
 
 }
 
+.iPlay{
+    font-size: 45px;
+    color: #2d5;
+}
 /*----SEZIONE MOBILE PER NAV FOLLOWING--*/
 .icons {
     cursor: pointer;
