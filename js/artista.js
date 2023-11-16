@@ -30,69 +30,13 @@ const urlGenerico = "https://api.spotify.com/v1/search?q="
 
 //  const spotifyApi = new SpotifyApi('client_credentials','9d5ca7a25f3943c29e70a563595298d0','67bf58d590e04daaaeacc44c24f31c77');
 
-checkCookie()
+checkCookieOnPage()
 const token = leggiCookie()
 // spotifyApi.getToken()
 
 // spotifyApi.accounts.getUsers();//prendi token
 
 
-/**** SEZIONE TOKEN & COOKIES */
-
-async function getToken() {
-    return await fetch("https://accounts.spotify.com/api/token",
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: "grant_type=client_credentials&client_id=3d95631fa2714b63a86360548af955cd&client_secret=8f03a40917cb4cca9c4c5a9c476fa168"
-        })
-        .then(res => res.json())
-
-}
-
-//Scrivi cookie----------------------------------------------------------------------------------------------------------
-
-async function scriviCookie() {
-    let token = await getToken()
-    let now = new Date();//Date crea un oggetto data contenente data ed ora attuali
-    now.getHours()//ora attuale
-    now.setHours(now.getHours() + 1);//All'ora attuale aggiungo un'ora
-
-
-    let scadenza = `expires= + ${now.toUTCString()}`;//converto la data nel formato utc, richiesto per il corretto funzionamento del cookie. esempio: Wed, 14 Jun 2017 07:00:00 GMT
-
-    document.cookie = `token =${token.access_token};${scadenza}`;
-}
-
-
-
-function leggiCookie() {
-    let allCookies = document.cookie;
-    let cookie = 'token';
-
-    let arr = allCookies.split(' ; ');
-
-    let res = '';
-
-    for (let i = 0; i < arr.length; i++) {
-
-        chiave = arr[i].split('=')[0];//"token"
-        valore = arr[i].split('=')[1];//valore token
-        if (cookie == chiave) {
-            res = valore;
-            return res;
-        }
-    }
-}
-
-function checkCookie() {
-    if (!leggiCookie()) {
-        scriviCookie();
-        return
-    }
-}
 
 
 
@@ -218,54 +162,57 @@ async function renderTracks1() {
 
 
 
-        function formatDuration(ms) {
-            const minutes = Math.floor(ms / 60000);
-            const seconds = ((ms % 60000) / 1000).toFixed(0);
-            return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
-        }
+     
 
-        // Per schermi lg------------------------------------------------------------------
-        let lgTableBody = document.querySelector('.lg-table tbody');
-        tracks.tracks.slice(0,5).forEach((track, index) => {
-            let row = document.createElement('tr');
+        
+    });
+    function formatDuration(ms) {
+        const minutes = Math.floor(ms / 60000);
+        const seconds = ((ms % 60000) / 1000).toFixed(0);
+        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    }
+    // Per schermi lg------------------------------------------------------------------------------------------------------
+    let lgTableBody = document.querySelector('.lg-table tbody');
+    tracks.tracks.slice(0,5).forEach((track, index) => {
+        let row = document.createElement('tr');
 
-            let songIdCell = document.createElement('td');
-            songIdCell.className = 'songId';
-            songIdCell.textContent = index + 1;
-            row.appendChild(songIdCell);
+        let songIdCell = document.createElement('td');
+        songIdCell.className = 'songId';
+        songIdCell.textContent = index + 1;
+        row.appendChild(songIdCell);
 
-            // Aggiunta dell'immagine dell'album
-            let imageCell = document.createElement('td');
-            let img = document.createElement('img');
-            img.src = track.album.images[0].url;
-            img.width = 50;
-            img.alt = track.name;
-            imageCell.appendChild(img);
-            row.appendChild(imageCell);
+        // Aggiunta dell'immagine dell'album
+        let imageCell = document.createElement('td');
+        let img = document.createElement('img');
+        img.src = track.album.images[0].url;
+        img.width = 50;
+        img.alt = track.name;
+        imageCell.appendChild(img);
+        row.appendChild(imageCell);
 
-            // Aggiunta del nome
-            let songInfoCell = document.createElement('td');
-            let songName = document.createElement('p');
-            songName.className = 'list-second-title px-3';
-            songName.textContent = track.name;
-            songInfoCell.appendChild(songName);
-
-
-            row.appendChild(songInfoCell);
-
-            let songLength = document.createElement('td');
-            songLength.className = 'song-length';
-            songLength.textContent = formatDuration(track.duration_ms);
-            row.appendChild(songLength);
+        // Aggiunta del nome
+        let songInfoCell = document.createElement('td');
+        let songName = document.createElement('p');
+        songName.className = 'list-second-title px-3';
+        songName.textContent = track.name;
+        songInfoCell.appendChild(songName);
 
 
+        row.appendChild(songInfoCell);
+
+        let songLength = document.createElement('td');
+        songLength.className = 'song-length';
+        songLength.textContent = formatDuration(track.duration_ms);
+        row.appendChild(songLength);
 
 
-            // Aggiunta della riga completa al corpo della tabella lg
-            lgTableBody.appendChild(row);
-        });
+
+
+        // Aggiunta della riga completa al corpo della tabella lg
+        lgTableBody.appendChild(row);
     });
 }
+
 
 renderTracks1();
 
