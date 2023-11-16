@@ -6,40 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/playerLg.css">
     <title>Document</title>
 </head>
 <body>
 
-
-    <nav class="navbar fixed-bottom bg-body-tertiary">
-        <div class="container-fluid">
-            <img src="assets/imgs/main/image-2.jpg" width="50px">
-          <a class="navbar-brand" href="#">Fat Funny Friend</a>
-          <a class="navbar-brand" href="#">Maddie Zahm</a>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+/>
+</head>
+<body>
+<div class="music-player">
+    <div class="song-bar">
+        <div class="song-infos">
+            <div class="image-container">
+                <img src="assets/imgs/search/image-10.jpg" alt="" />
+            </div>
+            <div class="song-description">
+                <p class="title">
+                    Nome canzone
+                </p>
+                <p class="artist">Nome Artista</p>
+            </div>
         </div>
-
-        <div>
-            <i class="bi bi-heart"></i>
+        <div class="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-compress"></i>
         </div>
-
-        <div class="play">
-            <i class="bi bi-shuffle"></i> 
-            <i class="bi bi-arrow-left-circle-fill"></i>
-            <i class="bi bi-play-circle-fill"></i>
-            <i class="bi bi-arrow-right-circle-fill"></i>
-            <i class="bi bi-arrow-repeat"></i>
-            
+    </div>
+    <div class="progress-controller">
+        <div class="control-buttons">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <i class="play-pause fas fa-play"></i>
+            <i class="fas fa-step-forward"></i>
+            <i class="fas fa-undo-alt"></i>
         </div>
-        
-        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
-          </div>
-
-
-
-          
-      </nav>
-
+        <div class="progress-container">
+            <span>0:49</span>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span>3:15</span>
+        </div>
+    </div>
+    <div class="other-features">
+        <i class="fas fa-list-ul"></i>
+        <i class="fas fa-desktop"></i>
+        <div class="volume-bar">
+            <i class="fas fa-volume-down"></i>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    
 
 
 
