@@ -1,10 +1,15 @@
 body {
   background-color:#121212;
+  width: 100%;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+.container-fluid {
+  width: 100%;
 }
 /*container canzone sopra l'header versione desktop */
 .container-song-desk {
@@ -284,6 +289,9 @@ column-gap: 15px;
    .image2{
     display:block;
   }
+  .container-album {
+    width: 40%;
+   }
 
 }
 
@@ -320,7 +328,11 @@ column-gap: 15px;
    }
 
    .container-album {
-    width: 30%;
+    width: 40%;
+   }
+
+   .contImage {
+    flex-grow: 1;
    }
 
   }
@@ -330,10 +342,18 @@ column-gap: 15px;
  .first-section-container{
   width: 25%;
  }
+
+ .container-album {
+  width: 30%;
+ }
+ .contImage {
+  flex-grow: 0;
+ }
+
 }
 
 /* SEZIONE NAV DI SX */
-.bi.bi-heart-fill{
+.heart-side{
   padding: 1px 2px;
   border-radius: 3px;
   background: rgb(62,33,167);
@@ -401,6 +421,6 @@ column-gap: 15px;
   color: #000000;
 }
 
-.friend-user-name,.bi.bi-x-lg,.mt-1,.bi.bi-person-add,.friend-song-artist,.friend-song,span,.friend-last-played{
+.friend-user-name,.bi.bi-x-lg,.mt-3,.bi.bi-person-add,.friend-song-artist,.friend-song,span,.friend-last-played{
   color: white;
 }

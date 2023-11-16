@@ -43,7 +43,7 @@
                 </a>
 
                 <a class="nav-link text-white ps-0" href="#">
-                    <i class="bi bi-heart-fill fs-5"></i>
+                    <i class="bi bi-heart-fill heart-side fs-5"></i>
                     Brani che piacciono
                 </a>
 
@@ -94,10 +94,10 @@
     <div class="extra-div d-none d-lg-block">
       <div class="container-song-desk">
         <div class="row">
-          <div class="col-6 col-md-6 d-flex align-items-center pb-5">
+          <div class="col-6 col-md-6 col-lg-6 d-flex align-items-center pb-5 contImage">
             <img src="https://picsum.photos/1000" alt="">
           </div>
-          <div class="col-6 col-md-6 d-flex flex-column container-titolo-song pt-3">
+          <div class="col-6 col-md-6 col-lg-6 d-flex flex-column container-titolo-song pt-3 align-self-start">
             <p class="singolo-desk">SINGOLO</p>
             <p class="name-song-desk">TITOLO CANZONE</p>
             <p class="name-artist-desk">Artista</p>
@@ -137,10 +137,6 @@
             </p>
           </div>
         </div>
-        <section class="row section1 d-flex justify-content-center" id="artists-area">
-
-
-
         <section class="row section1 justify-content-center" id="artists-area">
         </section>
         <div>
@@ -152,11 +148,11 @@
         </div>
         
 
-        </div>
+      </div>
     </main>
-        </div>
+  </div>
 
-        <footer id="footer">
+  <footer id="footer">
     <div class="container-footer-fixed">
       <div class="player mx-2 d-lg-none">
         <div class="title-player">
@@ -192,9 +188,9 @@
         </div>
       </div>
     </div>
-        </footer>
+  </footer>
 
-        <template id="artist-template">
+  <template id="artist-template">
     <div class="col-6 col-lg-3 mx-lg-4 my-2 d-flex align-items-center first-section-container">
       <img src="assets/imgs/main/image-1.jpg" alt="" class="img-first-section artist-img rounded-start-2">
       <div class="d-flex flex-column">
@@ -202,16 +198,16 @@
         <i class="bi bi-three-dots icon-first-section"></i>
       </div>
     </div>
-        </template>
+  </template>
 
-        <template id="album-template">
+  <template id="album-template">
     <div class="container-album col-12 col-md-4 col-lg-2 m-1 rounded-3">
       <div class="row">
         <div class="col-6 col-md-6 d-flex align-items-center">
           <img src="https://picsum.photos/300" class="image1" alt="">
           <img src="https://picsum.photos/1000" class="image2" alt="">
         </div>
-        <div class="col-6 col-md-6 d-flex flex-column container-titolo-album px-4 py-4">
+        <div class="col-6 col-md-6 d-flex flex-column container-titolo-album px-4 pt-4">
           <a class="album-link"><p class="album album-title"></p></a>
           <a class="artist-link"><p class="name-album album-artist"></p></a>
         </div>
@@ -227,61 +223,61 @@
         </div>
       </div>
     </div>
-        </template>
+  </template>
       </div>
       <div class="col-lg-2 d-none d-lg-block bg-black ps-0">
         <div class="container">
-            <div class="d-flex justify-content-between">
-                <p class="mt-1">Attività amici</p>
-                <div class="controller-section-friends">
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mt-3 col-lg-4 col-xl-8">Attività amici</p>
+                <div class="controller-section-friends col-lg-4 d-flex">
                     <button><i class="bi bi-person-add"></i></button>
                     <button><i class="bi bi-x-lg"></i></button>
                 </div>
             </div>
             <!-- SEZIONE CARD ATTIVITA` AMICI -->
-            <div class="friends-card row">
-                <div class="col-2 pe-0">
+            <div class="friends-card row justify-content-between">
+                <div class="col-2 col-lg-2 pe-0">
                     <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
                 </div>
-                <div class="col-8">
+                <div class="col-6 col-lg-5 col-xl-6 mx-2">
                     <p class="m-0 friend-user-name">Charlie Hookham</p>
                     <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
                     <i class="bi bi-disc friend-song"></i><span> EP III</span>
                 </div>
-                <div class="col-2 p-0">
+                <div class="col-2 col-lg-2 p-0">
                     <p class="friend-last-played">4 ore</p>
                 </div>
             </div>
             <!-- SEZIONE CARD ATTIVITA` AMICI -->
-            <div class="friends-card row">
-                <div class="col-2 pe-0">
+            <div class="friends-card row justify-content-between my-4">
+                <div class="col-2 col-lg-2 pe-0">
                     <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
                 </div>
-                <div class="col-8">
+                <div class="col-6 col-lg-5 col-xl-6 mx-2">
                     <p class="m-0 friend-user-name">Charlie Hookham</p>
                     <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
                     <i class="bi bi-disc friend-song"></i><span> EP III</span>
                 </div>
-                <div class="col-2 p-0">
+                <div class="col-2 col-lg-2 p-0">
                     <p class="friend-last-played">4 ore</p>
                 </div>
             </div>
             <!-- SEZIONE CARD ATTIVITA` AMICI -->
-            <div class="friends-card row">
-                <div class="col-2 pe-0">
+            <div class="friends-card row justify-content-between">
+                <div class="col-2 col-lg-2 pe-0">
                     <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
                 </div>
-                <div class="col-8">
+                <div class="col-6 col-lg-5 col-xl-6 mx-2">
                     <p class="m-0 friend-user-name">Charlie Hookham</p>
                     <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
                     <i class="bi bi-disc friend-song"></i><span> EP III</span>
                 </div>
-                <div class="col-2 p-0">
+                <div class="col-2 col-lg-2 p-0">
                     <p class="friend-last-played">4 ore</p>
                 </div>
             </div>
+          </div>
         </div>
-      </div>
     </div>
   </div>
   <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
