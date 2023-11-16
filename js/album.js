@@ -1,9 +1,11 @@
 const albumsUrl = "https://api.spotify.com/v1/albums/";
 const playBackCountUrl = "https://spotify-track-streams-playback-count1.p.rapidapi.com/tracks/spotify_track_streams?spotify_track_id="
-checkCookie();
-let token =  leggiCookie();
 
-let id = "4aawyAB9vmqN3uQ7FjRGTy";
+checkCookieOnPage();
+let token =  leggiCookie();
+let id = getIdFromBar();
+
+
 
 /***** funzione prendi album */
 async function getAlbum (id) {
@@ -54,6 +56,7 @@ async function renderAlbumHeader(id) {
  async function renderAlbumTracks(id) {
     let tracks = await getAlbumTracks(id)
     let target = document.querySelector('#tracks-list-tabel');
+    let target2 = document.querySelector('#track-list-area');
  
     console.log(tracks);
 
@@ -65,54 +68,44 @@ async function renderAlbumHeader(id) {
     let length = clone.querySelector('.track-length');
     
     let clone2 = cloneTemplate("#tracks-mobile-list")
-    let title2 = clone2.querySelector('.track-title');
-    let artists2 = clone2.querySelector('.track-artists');
+    let title2 = clone2.querySelector('.track-title-list');
+    let artists2 = clone2.querySelector('.track-artists-list');
 
 
     trackId.innerText = track.track_number;
     title.innerText = track.name;
     title2.innerText = track.name;
     artists.innerText = track.artists.map(artist => artist.name).join(', ');
-    artists.innerText = track.artists.map(artist => artist.name).join(', ');
+    artists2.innerText = track.artists.map(artist => artist.name).join(', ');
     length.innerText = millisToMinutesAndSeconds(track.duration_ms);
     target.append(clone);
+    target2.append(clone2);
     });
 
  }
 
  renderAlbumTracks(id)
 
-
+/****utilities functions */
 function cloneTemplate (template) {
     let temp = document.querySelector(template)
     return temp.content.cloneNode(true)
 }
 
-/**** SEZIONE TOKEN & COOKIES */
-
-async function getToken () {
-    return await fetch ("https://accounts.spotify.com/api/token",
-        {
-            method : "POST",
-            headers : {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body : "grant_type=client_credentials&client_id=3d95631fa2714b63a86360548af955cd&client_secret=8f03a40917cb4cca9c4c5a9c476fa168"
-        })
-   .then(res => res.json())
+function millisToMinutesAndSeconds(millis) {
+    var minutes = Math.floor(millis / 60000);
+    var seconds = ((millis % 60000) / 1000).toFixed(0);
+    return `${minutes} min  ${seconds} sec`;
 }
 
+/**** SEZIONE TOKEN & COOKIES */
 
-async function scriviCookie() {
-    let token = await getToken()
-    let now = new Date();//Date crea un oggetto data contenente data ed ora attuali
-    now.getHours()//ora attuale
-    now.setHours(now.getHours() + 1 );//All'ora attuale aggiungo un'ora
-
-    let scadenza = `expires= + ${now.toUTCString()}`;//converto la data nel formato utc, richiesto per il corretto funzionamento del cookie. esempio: Wed, 14 Jun 2017 07:00:00 GMT
-
-    document.cookie =`token =${token.access_token};${scadenza}`;
- } 
+function checkCookieOnPage() {
+    if (leggiCookie() == null) {
+        new Alert('info', 'La tua sessione è scaduta stai per essere reinderizzato', 'info').showAlert();
+        setTimeout(() => {location.href="index.html"}, 2500)
+    }
+    }
 
 function leggiCookie() {
     let allCookies = document.cookie;
@@ -132,16 +125,6 @@ function leggiCookie() {
          }
     }}
 
-function checkCookie(){
-        if (!leggiCookie()) {
-            location.href
-        }
-    }
 
-function millisToMinutesAndSeconds(millis) {
-    var minutes = Math.floor(millis / 60000);
-    var seconds = ((millis % 60000) / 1000).toFixed(0);
-    return `${minutes} min  ${seconds} sec`;
-}
 
-console.log(millisToMinutesAndSeconds(4008078));
+

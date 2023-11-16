@@ -2,6 +2,10 @@ body {
   background-color:#121212;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
 /*container canzone sopra l'header versione desktop */
 .container-song-desk {
   background: linear-gradient(0deg, black, rgb(30, 30, 30));

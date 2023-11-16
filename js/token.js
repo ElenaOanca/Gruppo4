@@ -1,33 +1,8 @@
 /**** audio entra */
 let soundfile = document.querySelector('#audio');
-
-
 function audioPlay (){  soundfile.play()}
 
-/**** SEZIONE TOKEN & COOKIES */
-function checkCookie() {
-if (leggiCookie()!= null) {
-    location.href="home.html"
-}
-}
-
 checkCookie();
-// SEZIONE CLASSE OGGETTI
-class Alert {
-    constructor(icon, message, text) {
-        this.icon = icon;
-        this.message = message;
-        this.text = text;
-    }
-
-    showAlert() {
-        Swal.fire({
-            icon: this.icon,
-            title: this.message,
-            text: this.text,
-          });
-        }
-}
 
 let tokenButton = document.querySelector('#tokenGenerator');
 let  check = document.querySelector('#promise');
