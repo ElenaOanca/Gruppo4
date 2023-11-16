@@ -5,7 +5,7 @@ checkCookieOnPage();
 let token = leggiCookie();
 
 id = "0TnOYISbd1XYRBk9myaseg";
-let token = leggiCookie();
+
 
 // FUNZIONE PRENDI ARTISTA
 async function getArtist(id) {
