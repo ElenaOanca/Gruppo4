@@ -166,15 +166,6 @@ async function getTracks() {
 }
 
 
-
-
-
-
-
-
-
-
-
 async function renderTracks1() {
     let tracks = await getTracks();
     console.log(tracks); // funziona dati ricevuti
@@ -233,9 +224,9 @@ async function renderTracks1() {
             return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
         }
 
-        // Per schermi lg
+        // Per schermi lg------------------------------------------------------------------
         let lgTableBody = document.querySelector('.lg-table tbody');
-        tracks.tracks.slice(0, 5).forEach((track, index) => {
+        tracks.tracks.slice(0,5).forEach((track, index) => {
             let row = document.createElement('tr');
 
             let songIdCell = document.createElement('td');
@@ -250,7 +241,6 @@ async function renderTracks1() {
             img.width = 50;
             img.alt = track.name;
             imageCell.appendChild(img);
-
             row.appendChild(imageCell);
 
             // Aggiunta del nome
