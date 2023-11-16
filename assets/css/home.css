@@ -358,3 +358,24 @@ column-gap: 15px;
 .dropdown-toggle{
   border: none;
 }
+
+/* SEZIONE CENTRALE SEZIONE PULSANTI PLAY */
+.buttonPlay{
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background-color: green;
+}
+.buttonSalva{
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.buttonSalva:hover{
+  background-color: white;
+  color: #000000;
+}
