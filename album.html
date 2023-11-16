@@ -57,39 +57,39 @@
                     </div>
         <div class="row">
             <!-- SEZIONE NAV DI SX -->
-             <div class="d-none d-lg-block col-lg-2 bg-black pe-0">
+             <div class="d-none d-lg-block col-lg-2 bg-black p-0">
             <div class="container text-white">
-                <div>
-                    <i class="bi bi-three-dots p-3"></i>
-                </div>
-
                 <div class="nav flex-column mt-3">
-                    <a class="nav-link active text-white" href="#">
+                    <div>
+                        <i class="bi bi-three-dots p-3 ps-0"></i>
+                    </div>
+
+                    <a class="nav-link active text-white ps-0" href="#">
                         <i class="bi bi-house-door-fill m-1"></i>
                         Home
                     </a>
 
-                    <a class="nav-link text-white" href="#">
+                    <a class="nav-link text-white ps-0" href="#">
                         <i class="bi bi-search m-1"></i>
                         Cerca
                     </a>
 
-                    <a class="nav-link text-white mb-5" href="#">
+                    <a class="nav-link text-white mb-5 ps-0" href="#">
                         <i class="bi bi-collection-fill m-1"></i>
                         La tua libreria
                     </a>
 
-                    <a class="nav-link active text-white" href="#">
+                    <a class="nav-link active text-white ps-0" href="#">
                         <i class="bi bi-plus-square m-1"></i>
                         Crea playlist
                     </a>
 
-                    <a class="nav-link text-white" href="#">
+                    <a class="nav-link text-white ps-0" href="#">
                         <i class="bi bi-heart-fill m-1"></i>
                         Brani che piacciono
                     </a>
 
-                    <a class="nav-link text-white" href="#">
+                    <a class="nav-link text-white ps-0" href="#">
                         <i class="bi bi-bookmark-fill m-1"></i>
                         I tuoi episodi
                     </a>
@@ -117,11 +117,14 @@
                 <!-- NAV BAR PER DESKTOP -->
                 <div class="d-none d-lg-flex justify-content-between mt-2">
                     <!-- SEZIONE FRECCIE NAV -->
-                    <div><i class="bi bi-arrow-left-circle-fill"></i><i class="bi bi-arrow-right-circle-fill"></i></div>
+                    <div>
+                        <button class="bt"><i class="fas fa-chevron-left"></i></button>
+                        <button class="bt"><i class="fas fa-chevron-right"></i></button>
+                    </div>
                     <!-- SEZIONE PULSANTE DX DROPDOWN -->
                     <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://picsum.photos/20" class="round-image" alt="user profile img">
+                        <button class="dropdown-toggle  bg-black text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://picsum.photos/25" class="round-image" alt="user profile img">
                             Davide D'Amario
                         </button>
                         <!-- MENÙ A TENDINA -->
@@ -133,12 +136,12 @@
                     </div>
                 </div>
                 <!-- CONTAINER ALBUM INFO SIA MOBILE SIA DESKTOP -->
-                <div class="container d-lg-flex align-items-end">
+                <div class="container d-lg-flex align-items-end ps-lg-0">
                     <div class="d-flex justify-content-center position-relative album-img-area mb-3 mt-5">
-                        <i class="bi bi-arrow-left position-absolute top-0 start-0"></i>
+                        <i class="bi bi-arrow-left position-absolute d-lg-none top-0 start-0"></i>
                         <img src="https://picsum.photos/200" alt="" class="album-img">
                     </div>
-                    <div class="album-info lh-lg-2">
+                    <div class="album-info ps-lg-3 pb-lg-3 lh-lg-2">
                         <!-- SCRITTA ALBUM SI SPOSTA CON DISPLAY NONE IN BASE AI BREAKPOINT -->
                         <div class="d-none d-md-none d-lg-block">Album</div>
                         <!-- NOME ALBUM -->
@@ -151,8 +154,8 @@
                                 Nucleari</a></div>
                             <!-- SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM -->
                             <div class="grey-text d-lg-flex gap-2"><span class="d-lg-none">Album</span> • <span class=""
-                                    id="album-year">2017</span><span class="d-none d-lg-block" id="tracks-count">12
-                                    brani</span><span class="d-none d-lg-block" id="album-length">53min 20sec</span></div>
+                                    id="album-year">2017</span> • <span class="d-none d-lg-block" id="tracks-count">12
+                                    brani, </span><span class="tempo-totale d-none d-lg-block" id="album-length">53min 20sec.</span></div>
                             </div>
                     </div>
                     <!-- SEZIONE CONTROLLERS MOBILE -->
@@ -192,12 +195,12 @@
             </template>
             
             <!-- SEZIONE CON TABELLA E CONTROLLERS PER DESKTOP  -->
-            <div class="d-none d-lg-block">
+            <div class="d-none d-lg-block pt-lg-2">
                 <div class="desktop-controllers">
-                    <i class="bi bi-play-circle-fill"></i>
-                    <i class="bi bi-suit-heart"></i>
-                    <i class="bi bi-arrow-down-circle"></i>
-                    <i class="bi bi-three-dots"></i>
+                    <a href="#"><i class="bi bi-play-fill play"></i></a>
+                    <a href="#"><i class="bi bi-heart"></i></a>
+                    <a href="#"><i class="bi bi-arrow-down-circle"></i></a>
+                    <a href="#"><i class="bi bi-three-dots"></i></a>
                 </div>
                 <!-- TABELLA CANZONI ALBUM IN DESKTOP -->
                 <table class="desktop-table table table-dark">
@@ -263,10 +266,10 @@
             <div class="col-lg-2 d-none d-lg-block bg-black ps-0">
             <div class="container">
                 <div class="d-flex justify-content-between">
-                        <p>Attività amici</p>
+                    <p class="mt-1">Attività amici</p>
                     <div class="controller-section-friends">
-                        <button><i class="bi bi-x-lg"></i></button>
                         <button><i class="bi bi-person-add"></i></button>
+                        <button><i class="bi bi-x-lg"></i></button>
                     </div>
                 </div>
                 <!-- SEZIONE CARD ATTIVITA` AMICI -->
