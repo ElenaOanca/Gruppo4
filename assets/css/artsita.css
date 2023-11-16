@@ -1,29 +1,43 @@
 body {
     color: white;
     background-color: black;
+    box-sizing: border-box;
+    margin: -2px;
 
 }
-#artist-header, #artist-lg-header{
-    height : 80%;
+/* CONTAINER PARTE CENTRALE CON FOTO ARTISTA E H1--*/
+ #artist-lg-header{
+    height : 100%;
     background-repeat: no-repeat;
     background-size:100%;
     padding: 0;
     margin: 0;
 }
-.ascoltatori {
-    font-size: 0.7rem;
-    color: grey;
+#artist-header{
+    height : 50%;
+    background-repeat: no-repeat;
+    background-size:100%;
+    padding: 0;
+    margin: 0;
+
 }
 
-.follow {
+/*---- STILE PER NUMERO FOLLOWER IN SM E LG-----*/
+.ascoltatori, .follow {
     font-size: 0.7rem;
+    
+}
+
+.ascoltatori{
+    color: grey;
+}
+.follow {
+    
     font-weight: 700;
 
 }
 
-
-
-
+/*----SEZIONE MOBILE PER NAV FOLLOWING--*/
 .icons {
     cursor: pointer;
 }
@@ -43,22 +57,36 @@ body {
     color: green;
 }
 
-
+/***** SEZIONE BRANI CHE TI PIACCIONO****************************************/
 .imgArtist img {
     border-radius: 50%;
     /* Rende l'immagine rotonda */
 }
-
-
 .imgContainer {
     position: relative;
+    display: inline-block;
+}
+
+.imgArtist img {
+    width: 50px;
+    height: 50px;
+    display: block; 
 }
 
 .heartIcon {
-    position: absolute;
-    bottom: 2px;
-    right: 12px;
+    position: relative;
+    bottom: 20px;
+   left: 35px; 
+  font-size: 20px;
+    color:white; 
+  
 }
+
+
+
+
+
+
 
 
 .sottotitoli {
@@ -77,10 +105,9 @@ body {
 
 .section {
     margin-top: 20px;
-
-
 }
 
+/******DESCRIZIONE TAB**********************************************/
 .desktop-table {
     background-color: black;
 }
@@ -95,15 +122,10 @@ body {
     background-color: black;
 }
 
+
+/*****LINK DEL FOOTER********************************************/
 .navbar-a {
     font-size: 0.5rem;
-}
-
-.player {
-    font-size: 0.9rem;
-    color: white;
-    font-weight: bold;
-
 }
 
 .songId {
@@ -128,16 +150,10 @@ body {
     line-height: 0;
 
 }
+/********* FOOTER MOBILE*********************************************/
 
-.inputRicerca {
-    color: grey;
-    font-size: 1.1rem;
-}
 
-h4 {
-    color: white;
-    font-size: 1.2rem;
-}
+
 
 
 .footerArtist {
@@ -175,13 +191,24 @@ h4 {
 
 }
 
-
+/********LINK FOOTER************************************************/
 .af {
     color: white;
 }
 
+
+/*********SEZIONE CARD***********************************************/
 .round-image {
     border-radius: 100%;
+}
+
+
+/******PLAYER MOBILE PICCOLO SOTTO IMAGINE GRANDE ARTISTA*****/
+.player {
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
+
 }
 /*----- Stile Player LG----*/
 
