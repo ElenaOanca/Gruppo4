@@ -197,3 +197,8 @@ thead tr td{
     color: var(--ColorGrey);
     font-size: 20px;
 }
+
+.nav-sx-list {
+    height: 100vh;
+    overflow-y: scroll;
+}
