@@ -45,7 +45,7 @@ async function renderArtists(id) {
       );
       img.src = artist.images[0].url;
       name.innerText = artist.name;
-      artistLink.href = `artist.html?id=${artist.id}`;
+      artistLink.href = `artista.html?id=${artist.id}`;
       target.append(clone);
     }
   });
@@ -111,10 +111,11 @@ let renderSingle = (array, img, title, artist, index) => {
     .join(", ");
   setInterval(() => {
     index++;
-    if (index > array.length) {
-      index = 0;
-    }
+    if (index == array.length) {
+        index = 0;
+      }
     renderSingle(array, img, title, artist, index);
+
   }, 10000);
 };
 
