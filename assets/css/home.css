@@ -354,3 +354,7 @@ column-gap: 15px;
   color: var(--ColorGrey);
   font-size: 20px;
 }
+
+.dropdown-toggle{
+  border: none;
+}
