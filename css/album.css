@@ -100,7 +100,7 @@ ul{
     font-size: 0.9rem;
 }
 
-/*ICONA LATERALE PLAYER*/
+/*ICONE LATERALE PLAYER*/
 
 .icons-player{
     font-size: 25px;
@@ -112,7 +112,9 @@ ul{
 .bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
     cursor:pointer;
 }
-   
+.bi.bi-play-fill.started{
+    font-size: 33px;
+}
 
 .bi-speaker, .bi-heart{
     color: rgba(255, 255, 255, 0.603);
