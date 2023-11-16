@@ -1,12 +1,26 @@
 const artistsUrl = "https://api.spotify.com/v1/artists/"
 const newAlbumUrl = "https://api.spotify.com/v1/browse/new-releases"
-id = "0TnOYISbd1XYRBk9myaseg";
 
-let token = leggiCookie();
-if (!token) {
-    location.href="index.html"
+class Alert {
+    constructor(icon, message, text) {
+        this.icon = icon;
+        this.message = message;
+        this.text = text;
+    }
+
+    showAlert() {
+        Swal.fire({
+            icon: this.icon,
+            title: this.message,
+            text: this.text,
+          });
+        }
 }
 
+checkCookie();
+
+id = "0TnOYISbd1XYRBk9myaseg";
+let token = leggiCookie();
 
 
 
@@ -109,3 +123,28 @@ function cloneTemplate (template) {
     let temp = document.querySelector(template)
     return temp.content.cloneNode(true)
 }
+
+function checkCookie() {
+    if (leggiCookie() == null) {
+        new Alert('INFO', 'La tua sessione è Scaduta stai per essere reinderizzato', 'info').showAlert();
+        setTimeout(() => {location.href="index.html"}, 2500)
+    }
+    }
+
+function leggiCookie() {
+    let allCookies = document.cookie;
+    let cookie = 'token';
+
+    let arr = allCookies.split('; ');
+
+    let res = '';
+
+    for(let i = 0; i < arr.length; i++) {
+
+       chiave = arr[i].split('=')[0];//"token"
+       valore = arr[i].split('=')[1];//valore token
+        if(cookie == chiave){
+           res = valore;
+           return res;
+         }
+    }}

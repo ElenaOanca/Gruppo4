@@ -1,36 +1,41 @@
 /**** SEZIONE TOKEN & COOKIES */
-leggiCookie();
-if (leggiCookie()) {
+function checkCookie() {
+if (leggiCookie()!= null) {
     location.href="home.html"
 }
+}
 
+checkCookie();
 // SEZIONE CLASSE OGGETTI
 class Alert {
-    constructor(title, text, icon){
-        this.title = title
-        this.text = text
-        this.icon = icon
+    constructor(icon, message, text) {
+        this.icon = icon;
+        this.message = message;
+        this.text = text;
     }
 
-    showAlert(){
-        Swal.fire(this.title, this.text, this.icon)
-    }
+    showAlert() {
+        Swal.fire({
+            icon: this.icon,
+            title: this.message,
+            text: this.text,
+          });
+        }
 }
 
 let tokenButton = document.querySelector('#tokenGenerator');
 let  check = document.querySelector('#promise');
 console.log(check, tokenButton);
 
-if (check.checked == true){
-    tokenButton.addEventListener('click', () => {
-        scriviCookie();
-        new Alert('Success', 'Token generato correttamente, ti stiamo reinderizzato alla Home', 'success').showAlert()
-        location.href="home.html"
-
-    })
-} else {
-    new Alert('Error', 'Eh no ! cosi nun se fa!', 'error').showAlert()
-}
+tokenButton.addEventListener('click', () => {
+    if (check.checked) {
+        scriviCookie()
+        new Alert('success', 'Token generato correttamente', 'success').showAlert();
+        setTimeout(() => {location.href="home.html"}, 2500)
+    } else {
+        new Alert('error', 'Eh no però così no eh!', 'error').showAlert();
+    }
+});
 async function getToken () {
     return await fetch ("https://accounts.spotify.com/api/token",
         {
@@ -73,8 +78,3 @@ function leggiCookie() {
          }
     }}
 
-function checkCookie(){
-        if (!leggiCookie()) {
-            scriviCookie();
-        }
-    }
