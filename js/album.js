@@ -86,41 +86,5 @@ async function renderAlbumHeader(id) {
 
  renderAlbumTracks(id)
 
-/****utilities functions */
-function cloneTemplate (template) {
-    let temp = document.querySelector(template)
-    return temp.content.cloneNode(true)
-}
-
-
-
-/**** SEZIONE TOKEN & COOKIES */
-
-function checkCookieOnPage() {
-    if (leggiCookie() == null) {
-        new Alert('info', 'La tua sessione è scaduta stai per essere reinderizzato', 'info').showAlert();
-        setTimeout(() => {location.href="index.html"}, 2500)
-    }
-    }
-
-function leggiCookie() {
-    let allCookies = document.cookie;
-    let cookie = 'token';
-
-    let arr = allCookies.split('; ');
-
-    let res = '';
-
-    for(let i = 0; i < arr.length; i++) {
-
-       chiave = arr[i].split('=')[0];//"token"
-       valore = arr[i].split('=')[1];//valore token
-        if(cookie == chiave){
-           res = valore;
-           return res;
-         }
-    }}
-
-
 
 
