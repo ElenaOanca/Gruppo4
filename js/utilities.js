@@ -62,3 +62,16 @@ function leggiCookie() {
            return res;
          }
     }}
+
+    // funzione millies to min and second
+    function formatDuration(ms) {
+        const minutes = Math.floor(ms / 60000);
+        const seconds = ((ms % 60000) / 1000).toFixed(0);
+        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    }
+
+    function millisToMinutesAndSeconds(millis) {
+        var minutes = Math.floor(millis / 60000);
+        var seconds = ((millis % 60000) / 1000).toFixed(0);
+        return `${minutes} min  ${seconds} sec`;
+    }
