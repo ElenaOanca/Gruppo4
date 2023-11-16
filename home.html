@@ -12,6 +12,27 @@
 </head>
 <body>
     <div class="container text-white pb-5 homeContainer">
+        <div class="container my-3">
+        <i class="bi bi-arrow-left-circle fs-3"></i>
+        <i class="bi bi-arrow-right-circle mx-2 fs-3"></i>
+      </div>
+        <div class="extra-div d-none d-lg-block">
+          <div class="container-song-desk">
+            <div class="row">
+              <div class="col-6 col-md-6 d-flex align-items-center pb-5">
+                <img src="https://picsum.photos/1000" alt="">
+              </div>
+              <div class="col-6 col-md-6 d-flex flex-column container-titolo-song pt-3">
+                <p class="singolo-desk">SINGOLO</p>
+                <p class="name-song-desk">TITOLO CANZONE</p>
+                <p class="name-artist-desk">Artista</p>
+                <div class="buttons play">
+
+                </div>
+              </div>
+            </div>         
+              </div>
+        </div>
         <header class="header-container">
             <div class="header-content">
               <div>
@@ -39,8 +60,8 @@
         </p>
       </div>
     </div>
-    <section class="row">
-        <div class="col-6 mb-3 d-flex align-items-center first-section-container">
+    <section class="row section1">
+        <div class="col-6 col-lg-3 mx-lg-4 my-2 d-flex align-items-center first-section-container">
           <img src="assets/imgs/main/image-1.jpg" alt="" class="img-first-section rounded-start-2">
           <div class="d-flex flex-column">
             <p class="name-first-section mb-0">Lorem ipsum</p>
@@ -48,35 +69,37 @@
           </div>
         </div>
       
-        <div class="col-6 mb-3 d-flex align-items-center first-section-container">
+        <div class="col-6 col-lg-3 mx-lg-4 my-2 d-flex align-items-center first-section-container">
             <img src="assets/imgs/main/image-2.jpg" alt="" class="img-first-section rounded-start-2">
             <div class="d-flex flex-column">
               <p class="name-first-section mb-0">Lorem ipsum</p>
               <i class="bi bi-three-dots icon-first-section"></i>
             </div>
           </div>
-          <div class="col-6 mb-3 d-flex align-items-center first-section-container">
+
+          <div class="col-6 col-lg-3 mx-lg-4 my-2 d-flex align-items-center first-section-container">
             <img src="assets/imgs/main/image-3.jpg" alt="" class="img-first-section rounded-start-2">
             <div class="d-flex flex-column">
               <p class="name-first-section mb-0">Lorem ipsum</p>
               <i class="bi bi-three-dots icon-first-section"></i>
             </div>
           </div>
-          <div class="col-6 mb-3 d-flex align-items-center first-section-container">
+          
+          <div class="col-6 col-lg-3 mx-lg-4 my-2 mb-3 d-flex align-items-center first-section-container">
             <img src="assets/imgs/main/image-4.jpg" alt="" class="img-first-section rounded-start-2">
             <div class="d-flex flex-column">
               <p class="name-first-section mb-0">Lorem ipsum</p>
               <i class="bi bi-three-dots icon-first-section"></i>
             </div>
           </div>
-          <div class="col-6 mb-3 d-flex align-items-center first-section-container">
+          <div class="col-6 col-lg-3 mx-lg-4 my-2 mb-3 d-flex align-items-center first-section-container">
             <img src="assets/imgs/main/image-5.jpg" alt="" class="img-first-section rounded-start-2">
             <div class="d-flex flex-column">
               <p class="name-first-section mb-0">Lorem ipsum</p>
               <i class="bi bi-three-dots icon-first-section"></i>
             </div>
           </div>
-          <div class="col-6 mb-3 d-flex align-items-center first-section-container">
+          <div class="col-6 col-lg-3 mx-lg-4 my-2 mb-3 d-flex align-items-center first-section-container">
             <img src="assets/imgs/main/image-6.jpg" alt="" class="img-first-section rounded-start-2">
             <div class="d-flex flex-column">
               <p class="name-first-section mb-0">Lorem ipsum</p>
@@ -84,57 +107,135 @@
             </div>
           </div>
     </section>
-
-    <section class="row">
-        <div class="col-12 container container-playlist"> <!-- rounded -->
-            <div> <!-- immagine  e p flex e column gap-->
-                <img src="" alt="">
-                <p class="playlist">
-                    Playlist
-                </p>
-                <p class="name-playlist">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                </p>
-            </div>
-            <div> <!-- space between -->
-                <div>
-                    <i class="bi bi-heart-fill"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
-                </div>
-                <div> <!-- space between -->
-                    <p> <!-- sarà generata da js -->
-                        16 brani
-                    </p>
-                    <i class="bi bi-play-circle"></i>
-                </div>
-            </div>
+    <div>
+      <h3 class="pt-5 pb-3 buonaseraTitle">
+        Album
+      </h3>
+    </div>
+    <section>
+      <div class="container-album col-lg-3 rounded-3">
+        <div class="row">
+          <div class="col-6 col-md-6 d-flex align-items-center">
+            <img src="https://picsum.photos/300" class="image1" alt="">
+            <img src="https://picsum.photos/1000" class="image2" alt="">
+          </div>
+          <div class="col-6 col-md-6 d-flex flex-column container-titolo-album px-4 py-4">
+            <p class="album">Album</p>
+            <p class="name-album">Lorem ipsum dolor</p>
+          </div>
         </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex mx-4 gap-4 pt-3">
+            <i class="bi bi-heart-fill"></i>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+          <div class="d-flex mx-4 gap-3 pt-3">
+            <p class="pt-2 tracks text-grey">16 brani</p>
+            <i class="bi bi-play-circle"></i>
+          </div>
+        </div>            
+          </div>
+</section>
+
+      <div class="container-album col-lg-3 rounded-3 mt-2">
+        <div class="row">
+          <div class="col-6 col-md-6 d-flex align-items-center">
+            <img src="https://picsum.photos/300" class="image1" alt="">
+            <img src="https://picsum.photos/1000" class="image2" alt="">
+          </div>
+          <div class="col-6 col-md-6 d-flex flex-column container-titolo-album px-4 py-4">
+            <p class="album">Album</p>
+            <p class="name-album">Lorem ipsum dolor</p>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex mx-4 gap-4 pt-3">
+            <i class="bi bi-heart-fill"></i>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+          <div class="d-flex mx-4 gap-3 pt-3">
+            <p class="pt-2 tracks text-grey">16 brani</p>
+            <i class="bi bi-play-circle"></i>
+          </div>
+        </div>            
+          </div>
+</section>
+
+    <section>
+          <div class="container-album col-lg-3 rounded-3 mt-2">
+            <div class="row">
+              <div class="col-6 col-md-6 d-flex align-items-center">
+                <img src="https://picsum.photos/300" class="image1" alt="">
+                <img src="https://picsum.photos/1000" class="image2" alt="">
+              </div>
+              <div class="col-6 col-md-6 d-flex flex-column container-titolo-album px-4 py-4">
+                <p class="album">Album</p>
+                <p class="name-album">Lorem ipsum dolor</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="d-flex mx-4 gap-4 pt-3">
+                <i class="bi bi-heart-fill"></i>
+                <i class="bi bi-three-dots-vertical"></i>
+              </div>
+              <div class="d-flex mx-4 gap-3 pt-3">
+                <p class="pt-2 tracks text-grey">16 brani</p>
+                <i class="bi bi-play-circle"></i>
+              </div>
+            </div>            
+              </div>
     </section>
 
     <section>
-        <div class="container container-playlist"> <!-- rounded -->
-            <div> <!-- immagine  e p flex e column gap-->
-                <img src="" alt="">
-                <p class="playlist">
-                    Playlist
-                </p>
-                <p class="name-playlist">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                </p>
-            </div>
-            <div> <!-- space between -->
-                <div>
-                    <!-- cuore e tre puntini con space between con una max-width -->
-                </div>
-                <div> <!-- space between -->
-                    <p> <!-- sarà generata da js -->
-                        16 brani
-                    </p>
-                    <!--icona play -->
-                </div>
-            </div>
+      <div class="container-album col-lg-3 rounded-3 mt-2">
+        <div class="row">
+          <div class="col-6 col-md-6 d-flex align-items-center">
+            <img src="https://picsum.photos/300" class="image1" alt="">
+            <img src="https://picsum.photos/1000" class="image2" alt="">
+          </div>
+          <div class="col-6 col-md-6 d-flex flex-column container-titolo-album px-4 py-4">
+            <p class="album">Album</p>
+            <p class="name-album">Lorem ipsum dolor</p>
+          </div>
         </div>
-    </section>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex mx-4 gap-4 pt-3">
+            <i class="bi bi-heart-fill"></i>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+          <div class="d-flex mx-4 gap-3 pt-3">
+            <p class="pt-2 tracks text-grey">16 brani</p>
+            <i class="bi bi-play-circle"></i>
+          </div>
+        </div>            
+          </div>
+</section>
+
+<section>
+  <div class="container-album col-lg-3 rounded-3 mt-2">
+    <div class="row">
+      <div class="col-6 col-md-6 d-flex align-items-center">
+        <img src="https://picsum.photos/300" class="image1" alt="">
+        <img src="https://picsum.photos/1000" class="image2" alt="">
+      </div>
+      <div class="col-6 col-md-6 d-flex flex-column container-titolo-album px-4 py-4">
+        <p class="album">Album</p>
+        <p class="name-album">Lorem ipsum dolor</p>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div class="d-flex mx-4 gap-4 pt-3">
+        <i class="bi bi-heart-fill"></i>
+        <i class="bi bi-three-dots-vertical"></i>
+      </div>
+      <div class="d-flex mx-4 gap-3 pt-3">
+        <p class="pt-2 tracks text-grey">16 brani</p>
+        <i class="bi bi-play-circle"></i>
+      </div>
+    </div>            
+      </div>
+    </div>
+</section>
  </div>
 </main>
 </div>
