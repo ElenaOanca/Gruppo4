@@ -67,7 +67,7 @@ async function renderArtist() {
     nameMobile.innerText = artist.name;
     nameLg.innerText = artist.name;
 
-    artistHeaderArea.style.backgroundImage = `url(${artist.images[1].url})`;
+    artistHeaderArea.style.backgroundImage = `url(${artist.images[0].url})`;
     artistHeaderAreaLg.style.backgroundImage = `url(${artist.images[0].url})`;
 
 
