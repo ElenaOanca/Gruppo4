@@ -1,3 +1,37 @@
+.scrolling-text-container {
+  width: 300px; 
+  overflow: hidden;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  display: inline-block;
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 1s;
+  }
+  75% {
+    opacity:1 ;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+
+
+
 /* animazione home page to search page  */
 .slide-in-fwd-center {
 	-webkit-animation: slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
