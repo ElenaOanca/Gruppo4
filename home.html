@@ -170,21 +170,22 @@
 
   
   <footer id="footer">
+    <audio id="audio-player-source">
+      <source type="audio/ogg">
+      <source type="audio/mpeg">
+    </audio>
     <div class="container-footer-fixed">
       <div class="player mx-2 d-lg-none">
-        <div class="title-player">
-          <p>
+        <div class="scrolling-text-container title-player">
+          <p class="scrolling-text" id="current-playing">
             Lorem ipsum
-            <audio id="audio-player-source">
-              <source type="audio/ogg">
-              <source type="audio/mpeg">
-            </audio>
           </p>
         </div>
         <div class="icons-player">
           <i class="bi bi-speaker"></i>
           <i class="bi bi-heart" id="like"></i>
           <i class="bi bi-play-fill" id="play"></i>
+          <!-- <i class="bi bi-pause d-none" id="pause"></i> -->
         </div>
       </div>
       <div class="container-footer d-lg-none navbarBottom"> <!--background trasparent-->

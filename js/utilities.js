@@ -94,13 +94,48 @@ function leggiCookie() {
 
    async function putReviews(query){
     let reviews = await getSongPreviews(query);
-    return reviews.data[0].preview
+    let target = document.querySelector('.player');
+    let currentTitle = document.querySelector('#current-playing');
+    console.log(reviews);
+    audioSrc.src = reviews.data[0].preview;
+    currentTitle.innerText = `${reviews.data[0].title} - ${reviews.data[0].artist.name}`;
+    audioSrc.play();
+    toggleMediaIcons();
    }
+
+ 
     
    
    /***** barra del player */
 
 
    let playBtn = document.querySelector("#play");
+   let audioSrc = document.querySelector('#audio-player-source');
 
-   
+   function playPause(mediaElement) { 
+    if (mediaElement.paused) {
+        mediaElement.play();
+        toggleMediaIcons()
+    }
+    else{
+        mediaElement.pause();
+        toggleMediaIcons();
+    } 
+  }
+
+  /**** funzione bottone play */
+  playBtn.addEventListener("click", () => {
+    playPause(audioSrc);
+  })
+
+  function toggleMediaIcons (){
+    if (audioSrc.paused) {
+      playBtn.classList.toggle("bi-play-fill");
+      playBtn.classList.toggle("bi-pause-fill");
+    } else {
+        playBtn.classList.toggle("bi-play-fill");
+        playBtn.classList.toggle("bi-pause-fill");
+    }
+  }
+
+  console.log(audioSrc);

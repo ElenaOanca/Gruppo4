@@ -72,6 +72,7 @@ async function renderSongsSearch() {
             let song = await searchByQuerySong(searchBox.value);
             let target = document.querySelector('.targetSearchsong');
             let audioTag = document.querySelector('#audio-player-source');
+            let currentSong = document.querySelector('#current-playing');
             target.innerHTML = '';
             console.log(song);
             let title = document.querySelector('#title-song');
@@ -89,8 +90,6 @@ async function renderSongsSearch() {
 
                     btn.addEventListener('click', async ()  => {
                         let preview = await putReviews(item.name);
-                        audioTag.src = preview;
-                        audioTag.play();
                     })
 
                     let name = clone.querySelector('.nomi-song');
