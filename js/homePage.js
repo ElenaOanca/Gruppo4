@@ -62,7 +62,7 @@ async function getNewReleases() {
     },
   }).then((res) => res.json());
 }
-
+/***** funzione nuove uscite */
 async function renderNewReleases() {
   let target = document.querySelector("#album-area");
   let albums = await getNewReleases();
@@ -100,9 +100,9 @@ async function renderNewReleases() {
     renderSingle(singleArray, singleImg, singleTitle, singleArtist, 0);
   });
 }
-
+/**** lancio funzione delle nuove uscite */
 renderNewReleases();
-
+/*** funzione renderizzazione singoli  */
 let renderSingle = (array, img, title, artist, index) => {
   img.src = array[index].images[1].url;
   title.innerText = array[index].name;
@@ -118,7 +118,7 @@ let renderSingle = (array, img, title, artist, index) => {
 
   }, 10000);
 };
-
+/****** sezione funzioni bottoni footer */
 function buttonFooter() {
     const home = document.querySelector('.home');
     const search = document.querySelector('.search');
@@ -143,4 +143,6 @@ function buttonFooter() {
     });
 }
 
-buttonFooter()
+buttonFooter();
+
+

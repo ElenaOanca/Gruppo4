@@ -146,7 +146,7 @@
       <div class="col-12 col-md-5 col-lg-4  container-song">
         <img src="" alt="" class="img-song">
         <p class="nomi-song"> </p>
-        <a href="#" class="btn-song"> </a>
+        <a class="btn-song"> </a>
 
 
 
@@ -175,13 +175,16 @@
         <div class="title-player">
           <p>
             Lorem ipsum
+            <audio id="audio-player-source">
+              <source type="audio/ogg">
+              <source type="audio/mpeg">
+            </audio>
           </p>
         </div>
         <div class="icons-player">
-
           <i class="bi bi-speaker"></i>
-          <i class="bi bi-heart"></i>
-          <i class="bi bi-play-fill"></i>
+          <i class="bi bi-heart" id="like"></i>
+          <i class="bi bi-play-fill" id="play"></i>
         </div>
       </div>
       <div class="container-footer d-lg-none navbarBottom"> <!--background trasparent-->

@@ -84,4 +84,23 @@ function leggiCookie() {
         
         return `rgb(${col1}, ${col2}, ${col3})`;
     }
+
+    /**** funzione snitcha le vere preview da deezer */
     
+    async function getSongPreviews(query) {
+        return await fetch ("https://striveschool-api.herokuapp.com/api/deezer/search?q="+query,)
+        .then(res => res.json())
+    }
+
+   async function putReviews(query){
+    let reviews = await getSongPreviews(query);
+    return reviews.data[0].preview
+   }
+    
+   
+   /***** barra del player */
+
+
+   let playBtn = document.querySelector("#play");
+
+   
