@@ -137,44 +137,21 @@
             <div class="container mobile-list d-lg-none">
                 <!-- LISTA CANZONI DELL'ALBUM IN MOBILE -->
                 <ul class="song-list list-group">
-                    <li class="song-item d-flex justify-content-between align-items-center">
-                        <div class="song-item-info">
-                            <p class="list-main-title">Montanelli - Intro</p>
-                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                        </div>
-                        <div class="song-item-menu-icon">
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                    </li>
-                    <li class="song-item d-flex justify-content-between align-items-center">
-                        <div class="song-item-info">
-                            <p class="list-main-title">Sciare</p>
-                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                        </div>
-                        <div class="song-item-menu-icon">
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                    </li>
-                    <li class="song-item d-flex justify-content-between align-items-center">
-                        <div class="song-item-info">
-                            <p class="list-main-title">Polpette</p>
-                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                        </div>
-                        <div class="song-item-menu-icon">
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                    </li>
-                    <li class="song-item d-flex justify-content-between align-items-center">
-                        <div class="song-item-info">
-                            <p class="list-main-title">lasagne</p>
-                            <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                        </div>
-                        <div class="song-item-menu-icon">
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                    </li>
+                   
                 </ul>
             </div>
+
+            <template id="tracks-mobile-list">
+                <li class="song-item d-flex justify-content-between align-items-center">
+                    <div class="song-item-info">
+                        <p class="track-title"></p>
+                        <p class="track-artists"></p>
+                    </div>
+                    <div class="song-item-menu-icon">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+                </li>
+            </template>
             <!-- SEZIONE CON TABELLA E CONTROLLERS PER DESKTOP  -->
             <div class="d-none d-lg-block pt-lg-2">
                 <div class="desktop-controllers">
@@ -194,53 +171,24 @@
                             <td><i class="bi bi-clock"></i></td>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td class="song-id">1</td>
-                            <td>
-                                <div class="song-item-info">
-                                    <p class="list-main-title">Sciare</p>
-                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                                </div>
-                            </td>
-                            <td class="reproductions">12098310</td>
-                            <td class="song-length">1:35</td>
-                        </tr>
-                        <tr>
-                            <td class="song-id">1</td>
-                            <td>
-                                <div class="song-item-info">
-                                    <p class="list-main-title">Sciare</p>
-                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                                </div>
-                            </td>
-                            <td class="reproductions">12098310</td>
-                            <td class="song-length">1:35</td>
-                        </tr>
-                        <tr>
-                            <td class="song-id">1</td>
-                            <td>
-                                <div class="song-item-info">
-                                    <p class="list-main-title">Sciare</p>
-                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                                </div>
-                            </td>
-                            <td class="reproductions">12098310</td>
-                            <td class="song-length">1:35</td>
-                        </tr>
-                        <tr>
-                            <td class="song-id">1</td>
-                            <td>
-                                <div class="song-item-info">
-                                    <p class="list-main-title">Sciare</p>
-                                    <p class="list-second-title">Pinguini Tattici Nucleari</p>
-                                </div>
-                            </td>
-                            <td class="reproductions">12098310</td>
-                            <td class="song-length">1:35</td>
-                        </tr>
+                    <tbody id="tracks-list-tabel">
+
                     </tbody>
                 </table>
+
+                <template id="track-table-item">
+                    <tr>
+                        <td class="track-number"></td>
+                        <td>
+                            <div class="track-item-info">
+                                <p class="track-title"></p>
+                                <p class="track-artists"></p>
+                            </div>
+                        </td>
+                        <td class="reproductions text-white"><i class="bi bi-play-circle-fill"></i></td>
+                        <td class="track-length"></td>
+                    </tr>
+                </template>
             </div>
             <!-- FOOTER -->
             <footer>
@@ -328,6 +276,7 @@
             </div>
         </div>
     </div>
+    <script src="js/album.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
