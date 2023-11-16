@@ -1,6 +1,6 @@
 const url = "https://api.spotify.com/v1/search?q=";
-const token = "Bearer BQCqrKXvv7kuHoKKArmebT5LJtD7Mno5dBqtnVjqJ-DDnGfotV9M1x-eZiu6UHv3vg8B8Jdi-Nq8bhHzGPaJzVNQ3X1yFhLOPe0b2V9GFnFB0h3PcqI"
-
+const token = "Bearer BQAyfDyvqRFvAIJsq--eTB-6M_nlx4xin6Dvbng_6JytIFrrdPKx9_h0MqUpxhryDFWps6OQd0rBkCHD-YjvbH2KX0movvRq8EWWjjaNpIOtYb_7bRE"
+const urlArtist=  "https://api.spotify.com/v1/artists/"
 const searchBox = document.querySelector('.searchForm input');
 
 
@@ -23,6 +23,7 @@ async function searchByQuerySong(query) {
         })
     .then(res => res.json())
 }
+
 async function searchByQueryAlbum(query) {
     return await fetch (`${url}${query}&type=album` , {
         headers : {
@@ -118,7 +119,7 @@ async function renderAlbumSearch() {
             let album = await searchByQueryAlbum(searchBox.value);
             let items = album.albums.items;
             console.log(album);
-            // Definisci il breakpoint
+            
            
 
             for (let index = 0; index < 4; index++) {
@@ -151,3 +152,56 @@ async function renderAlbumSearch() {
 
 
 renderAlbumSearch()
+
+
+async function searchByQueryTrending(id) {
+    return await fetch ( urlArtist + id, {
+        headers : {
+            "Content-Type": "application/json",
+            Authorization : token
+        }
+        })
+    .then(res => res.json())
+}
+
+async function renderTrendingSearch(id) {
+    let target = document.querySelector('.targetTrending');
+
+        
+            let title = document.querySelector('.sfogliaTitle');
+            title.classList.remove('d-none');
+            
+            
+            let trending = await searchByQueryTrending(id);
+            
+            console.log(trending);
+            
+            
+           
+
+            for (let index = 0; index <=10; index++) {
+               
+                let temp = document.querySelector('#areaTrending');
+                let clone = temp.content.cloneNode(true);
+            
+                let img = clone.querySelector('.img-artist');
+                let name = clone.querySelector('.frase-card');
+                let img2 = clone.querySelector('.img-second');
+                let name2 = clone.querySelector('.frase-second');
+
+                img.src = trending.images[1].url;
+                name.innerText = trending.name;
+                img2.src = trending.images[1].url;
+                name2.innerText = trending.name;
+                
+                
+                
+                
+                target.append(clone);
+            }
+       
+   
+}
+renderTrendingSearch('0TnOYISbd1XYRBk9myaseg')
+
+  
