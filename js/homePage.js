@@ -109,7 +109,7 @@ let renderSingle = (array, img, title, artist, index) => {
   artist.innerText = array[index].artists
     .map((artist) => artist.name)
     .join(", ");
-  setInterval(() => {
+  setTimeout(() => {
     index++;
     if (index == array.length) {
         index = 0;

@@ -124,9 +124,11 @@ function leggiCookie() {
   }
 
   /**** funzione bottone play */
-  playBtn.addEventListener("click", () => {
-    playPause(audioSrc);
-  })
+  if (playBtn!= null){
+      playBtn.addEventListener("click", () => {
+          playPause(audioSrc);
+        })
+    }
 
   function toggleMediaIcons (){
     if (audioSrc.paused) {
