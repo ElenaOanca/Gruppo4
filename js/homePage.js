@@ -2,6 +2,7 @@ const artistsUrl = "https://api.spotify.com/v1/artists/";
 const newAlbumUrl = "https://api.spotify.com/v1/browse/new-releases";
 
 checkCookieOnPage();
+let token = leggiCookie();
 
 id = "0TnOYISbd1XYRBk9myaseg";
 let token = leggiCookie();
@@ -26,25 +27,31 @@ async function getArtistsRelated() {
 }
 
 // FUNZIONE RENDERIZZA artisti
-async function renderArtists(id) {
-  let target = document.querySelector("#artists-area");
-  let artist = await getArtist(id);
-  let relatedArtists = await getArtistsRelated(id);
-  relatedArtists.artists.push(artist);
-  console.log(relatedArtists);
-  relatedArtists.artists.forEach((artist) => {
-    if (artist.popularity > 60) {
-      let clone = cloneTemplate("#artist-template");
-      let img = clone.querySelector(".artist-img");
-      let name = clone.querySelector(".artist-name");
-      let artistLink = clone.querySelector(".artist-link");
+async function renderArtists(id){
 
-      img.src = artist.images[0].url;
-      name.innerText = artist.name;
-      artistLink.href = `artista.html?id=${artist.id}`;
-      target.append(clone);
-    }
-  });
+    let target = document.querySelector('#artists-area')
+    let artist = await getArtist(id)
+    let relatedArtists = await getArtistsRelated(id)
+    relatedArtists.artists.push(artist)
+    console.log(relatedArtists);
+    relatedArtists.artists.forEach(artist => {
+        if (artist.popularity > 60){
+            let clone = cloneTemplate("#artist-template")
+            let img = clone.querySelector('.artist-img')
+            let name = clone.querySelector('.artist-name')
+            let artistLink = clone.querySelector('.artist-link')
+            let container = clone.querySelectorAll('.first-section-container');
+            container.forEach(card => card.style.backgroundColor = getRandomColor());
+            img.src = artist.images[0].url
+            name.innerText = artist.name
+            artistLink.href = `artist.html?id=${artist.id}`
+            target.append(clone)    
+        }
+    })
+  
+
+
+  
 }
 // LANCIO FUNZIONE RENDERIZZA categorie
 renderArtists(id);
@@ -80,7 +87,8 @@ async function renderNewReleases() {
       let tracks = clone.querySelector(".tracks");
       let albumLink = clone.querySelector(".album-link");
       let artistLink = clone.querySelector(".artist-link");
-
+            let container = clone.querySelectorAll('.container-album');
+            container.forEach(card => card.style.backgroundColor = getRandomColor());
       img1.src = album.images[1].url;
       img2.src = album.images[0].url;
       title.innerText = album.name;
