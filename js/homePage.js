@@ -118,31 +118,6 @@ let renderSingle = (array, img, title, artist, index) => {
 
   }, 10000);
 };
-/****** sezione funzioni bottoni footer */
-function buttonFooter() {
-    const home = document.querySelector('.home');
-    const search = document.querySelector('.search');
-    const library = document.querySelector('.library');
-    const searchPage= document.querySelector('.search-container');
-    const homePage = document.querySelector('.homeContainer');
 
-    home.addEventListener('click', () => {
-        library.classList.toggle('puff-out-center');
-        searchPage.classList.toggle('puff-out-center');
-        location.href = "home.html";
-    });
-    search.addEventListener('click', () =>{
-       
-        homePage.classList.add('d-none');
-        searchPage.classList.remove('d-none');
-        searchPage.classList.toggle('slide-in-fwd-center')
-        searchPage.style.zIndex='5'
-    })
-    library.addEventListener('click', () => {
-        location.href = "album.html"; // array in local storage di canzoni salvate
-    });
-}
-
-buttonFooter();
 
 
