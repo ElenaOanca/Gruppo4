@@ -62,3 +62,14 @@ function leggiCookie() {
            return res;
          }
     }}
+
+    function getRandomColor() {
+        // Genera valori RGB casuali
+        let col1 = Math.floor(Math.random() * 256);
+        let col2 = Math.floor(Math.random() * 100);
+        let col3 = Math.floor(Math.random() * 156);
+    
+        
+        return `rgb(${col1}, ${col2}, ${col3})`;
+    }
+    

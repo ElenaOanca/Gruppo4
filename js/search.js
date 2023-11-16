@@ -1,7 +1,8 @@
 const url = "https://api.spotify.com/v1/search?q=";
-const token = "Bearer BQBrUC5en4gU5bWWN1JTWz7W7to6UEy2igL8j0LaLURJG4F_3_v_mOmiJYNB5WJv5M9qgYc6utQcYmlB9xdwbdJBYyboyDOmstOAeb7bwNKxh_KJCsc"
+// const token = "Bearer BQBrUC5en4gU5bWWN1JTWz7W7to6UEy2igL8j0LaLURJG4F_3_v_mOmiJYNB5WJv5M9qgYc6utQcYmlB9xdwbdJBYyboyDOmstOAeb7bwNKxh_KJCsc"
 const newAlbumUrl = "https://api.spotify.com/v1/browse/new-releases"
-
+checkCookieOnPage();
+let token = leggiCookie();
 const searchBox = document.querySelector('.searchForm input');
 
 //query aritsta
@@ -9,7 +10,8 @@ async function searchByQueryArtist (query) {
     return await fetch (`${url}${query}&type=artist` , {
         headers : {
             "Content-Type": "application/json",
-            Authorization : token
+            Authorization :`Bearer ${token}`
+
         }
         })
     .then(res => res.json())
@@ -27,9 +29,8 @@ async function renderArtistsSearch() {
                 for (let index = 0; index < 4 && index < items.length; index++) {
                     let item = items[index];
                     if (item.popularity > 50) {
-                        let temp = document.querySelector('#risultatoSearchPage');
-                        let clone = temp.content.cloneNode(true);
-                
+                       
+                        let clone = cloneTemplate('#risultatoSearchPage')
                         let img = clone.querySelector('.img-artist');
                         let btn = clone.querySelector('.btn-artist');
                         let name = clone.querySelector('.nome-artist');
@@ -56,7 +57,7 @@ async function searchByQuerySong(query) {
     return await fetch (`${url}${query}&type=track` , {
         headers : {
             "Content-Type": "application/json",
-            Authorization : token
+            Authorization :`Bearer ${token}`
         }
         })
     .then(res => res.json())
@@ -77,8 +78,8 @@ async function renderSongsSearch() {
             for (let index = 0; index < 4 && index < items.length; index++) {
                 let item = items[index];
                 if (item.popularity > 50) {
-                    let temp = document.querySelector('#risultatoSearchPageSong');
-                    let clone = temp.content.cloneNode(true);
+                    let clone = cloneTemplate ('#risultatoSearchPageSong')
+                    
             
                     let img = clone.querySelector('.img-song');
                     let btn = clone.querySelector('.btn-song');
@@ -107,7 +108,7 @@ async function searchByQueryAlbum(query) {
     return await fetch (`${url}${query}&type=album` , {
         headers : {
             "Content-Type": "application/json",
-            Authorization : token
+            Authorization :`Bearer ${token}`
         }
         })
     .then(res => res.json())
@@ -128,10 +129,11 @@ async function renderAlbumSearch() {
             let items = album.albums.items;
             console.log(album);
             
-            for (let index = 0; index < 4; index++) {
+            for (let index = 0; index < 3; index++) {
                 // Clona il contenuto del template con ID 'risultatoSearchAlbum'
-                let temp = document.querySelector('#risultatoSearchAlbum');
-                let clone = temp.content.cloneNode(true);
+                
+                let clone =  cloneTemplate ("#risultatoSearchAlbum")
+
                 
                 // Estrae gli elementi dal template clonato
                 let img = clone.querySelector('.img-album');
@@ -170,7 +172,7 @@ async function getNewReleases () {
         {
             headers : {
                 "Content-Type": "application/json",
-                Authorization : token   
+                Authorization :`Bearer ${token}`   
             }
         })
     .then(res => res.json())
@@ -181,13 +183,14 @@ async function renderNewReleases() {
     console.log(albums);
 
     let target = document.querySelector('#targetTrendingAlbum');
-    let temp = document.querySelector('#areaTrendingALbum');
+    
 
     for (let i = 0; i < albums.albums.items.length; i++) {
         let album = albums.albums.items[i];
 
         if (album.album_type === "album") {
-            let clone = temp.content.cloneNode(true);
+           
+            let clone =  cloneTemplate ("#areaTrendingALbum")
             let img1 = clone.querySelector('#image1');
             let img2 = clone.querySelector('#image2');
             let title = clone.querySelector('.album-title');
@@ -220,4 +223,4 @@ function getRandomColor() {
 }
 
 
-getRandomColor();
+

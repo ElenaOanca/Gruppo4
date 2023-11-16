@@ -2,9 +2,9 @@ const artistsUrl = "https://api.spotify.com/v1/artists/"
 const newAlbumUrl = "https://api.spotify.com/v1/browse/new-releases"
 
 checkCookieOnPage();
+let token = leggiCookie();
 
 id = "0TnOYISbd1XYRBk9myaseg";
-let token = leggiCookie();
 
 
 
@@ -46,8 +46,8 @@ async function renderArtists(id){
             let img = clone.querySelector('.artist-img')
             let name = clone.querySelector('.artist-name')
             let artistLink = clone.querySelector('.artist-link')
-  
-
+            let container = clone.querySelectorAll('.first-section-container');
+            container.forEach(card => card.style.backgroundColor = getRandomColor());
             img.src = artist.images[0].url
             name.innerText = artist.name
             artistLink.href = `artist.html?id=${artist.id}`
@@ -90,7 +90,8 @@ async function renderNewReleases () {
             let tracks = clone.querySelector('.tracks');
             let albumLink = clone.querySelector('.album-link');
             let artistLink = clone.querySelector('.artist-link');
-
+            let container = clone.querySelectorAll('.container-album');
+            container.forEach(card => card.style.backgroundColor = getRandomColor());
             img1.src = album.images[1].url
             img2.src = album.images[0].url
             title.innerText = album.name
