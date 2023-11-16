@@ -56,11 +56,14 @@ async function getArtists() {
 
 async function renderArtist() {
     let artist = await getArtists();
+    console.log(artist);
 
     const windowWidth = window.innerWidth;
     let img = document.getElementById('artist-img-album-' + (windowWidth > 670 ? "lg" : "sm"));
+    let nomeArtista1 = document.getElementById('nomeArtista1');
+    nomeArtista1.innerText = artist.name;
 
-    img.src = artist.images[0].url
+    img.src = artist.images[1].url
 
 
 }
