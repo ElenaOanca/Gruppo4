@@ -16,6 +16,7 @@ body {
 
 .container-titolo-song {
   margin-left: -200px;
+
 }
 
 .singolo-desk {
@@ -309,4 +310,47 @@ column-gap: 15px;
  .first-section-container{
   width: 25%;
  }
-  }
+}
+
+/* SEZIONE NAV DI SX */
+.bi.bi-heart-fill{
+  padding: 1px 2px;
+  border-radius: 3px;
+  background: rgb(62,33,167);
+  background: linear-gradient(148deg, rgba(62,33,167,1) 19%, rgba(255,255,255,1) 62%);
+}
+  
+.bi.bi-bookmark-fill{
+  padding: 4px;
+  background-color: #004537;
+  border-radius: 3px;
+}
+
+.bi.bi-plus-square{
+  padding: 4px;
+}
+
+.bt{
+  border: 0;
+  border-radius: 100%;
+  padding: 4px 10px;
+  opacity: 0.6;
+}
+
+.bt:hover{
+  opacity: 1;
+}
+
+.dropdown-toggle{
+  border-radius: 15px;
+}
+.round-image{
+  border-radius: 100%;
+}
+
+.controller-section-friends button{
+  border: 0;
+  background: none;
+  color: var(--ColorGrey);
+  font-size: 20px;
+}
