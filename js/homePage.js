@@ -117,25 +117,20 @@ function buttonFooter() {
     const homePage = document.querySelector('.homeContainer');
 
     home.addEventListener('click', () => {
+        library.classList.toggle('puff-out-center');
+        searchPage.classList.toggle('puff-out-center');
         location.href = "home.html";
     });
     search.addEventListener('click', () =>{
-        homePage.style.opacity='0.2'
-        searchPage.classList.toggle('d-none');
-        searchPage.style.zIndex='2'
-        searchPage.style.opacity='0.9'
-        window.addEventListener('scroll', ()=>{
-            if (window.scrollY > searchPage.offsetTop) {
-                // Se sì, aggiungi la classe per bloccare lo scroll
-                body.classList.add('stopScroll');
-              } else {
-                // Altrimenti, rimuovi la classe per consentire lo scroll
-                body.classList.remove('stopScroll');
-              }
-        })
-    });
+       
+        homePage.classList.add('d-none');
+        searchPage.classList.remove('d-none');
+        searchPage.classList.toggle('slide-in-fwd-center')
+        searchPage.style.zIndex='5'
+    })
     library.addEventListener('click', () => {
         location.href = "album.html"; // array in local storage di canzoni salvate
     });
 }
+
 buttonFooter()
