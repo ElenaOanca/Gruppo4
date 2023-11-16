@@ -64,8 +64,6 @@ async function searchByQuerySong(query) {
 }
 
 
-
-
 //ricerca canzone
 
 async function renderSongsSearch() {
@@ -73,6 +71,8 @@ async function renderSongsSearch() {
         if (e.keyCode === 13) {
             let song = await searchByQuerySong(searchBox.value);
             let target = document.querySelector('.targetSearchsong');
+            let audioTag = document.querySelector('#audio-player-source');
+            let currentSong = document.querySelector('#current-playing');
             target.innerHTML = '';
             console.log(song);
             let title = document.querySelector('#title-song');
@@ -86,12 +86,17 @@ async function renderSongsSearch() {
             
                     let img = clone.querySelector('.img-song');
                     let btn = clone.querySelector('.btn-song');
+                    
+
+                    btn.addEventListener('click', async ()  => {
+                        let preview = await putReviews(item.name);
+                    })
+
                     let name = clone.querySelector('.nomi-song');
                     let container = clone.querySelectorAll('.container-song');
                     container.forEach(card => card.style.backgroundColor = getRandomColor());
             
                     img.src = item.album.images[0].url;
-                    btn.href = ''; // Aggiungi l'URL desiderato
                     btn.innerText = 'Ascolta ora';
                     name.innerText = item.name;
                     searchBox.value = '';

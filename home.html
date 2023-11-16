@@ -25,12 +25,12 @@
       <div class="container-song-desk">
         <div class="row">
           <div class="col-6 col-md-6 d-flex align-items-center pb-5">
-            <img src="https://picsum.photos/1000" alt="">
+            <img id="single-img">
           </div>
           <div class="col-6 col-md-6 d-flex flex-column container-titolo-song pt-3">
             <p class="singolo-desk">SINGOLO</p>
-            <p class="name-song-desk">TITOLO CANZONE</p>
-            <p class="name-artist-desk">Artista</p>
+            <p class="name-song-desk" id="single-title">TITOLO CANZONE</p>
+            <p class="name-artist-desk" id="single-artists">Artista</p>
             <div class="buttons play">
 
             </div>
@@ -146,7 +146,7 @@
       <div class="col-12 col-md-5 col-lg-4  container-song">
         <img src="" alt="" class="img-song">
         <p class="nomi-song"> </p>
-        <a href="#" class="btn-song"> </a>
+        <a class="btn-song"> </a>
 
 
 
@@ -170,18 +170,22 @@
 
   
   <footer id="footer">
+    <audio id="audio-player-source">
+      <source type="audio/ogg">
+      <source type="audio/mpeg">
+    </audio>
     <div class="container-footer-fixed">
       <div class="player mx-2 d-lg-none">
-        <div class="title-player">
-          <p>
+        <div class="scrolling-text-container title-player">
+          <p class="scrolling-text" id="current-playing">
             Lorem ipsum
           </p>
         </div>
         <div class="icons-player">
-
           <i class="bi bi-speaker"></i>
-          <i class="bi bi-heart"></i>
-          <i class="bi bi-play-fill"></i>
+          <i class="bi bi-heart" id="like"></i>
+          <i class="bi bi-play-fill" id="play"></i>
+          <!-- <i class="bi bi-pause d-none" id="pause"></i> -->
         </div>
       </div>
       <div class="container-footer d-lg-none navbarBottom"> <!--background trasparent-->
@@ -211,7 +215,7 @@
     <div class="col-6 col-lg-3 mx-lg-4 my-2 d-flex p-0 align-items-center first-section-container rounded-2">
       <img src="assets/imgs/main/image-1.jpg" alt="" class="img-first-section artist-img rounded-start-2">
       <div class="d-flex flex-column">
-        <a class="artist-link"></a><p class="name-first-section artist-name mb-0"></p>
+        <a class="artist-link"><p class="name-first-section artist-name mb-0"></p></a>
         <i class="bi bi-three-dots icon-first-section"></i>
       </div>
     </div>

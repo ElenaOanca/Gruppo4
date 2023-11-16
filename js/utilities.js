@@ -63,6 +63,18 @@ function leggiCookie() {
          }
     }}
 
+    // funzione millies to min and second
+    function formatDuration(ms) {
+        const minutes = Math.floor(ms / 60000);
+        const seconds = ((ms % 60000) / 1000).toFixed(0);
+        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    }
+
+    function millisToMinutesAndSeconds(millis) {
+        var minutes = Math.floor(millis / 60000);
+        var seconds = ((millis % 60000) / 1000).toFixed(0);
+        return `${minutes} min  ${seconds} sec`;
+    }
     function getRandomColor() {
         // Genera valori RGB casuali
         let col1 = Math.floor(Math.random() * 256);
@@ -72,4 +84,58 @@ function leggiCookie() {
         
         return `rgb(${col1}, ${col2}, ${col3})`;
     }
+
+    /**** funzione snitcha le vere preview da deezer */
     
+    async function getSongPreviews(query) {
+        return await fetch ("https://striveschool-api.herokuapp.com/api/deezer/search?q="+query,)
+        .then(res => res.json())
+    }
+
+   async function putReviews(query){
+    let reviews = await getSongPreviews(query);
+    let target = document.querySelector('.player');
+    let currentTitle = document.querySelector('#current-playing');
+    console.log(reviews);
+    audioSrc.src = reviews.data[0].preview;
+    currentTitle.innerText = `${reviews.data[0].title} - ${reviews.data[0].artist.name}`;
+    audioSrc.play();
+    toggleMediaIcons();
+   }
+
+ 
+    
+   
+   /***** barra del player */
+
+
+   let playBtn = document.querySelector("#play");
+   let audioSrc = document.querySelector('#audio-player-source');
+
+   function playPause(mediaElement) { 
+    if (mediaElement.paused) {
+        mediaElement.play();
+        toggleMediaIcons()
+    }
+    else{
+        mediaElement.pause();
+        toggleMediaIcons();
+    } 
+  }
+
+  /**** funzione bottone play */
+  playBtn.addEventListener("click", () => {
+    playPause(audioSrc);
+  })
+
+  function toggleMediaIcons (){
+    if (audioSrc.paused) {
+      playBtn.classList.toggle("bi-play-fill");
+      playBtn.classList.toggle("bi-pause-fill");
+    } else {
+        playBtn.classList.toggle("bi-play-fill");
+        playBtn.classList.toggle("bi-pause-fill");
+    }
+  }
+
+  console.log(audioSrc);
