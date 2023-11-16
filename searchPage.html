@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div class="container text-white pb-5 main-container">
+  <div class="container text-white pb-5 search-container">
     <h3 class="pt-5 pb-3 fs-1 cercaTitle">Cerca</h3>
     <div class="searchForm">
       <i class="bi bi-search searchIcons text-white"></i>
@@ -46,8 +46,60 @@
 
 
 
+    <template id="areaTrendingALbum">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="p-2 single-card">
+          <p class="frase-card album-title text-white fw-bold fs-5">
+            Podcast
+          </p>
+          <img src="assets/imgs/search/image-2.jpg" alt="" class="img-artist " id="image1">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="p-2  single-card">
+          <p class="frase-card album-artist frase-second text-white fw-bold fs-5">
+            Create per te
+          </p>
+          <img src="assets/imgs/search/image-4.jpg" alt="" class="img-artist " id="image2">
+        </div>
+      </div>
+
+    </template>
+
+    <template id="risultatoSearchPage">
+      <div class="col-12 col-md-5  col-lg-4  p-3   single-card">
+        <p class="frase-card text-white fw-bold fs-5 nome-artist">
+        </p>
+        <img src="assets/imgs/search/image-2.jpg" alt="" class="img-artist ">
+        <a href="#" class="btn-artist mt-3"> </a>
+      </div>
+    </template>
+    <template id="risultatoSearchPageSong">
+      <div class="col-12 col-md-5 col-lg-4  container-song">
+        <img src="" alt="" class="img-song">
+        <p class="nomi-song"> </p>
+        <a href="#" class="btn-song"> </a>
 
 
+
+      </div>
+    </template>
+    <template id="risultatoSearchAlbum">
+
+
+      <div class="card col-12 col-md-6 col-lg-4 bg-dark p-0 rounded-2 text-white my-5">
+        <img src="" class="card-img-top img-album" alt="...">
+        <div class="card-body  ">
+          <h5 class="card-title nome-album"></h5>
+          <p class="card-text releaseDate-album">Some quick example text to build on the card title and make up the bulk
+            of the card's content.</p>
+          <a href="#" class="btn btn-success btn-album"></a>
+        </div>
+      </div>
+    </template>
+
+</div>
 
     <footer id="footer">
       <div class="container-footer-fixed">
@@ -133,58 +185,6 @@
       </div>
     </footer>
 
-    <template id="areaTrendingALbum">
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="p-2 single-card">
-          <p class="frase-card album-title text-white fw-bold fs-5">
-            Podcast
-          </p>
-          <img src="assets/imgs/search/image-2.jpg" alt="" class="img-artist " id="image1">
-        </div>
-      </div>
-
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="p-2  single-card">
-          <p class="frase-card album-artist frase-second text-white fw-bold fs-5">
-            Create per te
-          </p>
-          <img src="assets/imgs/search/image-4.jpg" alt="" class="img-artist " id="image2">
-        </div>
-      </div>
-
-    </template>
-
-    <template id="risultatoSearchPage">
-      <div class="col-12 col-md-5  col-lg-4  p-3   single-card">
-        <p class="frase-card text-white fw-bold fs-5 nome-artist">
-        </p>
-        <img src="assets/imgs/search/image-2.jpg" alt="" class="img-artist ">
-        <a href="#" class="btn-artist mt-3"> </a>
-      </div>
-    </template>
-    <template id="risultatoSearchPageSong">
-      <div class="col-12 col-md-5 col-lg-4  container-song">
-        <img src="" alt="" class="img-song">
-        <p class="nomi-song"> </p>
-        <a href="#" class="btn-song"> </a>
-
-
-
-      </div>
-    </template>
-    <template id="risultatoSearchAlbum">
-
-
-      <div class="card col-12 col-md-6 col-lg-4 bg-dark p-0 rounded-2 text-white my-5">
-        <img src="" class="card-img-top img-album" alt="...">
-        <div class="card-body  ">
-          <h5 class="card-title nome-album"></h5>
-          <p class="card-text releaseDate-album">Some quick example text to build on the card title and make up the bulk
-            of the card's content.</p>
-          <a href="#" class="btn btn-success btn-album"></a>
-        </div>
-      </div>
-    </template>
 
 
     <script src = 'node_modules/sweetalert2/dist/sweetalert2.all.min.js'></script>
