@@ -1,6 +1,7 @@
-const catUrl = "https://api.spotify.com/v1/browse/categories"
+const artistsUrl = "https://api.spotify.com/v1/artists/"
 const newAlbumUrl = "https://api.spotify.com/v1/browse/new-releases"
 
+id = "0TnOYISbd1XYRBk9myaseg";
 
 checkCookie();
 let token = leggiCookie();
@@ -21,44 +22,56 @@ class Alert {
 }
 
 
-// // FUNZIONE PRENDI CATEGORIE
-// async function getCategories () {
-//     return await fetch (catUrl,
-//         {
-//             headers : {
-//                 "Content-Type": "application/json",
-//                 Authorization : `Bearer ${token}`   
-//             }
-//         })
-//     .then(res => res.json())
-// }
+// FUNZIONE PRENDI ARTISTA
+async function getArtist (id) {
+    return await fetch (`${artistsUrl}${id}`,
+        {
+            headers : {
+                "Content-Type": "application/json",
+                Authorization : `Bearer ${token}`   
+            }
+        })
+    .then(res => res.json())
+}
+// FUNZIONE PRENDI ARTISTI CORRELATI
+async function getArtistsRelated () {
+    return await fetch (`${artistsUrl}${id}/related-artists`,
+        {
+            headers : {
+                "Content-Type": "application/json",
+                Authorization : `Bearer ${token}`   
+            }
+        })
+    .then(res => res.json())
+}
 
-// let catArray = [];
+// FUNZIONE RENDERIZZA artisti
+async function renderArtists(id){
 
-// // FUNZIONE RENDERIZZA CATEGORIE
-// async function renderCategories(){
-
-//     let target = document.querySelector('.home-artists-area')
-//     let categories = await getCategories()
-//     categories.categories.items.forEach(category => {
-//         catArray.push(category.name)
-//     })
-
-//     console.log(catArray);
-
-//     for (let i = 0 ; i < 6; i++) {
-//         let clone = cloneCategoriesCard()
-//         let img = clone.querySelector('.img-first-section')
-//         let artistName = clone.querySelector('.name-first-section')
-
-//         img.src = categories.categories.items[i].icons[0].url
-//         artistName.innerText = categories.categories.items[i].name
-//         target.append(clone)
-//     }
+    let target = document.querySelector('#artists-area')
+    let artist = await getArtist(id)
+    let relatedArtists = await getArtistsRelated(id)
+    relatedArtists.artists.push(artist)
+    console.log(relatedArtists);
+    relatedArtists.artists.forEach(artist => {
+        if (artist.popularity > 60){
+            let clone = cloneTemplate("#artist-template")
+            let img = clone.querySelector('.artist-img')
+            let name = clone.querySelector('.artist-name')
   
-// }
-// // LANCIO FUNZIONE RENDERIZZA categorie
-// renderCategories();
+
+            img.src = artist.images[0].url
+            name.innerText = artist.name
+            target.append(clone)    
+        }
+    })
+  
+
+
+  
+}
+// LANCIO FUNZIONE RENDERIZZA categorie
+renderArtists(id);  
 
 
 
