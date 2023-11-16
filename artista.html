@@ -8,45 +8,49 @@
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <title>Document</title>
     <style>
-       body {
-    color: white;
-    background-color: black;
+        body {
+            color: white;
+            background-color: black;
 
-}
+        }
 
-.ascoltatori{
-    font-size: 0.7rem;
-    color: grey;
-}
-.follow{ 
-    font-size: 0.7rem;
-    font-weight: 700;
+        .ascoltatori {
+            font-size: 0.7rem;
+            color: grey;
+        }
 
-}
+        .follow {
+            font-size: 0.7rem;
+            font-weight: 700;
+
+        }
 
 
 
 
-.icons{
-    cursor: pointer;
-}
+        .icons {
+            cursor: pointer;
+        }
 
-.enlarged-icon {
-    font-size: 2.1rem;
-    
-    
-}
-.enlarged-icons{
-    font-size: 1.1rem;
-}
-.enlarged-icons:active,
+        .enlarged-icon {
+            font-size: 2.1rem;
+
+
+        }
+
+        .enlarged-icons {
+            font-size: 1.1rem;
+        }
+
+        .enlarged-icons:active,
         .enlarged-icon:active {
             color: green;
         }
 
 
         .imgArtist img {
-            border-radius: 50%; /* Rende l'immagine rotonda */
+            border-radius: 50%;
+            /* Rende l'immagine rotonda */
         }
 
 
@@ -57,115 +61,132 @@
         .heartIcon {
             position: absolute;
             bottom: 2px;
-             right: 12px;
-             }
-        
+            right: 12px;
+        }
 
-        .sottotitoli{
-            color:white;
+
+        .sottotitoli {
+            color: white;
             font-size: 0.7rem;
             line-height: 0;
             font-weight: 700;
-    
+
         }
 
-        .titoloCanzoneArtista{
-            color:grey;
+        .titoloCanzoneArtista {
+            color: grey;
             font-size: 0.7rem;
             line-height: 0;
         }
-        .section{margin-top:20px;
-            
+
+        .section {
+            margin-top: 20px;
+
 
         }
+
         .desktop-table {
             background-color: black;
         }
 
-.descrizioneTab{
-    font-size: 0.9rem;
-    font-weight: 700;
+        .descrizioneTab {
+            font-size: 0.9rem;
+            font-weight: 700;
 
-}
-.tabColor{
-    background-color: black;
-}
-.navbar-a{
-    font-size: 0.5rem;
-}
-.player{
-   font-size:  0.9rem;
-   color: white;
-   font-weight: bold;
+        }
 
-}
-.songId{
-    font-size: 0.7rem;
-    
-}
+        .tabColor {
+            background-color: black;
+        }
 
-.titoloCanzone{font-size: 0.7rem;}
+        .navbar-a {
+            font-size: 0.5rem;
+        }
 
-.titoloArtistaAscolti{
-    color:grey;
-    font-size: 1rem;
-    line-height: 0;
+        .player {
+            font-size: 0.9rem;
+            color: white;
+            font-weight: bold;
 
-}
-.ascolti{color:grey;
-    font-size: 0.7rem;
-    line-height: 0;
+        }
 
-}
+        .songId {
+            font-size: 0.7rem;
 
-.inputRicerca{
-    color: grey;
-    font-size: 1.1rem;
-}
-    h4{
-        color:white;
-        font-size: 1.2rem;
-    }
+        }
 
+        .titoloCanzone {
+            font-size: 0.7rem;
+        }
 
-.footerArtist{
-     /* background: linear-gradient(0deg, black, grey 50%); */
-     background-color: black;
-    opacity: 0.5;
+        .titoloArtistaAscolti {
+            color: grey;
+            font-size: 1rem;
+            line-height: 0;
 
-}
+        }
 
-.navbar{
-   
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content: space-between;
-    
-    
-   
-}
+        .ascolti {
+            color: grey;
+            font-size: 0.7rem;
+            line-height: 0;
 
-.navbar i {
-    font-size: 1.3rem; 
-}
-.navbarIcons:hover{
-    color:green;
-    cursor: pointer;
+        }
 
-    
-}
-.navbar a {
-    font-size: 0.8rem; 
-    
-    
-}
+        .inputRicerca {
+            color: grey;
+            font-size: 1.1rem;
+        }
+
+        h4 {
+            color: white;
+            font-size: 1.2rem;
+        }
 
 
-.af {
-    color: white;
-}
-.round-image {border-radius: 100%;}
+        .footerArtist {
+            /* background: linear-gradient(0deg, black, grey 50%); */
+            background-color: black;
+            opacity: 0.5;
+
+        }
+
+        .navbar {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+
+
+        }
+
+        .navbar i {
+            font-size: 1.3rem;
+        }
+
+        .navbarIcons:hover {
+            color: green;
+            cursor: pointer;
+
+
+        }
+
+        .navbar a {
+            font-size: 0.8rem;
+
+
+        }
+
+
+        .af {
+            color: white;
+        }
+
+        .round-image {
+            border-radius: 100%;
+        }
     </style>
 </head>
 
@@ -230,15 +251,15 @@
 
             </div>
         </div>
-           <!-- ---------------------------------------------------------------------------Mobile------------------------------------------------------------------------------------------ -->
+        <!-- ---------------------------------------------------------------------------Mobile------------------------------------------------------------------------------------------ -->
         <!--parte centrale-->
         <div class="col-md-12 d-lg-none">
-           
+
             <div>
                 <img id="artist-img-album-sm" src="assets/imgs/pinguiniTatticiNucleari.png" width="100%" alt="">
-             
+
             </div>
-     
+
 
             <!--sezione mobile per nav following-->
             <div class="d-lg-none">
@@ -269,10 +290,10 @@
             <!-- TABELLA CANZONI ALBUM IN MOBILE -->
             <table class="desktop-table table table-dark d-lg-none">
                 <tbody>
-                   
 
-                        
-                       
+
+
+
 
                 </tbody>
             </table>
@@ -286,7 +307,7 @@
                     <div class="col-1"><i class="bi bi-play-fill"></i></div>
                 </div>
             </div> -->
-            <footer >
+            <footer>
                 <nav>
                     <div class=" d-flex d-lg-none text-center justify-content-around fixed-bottom">
                         <div class="nav-icon">
@@ -308,130 +329,115 @@
 
 
         </div>
-            <!---------------------------------------------------------------------------sezione per lg----------------------------------------------------------------------------------------------->
-            <div class="col-lg-7 d-none d-lg-block">
-               <!--sezione lg per nav following-->
-            
+        <!---------------------------------------------------------------------------sezione per lg----------------------------------------------------------------------------------------------->
+        <div class="col-lg-7 d-none d-lg-block">
+            <!--sezione lg per nav following-->
 
-                <div>
-                    <img id="artist-img-album-lg" src="assets/imgs/pinguiniTatticiNucleari.png" width="100%" alt="">
-                  
+
+            <div>
+                <img id="artist-img-album-lg" src="assets/imgs/pinguiniTatticiNucleari.png" width="100%" alt="">
+
+            </div>
+            <p>3.90000000 ascoltattori mensili</p>
+            <div class="row">
+                <div class="col-1 text-center"><i class="bi bi-play-circle-fill"></i></div>
+                <div class="col-2 text-start"><button class="bg-black text-white">Following</button></div>
+                <div class="col-1 text-start"><i class="bi bi-three-dots"></i></div>
+
+
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-8">
+                    <p>Popolari</p>
+                    <!-- TABELLA CANZONI ALBUM IN DESKTOP -->
+                    <table class="lg-table table table-dark ">
+                        <tbody>
+    
+                        </tbody>
+                    </table>
                 </div>
-                <p>3.90000000 ascoltattori mensili</p>
-                <div class="row">
-                    <div class="col-1 text-center"><i class="bi bi-play-circle-fill"></i></div>
-                    <div class="col-2 text-start"><button class="bg-black text-white">Following</button></div>
-                    <div class="col-1 text-start"><i class="bi bi-three-dots"></i></div>
+                <div class="col-4">
+                    <!--sezione brani che ti piacciono-->
+                    <div class="row mb-3  ">
+                        <p>Brani che ti piacciono</p>
+                        <div class="col-3 text-center "><img src="assets/imgs/main/image-1.jpg" width="70" height="70">
+                        </div>
+                        <div class="col-9">
 
+                            <p>8 brani di Pinguini tattici Nucleari</p>
+                            <i class="bi bi-suit-heart-fill"></i>
+                        </div>
+                    </div>
 
                 </div>
 
-                <div class="row">
 
 
+            </div>
+
+
+
+        </div>
+        <!-- parte destra-->
+        <div class="col-lg-2 d-none d-lg-block bg-black ps-1">
+            <div class="container">
+                <div class="d-flex justify-content-between">
+                    <p>AttivitÃ amici</p>
+                    <div class="controller-section-friends">
+                        <button><i class="bi bi-x-lg"></i></button>
+                        <button><i class="bi bi-person-add"></i></button>
+                    </div>
+                </div>
+                <!-- SEZIONE CARD ATTIVITA` AMICI -->
+                <div class="friends-card row">
+                    <div class="col-2 pe-0">
+                        <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
+                    </div>
                     <div class="col-8">
-                        <p>Popolari</p>
-                        <!-- TABELLA CANZONI ALBUM IN DESKTOP -->
-                        <table class="lg-table table table-dark ">
-                            <tbody>
-                                <tr>
-                                    <td class="song-id">1</td>
-
-                                    <td>
-                                        <div class="song-item-info d-flex align-items-center">
-                                            <img src="assets/imgs/main/image-8.jpg " width="50px" alt="">
-                                            <p class="list-second-title px-3">Pinguini Tattici Nucleari</p>
-                                        </div>
-                                    </td>
-                                    <td class="reproductions">12098310</td>
-                                    <td class="song-length">1:35</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <p class="m-0 friend-user-name">Charlie Hookham</p>
+                        <p class="m-0 friend-song-artist">in Camera Yumi Zouma</p>
+                        <i class="bi bi-disc friend-song"></i><span> EP III</span>
                     </div>
-                    <div class="col-4">
-                        <!--sezione brani che ti piacciono-->
-                        <div class="row mb-3  ">
-                            <p>Brani che ti piacciono</p>
-                            <div class="col-3 text-center "><img src="assets/imgs/main/image-1.jpg" width="70"
-                                    height="70">
-                            </div>
-                            <div class="col-9">
-
-                                <p>8 brani di Pinguini tattici Nucleari</p>
-                                <i class="bi bi-suit-heart-fill"></i>
-                            </div>
-                        </div>
-
+                    <div class="col-2 p-0">
+                        <p class="friend-last-played">4 ore</p>
                     </div>
-
-
-
                 </div>
-               
-
-                <!-- parte destra-->
-             
-
-
-                
-            </div>
-
-            <div class="col-lg-2 d-none d-lg-block bg-black ps-1">
-                <div class="container">
-                    <div class="d-flex justify-content-between">
-                            <p>AttivitÃ  amici</p>
-                        <div class="controller-section-friends">
-                            <button><i class="bi bi-x-lg"></i></button>
-                            <button><i class="bi bi-person-add"></i></button>
-                        </div>
+                <!-- SEZIONE CARD ATTIVITA` AMICI -->
+                <div class="friends-card row">
+                    <div class="col-2 pe-0">
+                        <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
                     </div>
-                    <!-- SEZIONE CARD ATTIVITA` AMICI -->
-                    <div class="friends-card row">
-                        <div class="col-2 pe-0">
-                            <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
-                        </div>
-                        <div class="col-8">
-                            <p class="m-0 friend-user-name">Charlie Hookham</p>
-                            <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
-                            <i class="bi bi-disc friend-song"></i><span> EP III</span>
-                        </div>
-                        <div class="col-2 p-0">
-                            <p class="friend-last-played">4 ore</p>
-                        </div>
+                    <div class="col-8">
+                        <p class="m-0 friend-user-name">Charlie Hookham</p>
+                        <p class="m-0 friend-song-artist">in Camera Yumi Zouma</p>
+                        <i class="bi bi-disc friend-song"></i><span> EP III</span>
                     </div>
-                    <!-- SEZIONE CARD ATTIVITA` AMICI -->
-                    <div class="friends-card row">
-                        <div class="col-2 pe-0">
-                            <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
-                        </div>
-                        <div class="col-8">
-                            <p class="m-0 friend-user-name">Charlie Hookham</p>
-                            <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
-                            <i class="bi bi-disc friend-song"></i><span> EP III</span>
-                        </div>
-                        <div class="col-2 p-0">
-                            <p class="friend-last-played">4 ore</p>
-                        </div>
+                    <div class="col-2 p-0">
+                        <p class="friend-last-played">4 ore</p>
                     </div>
-                    <!-- SEZIONE CARD ATTIVITA` AMICI -->
-                    <div class="friends-card row">
-                        <div class="col-2 pe-0">
-                            <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
-                        </div>
-                        <div class="col-8">
-                            <p class="m-0 friend-user-name">Charlie Hookham</p>
-                            <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
-                            <i class="bi bi-disc friend-song"></i><span> EP III</span>
-                        </div>
-                        <div class="col-2 p-0">
-                            <p class="friend-last-played">4 ore</p>
-                        </div>
+                </div>
+                <!-- SEZIONE CARD ATTIVITA` AMICI -->
+                <div class="friends-card row">
+                    <div class="col-2 pe-0">
+                        <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
+                    </div>
+                    <div class="col-8">
+                        <p class="m-0 friend-user-name">Charlie Hookham</p>
+                        <p class="m-0 friend-song-artist">in Camera Yumi Zouma</p>
+                        <i class="bi bi-disc friend-song"></i><span> EP III</span>
+                    </div>
+                    <div class="col-2 p-0">
+                        <p class="friend-last-played">4 ore</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <script src="js/artista.js"></script>
+        <script src="js/artista.js"></script>
 </body>
 
 </html>

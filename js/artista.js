@@ -39,16 +39,16 @@ const token = leggiCookie()
 
 /**** SEZIONE TOKEN & COOKIES */
 
-async function getToken () {
-    return await fetch ("https://accounts.spotify.com/api/token",
+async function getToken() {
+    return await fetch("https://accounts.spotify.com/api/token",
         {
-            method : "POST",
-            headers : {
+            method: "POST",
+            headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body : "grant_type=client_credentials&client_id=3d95631fa2714b63a86360548af955cd&client_secret=8f03a40917cb4cca9c4c5a9c476fa168"
+            body: "grant_type=client_credentials&client_id=3d95631fa2714b63a86360548af955cd&client_secret=8f03a40917cb4cca9c4c5a9c476fa168"
         })
-   .then(res => res.json())
+        .then(res => res.json())
 
 }
 
@@ -58,66 +58,67 @@ async function scriviCookie() {
     let token = await getToken()
     let now = new Date();//Date crea un oggetto data contenente data ed ora attuali
     now.getHours()//ora attuale
-    now.setHours(now.getHours() + 1 );//All'ora attuale aggiungo un'ora
+    now.setHours(now.getHours() + 1);//All'ora attuale aggiungo un'ora
 
 
     let scadenza = `expires= + ${now.toUTCString()}`;//converto la data nel formato utc, richiesto per il corretto funzionamento del cookie. esempio: Wed, 14 Jun 2017 07:00:00 GMT
 
-    document.cookie =`token =${token.access_token};${scadenza}`;
- } 
+    document.cookie = `token =${token.access_token};${scadenza}`;
+}
 
 
 
- function leggiCookie() {
+function leggiCookie() {
     let allCookies = document.cookie;
     let cookie = 'token';
 
     let arr = allCookies.split(' ; ');
 
     let res = '';
-    
-    for(let i = 0; i < arr.length; i++) {
 
-       chiave = arr[i].split('=')[0];//"token"
-       valore = arr[i].split('=')[1];//valore token
-        if(cookie == chiave){
-           res = valore;
-           return res;
-         }
-    }}
+    for (let i = 0; i < arr.length; i++) {
 
-    function checkCookie(){
-        if (!leggiCookie()){
-            scriviCookie();
-            return
+        chiave = arr[i].split('=')[0];//"token"
+        valore = arr[i].split('=')[1];//valore token
+        if (cookie == chiave) {
+            res = valore;
+            return res;
         }
     }
+}
+
+function checkCookie() {
+    if (!leggiCookie()) {
+        scriviCookie();
+        return
+    }
+}
 
 
 
 
 // SEZIONE PRENDI ARTISTA  E MOSTRALO NEL IMG DI PAGINA ARTISTA---------------------------------------------------------
 
-async function getArtists () {
-    return await fetch (url,
+async function getArtists() {
+    return await fetch(url,
         {
-            headers : {
+            headers: {
                 "Content-Type": "application/json",
-                Authorization : `Bearer ${token}`   
+                Authorization: `Bearer ${token}`
             }
         })
-    .then(res => res.json())
+        .then(res => res.json())
 }
 
-async function renderArtist(){
+async function renderArtist() {
     let artist = await getArtists();
 
-const windowWidth = window.innerWidth;
-let img = document.getElementById('artist-img-album-'+(windowWidth>670?"lg":"sm"));
+    const windowWidth = window.innerWidth;
+    let img = document.getElementById('artist-img-album-' + (windowWidth > 670 ? "lg" : "sm"));
 
-img.src = artist.images[0].url
+    img.src = artist.images[0].url
 
- 
+
 }
 
 renderArtist();
@@ -125,26 +126,26 @@ renderArtist();
 
 // SEZIONE PER PRENDERE FOLLOWERS E METTERLO DENTRO IL P --------------------------------------------------------------------
 
-async function getFollower () {
-    return await fetch (url,
+async function getFollower() {
+    return await fetch(url,
         {
-            headers : {
+            headers: {
                 "Content-Type": "application/json",
-                Authorization : `Bearer ${token}`   
+                Authorization: `Bearer ${token}`
             }
         })
-    .then(res => res.json())
+        .then(res => res.json())
 }
 
-async function renderFollower(){
+async function renderFollower() {
     let artist = await getArtists();
-console.log(artist.followers);//funziona
+    console.log(artist.followers);//funziona
 
-let follower = document.querySelector('#follower');
-follower.textContent = artist.followers.total +' ascoltattori mensili';
-const windowWidth = window.innerWidth;
-//  follower.style.background = windowWidth>670?"trnsparent":"linear-gradient(0deg, black, grey 50%)"
- 
+    let follower = document.querySelector('#follower');
+    follower.textContent = artist.followers.total + ' ascoltattori mensili';
+    const windowWidth = window.innerWidth;
+    //  follower.style.background = windowWidth>670?"trnsparent":"linear-gradient(0deg, black, grey 50%)"
+
 }
 
 renderFollower();
@@ -161,20 +162,31 @@ async function getTracks() {
             Authorization: `Bearer ${token}`
         }
     })
-    .then(res => res.json());
+        .then(res => res.json());
 }
-async function renderTracks() {
+
+
+
+
+
+
+
+
+
+
+
+async function renderTracks1() {
     let tracks = await getTracks();
     console.log(tracks); // funziona dati ricevuti
     // let tableBody = document.querySelector('.desktop-table tbody');
     // for (let index = 0; index < tracks.tracks.length; index++) {
     //     if (index >= 8) break; // Esce dal ciclo  8 elementi
     let tableBody = document.querySelector('.desktop-table tbody');
-    tracks.tracks.slice(0,5).forEach((track, index) => { 
-        
+    tracks.tracks.slice(0, 5).forEach((track, index) => {
+
         let row = document.createElement('tr');
 
-    
+
         let songIdCell = document.createElement('td');
         songIdCell.className = 'songId';
         songIdCell.textContent = index + 1;
@@ -188,7 +200,6 @@ async function renderTracks() {
         img.alt = track.name;
         imageCell.appendChild(img);
         row.appendChild(imageCell);
-
         // Aggiunta del nome e della popolarità della canzone
         let songInfoCell = document.createElement('td');
         let songName = document.createElement('p');
@@ -197,15 +208,16 @@ async function renderTracks() {
         songInfoCell.appendChild(songName);
 
         let songPopularity = document.createElement('p');
-        songPopularity.className = 'ascolti';
+        songPopularity.className = 'reproductions';
         songPopularity.textContent = `${track.popularity} Popolarità`;
         songInfoCell.appendChild(songPopularity);
         row.appendChild(songInfoCell);
 
+
         // Aggiunta dell'icona dei tre punti
         let iconCell = document.createElement('td');
         let icon = document.createElement('i');
-        icon.className = 'bi bi-three-dots-vertical';
+        icon.className = 'bi bi-three-dots';
         iconCell.appendChild(icon);
         row.appendChild(iconCell);
 
@@ -213,51 +225,58 @@ async function renderTracks() {
         tableBody.appendChild(row);
 
 
-          // Per schermi lg
-    let lgTableBody = document.querySelector('.lg-table tbody');
-    tracks.tracks.slice(0,5).forEach((track, index) => { 
-        let row = document.createElement('tr');
-    
-        let songIdCell = document.createElement('td');
-        songIdCell.className = 'songId';
-        songIdCell.textContent = index + 1;
-        row.appendChild(songIdCell);
 
-        // Aggiunta dell'immagine dell'album
-        let imageCell = document.createElement('td');
-        let img = document.createElement('img');
-        img.src = track.album.images[0].url;
-        img.width = 50;
-        img.alt = track.name;
-        imageCell.appendChild(img);
-        row.appendChild(imageCell);
 
-        // Aggiunta del nome e della popolarità della canzone
-        let songInfoCell = document.createElement('td');
-        let songName = document.createElement('p');
-        songName.className = 'list-second-title titoloCanzone';
-        songName.textContent = track.name;
-        songInfoCell.appendChild(songName);
+        function formatDuration(ms) {
+            const minutes = Math.floor(ms / 60000);
+            const seconds = ((ms % 60000) / 1000).toFixed(0);
+            return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+        }
 
-        let songPopularity = document.createElement('p');
-        songPopularity.className = 'ascolti';
-        songPopularity.textContent = `${track.popularity} Popolarità`;
-        songInfoCell.appendChild(songPopularity);
-        row.appendChild(songInfoCell);
+        // Per schermi lg
+        let lgTableBody = document.querySelector('.lg-table tbody');
+        tracks.tracks.slice(0, 5).forEach((track, index) => {
+            let row = document.createElement('tr');
 
-        // Aggiunta dell'icona dei tre punti
-        let iconCell = document.createElement('td');
-        let icon = document.createElement('i');
-        icon.className = 'bi bi-three-dots-vertical';
-        iconCell.appendChild(icon);
-        row.appendChild(iconCell);
+            let songIdCell = document.createElement('td');
+            songIdCell.className = 'songId';
+            songIdCell.textContent = index + 1;
+            row.appendChild(songIdCell);
 
-        // Aggiunta della riga completa al corpo della tabella lg
-        lgTableBody.appendChild(row);
-    });
+            // Aggiunta dell'immagine dell'album
+            let imageCell = document.createElement('td');
+            let img = document.createElement('img');
+            img.src = track.album.images[0].url;
+            img.width = 50;
+            img.alt = track.name;
+            imageCell.appendChild(img);
+
+            row.appendChild(imageCell);
+
+            // Aggiunta del nome
+            let songInfoCell = document.createElement('td');
+            let songName = document.createElement('p');
+            songName.className = 'list-second-title px-3';
+            songName.textContent = track.name;
+            songInfoCell.appendChild(songName);
+
+
+            row.appendChild(songInfoCell);
+
+            let songLength = document.createElement('td');
+            songLength.className = 'song-length';
+            songLength.textContent = formatDuration(track.duration_ms);
+            row.appendChild(songLength);
+
+
+
+
+            // Aggiunta della riga completa al corpo della tabella lg
+            lgTableBody.appendChild(row);
+        });
     });
 }
 
-renderTracks();
+renderTracks1();
 
 
