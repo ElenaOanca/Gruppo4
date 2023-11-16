@@ -1,23 +1,7 @@
 const artistsUrl = "https://api.spotify.com/v1/artists/"
 const newAlbumUrl = "https://api.spotify.com/v1/browse/new-releases"
 
-class Alert {
-    constructor(icon, message, text) {
-        this.icon = icon;
-        this.message = message;
-        this.text = text;
-    }
-
-    showAlert() {
-        Swal.fire({
-            icon: this.icon,
-            title: this.message,
-            text: this.text,
-          });
-        }
-}
-
-checkCookie();
+checkCookieOnPage();
 
 id = "0TnOYISbd1XYRBk9myaseg";
 let token = leggiCookie();
@@ -61,10 +45,12 @@ async function renderArtists(id){
             let clone = cloneTemplate("#artist-template")
             let img = clone.querySelector('.artist-img')
             let name = clone.querySelector('.artist-name')
+            let artistLink = clone.querySelector('.artist-link')
   
 
             img.src = artist.images[0].url
             name.innerText = artist.name
+            artistLink.href = `artist.html?id=${artist.id}`
             target.append(clone)    
         }
     })
@@ -102,12 +88,16 @@ async function renderNewReleases () {
             let title = clone.querySelector('.album-title');
             let artist = clone.querySelector('.album-artist');
             let tracks = clone.querySelector('.tracks');
+            let albumLink = clone.querySelector('.album-link');
+            let artistLink = clone.querySelector('.artist-link');
 
             img1.src = album.images[1].url
             img2.src = album.images[0].url
             title.innerText = album.name
             artist.innerText = album.artists.map(artist => artist.name).join(', ');
             tracks.innerText = album.total_tracks
+            albumLink.href = `album.html?id=${album.id}`
+            artistLink.href = `artist.html?id=${album.artists[0].id}`
             target.append(clone)
         }
     })
@@ -118,33 +108,33 @@ async function renderNewReleases () {
 renderNewReleases();
 
 
-// FUNZIONE CLONA TEMPLATE
-function cloneTemplate (template) {
-    let temp = document.querySelector(template)
-    return temp.content.cloneNode(true)
-}
+// // FUNZIONE CLONA TEMPLATE
+// function cloneTemplate (template) {
+//     let temp = document.querySelector(template)
+//     return temp.content.cloneNode(true)
+// }
 
-function checkCookie() {
-    if (leggiCookie() == null) {
-        new Alert('INFO', 'La tua sessione è Scaduta stai per essere reinderizzato', 'info').showAlert();
-        setTimeout(() => {location.href="index.html"}, 2500)
-    }
-    }
+// function checkCookieOnPage() {
+//     if (leggiCookie() == null) {
+//         new Alert('INFO', 'La tua sessione è Scaduta stai per essere reinderizzato', 'info').showAlert();
+//         setTimeout(() => {location.href="index.html"}, 2500)
+//     }
+//     }
 
-function leggiCookie() {
-    let allCookies = document.cookie;
-    let cookie = 'token';
+// function leggiCookie() {
+//     let allCookies = document.cookie;
+//     let cookie = 'token';
 
-    let arr = allCookies.split('; ');
+//     let arr = allCookies.split('; ');
 
-    let res = '';
+//     let res = '';
 
-    for(let i = 0; i < arr.length; i++) {
+//     for(let i = 0; i < arr.length; i++) {
 
-       chiave = arr[i].split('=')[0];//"token"
-       valore = arr[i].split('=')[1];//valore token
-        if(cookie == chiave){
-           res = valore;
-           return res;
-         }
-    }}
+//        chiave = arr[i].split('=')[0];//"token"
+//        valore = arr[i].split('=')[1];//valore token
+//         if(cookie == chiave){
+//            res = valore;
+//            return res;
+//          }
+//     }}
