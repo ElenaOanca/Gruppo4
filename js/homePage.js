@@ -27,31 +27,28 @@ async function getArtistsRelated() {
 }
 
 // FUNZIONE RENDERIZZA artisti
-async function renderArtists(id){
-
-    let target = document.querySelector('#artists-area')
-    let artist = await getArtist(id)
-    let relatedArtists = await getArtistsRelated(id)
-    relatedArtists.artists.push(artist)
-    console.log(relatedArtists);
-    relatedArtists.artists.forEach(artist => {
-        if (artist.popularity > 60){
-            let clone = cloneTemplate("#artist-template")
-            let img = clone.querySelector('.artist-img')
-            let name = clone.querySelector('.artist-name')
-            let artistLink = clone.querySelector('.artist-link')
-            let container = clone.querySelectorAll('.first-section-container');
-            container.forEach(card => card.style.backgroundColor = getRandomColor());
-            img.src = artist.images[0].url
-            name.innerText = artist.name
-            artistLink.href = `artist.html?id=${artist.id}`
-            target.append(clone)    
-        }
-    })
-  
-
-
-  
+async function renderArtists(id) {
+  let target = document.querySelector("#artists-area");
+  let artist = await getArtist(id);
+  let relatedArtists = await getArtistsRelated(id);
+  relatedArtists.artists.push(artist);
+  console.log(relatedArtists);
+  relatedArtists.artists.forEach((artist) => {
+    if (artist.popularity > 60) {
+      let clone = cloneTemplate("#artist-template");
+      let img = clone.querySelector(".artist-img");
+      let name = clone.querySelector(".artist-name");
+      let artistLink = clone.querySelector(".artist-link");
+      let container = clone.querySelectorAll(".first-section-container");
+      container.forEach(
+        (card) => (card.style.backgroundColor = getRandomColor())
+      );
+      img.src = artist.images[0].url;
+      name.innerText = artist.name;
+      artistLink.href = `artist.html?id=${artist.id}`;
+      target.append(clone);
+    }
+  });
 }
 // LANCIO FUNZIONE RENDERIZZA categorie
 renderArtists(id);
@@ -87,8 +84,10 @@ async function renderNewReleases() {
       let tracks = clone.querySelector(".tracks");
       let albumLink = clone.querySelector(".album-link");
       let artistLink = clone.querySelector(".artist-link");
-            let container = clone.querySelectorAll('.container-album');
-            container.forEach(card => card.style.backgroundColor = getRandomColor());
+      let container = clone.querySelectorAll(".container-album");
+      container.forEach(
+        (card) => (card.style.backgroundColor = getRandomColor())
+      );
       img1.src = album.images[1].url;
       img2.src = album.images[0].url;
       title.innerText = album.name;
@@ -105,16 +104,16 @@ async function renderNewReleases() {
 renderNewReleases();
 
 let renderSingle = (array, img, title, artist, index) => {
-        img.src = array[index].images[1].url;
-        title.innerText = array[index].name;
-        artist.innerText = array[index].artists.map(
-          (artist) => artist.name
-        ).join(", ");
-        setInterval (() => {
-            index++;
-            if (index > array.length) {
-                index = 0;
-            }
-            renderSingle(array, img, title, artist, index);
-        }, 10000)
-}
+  img.src = array[index].images[1].url;
+  title.innerText = array[index].name;
+  artist.innerText = array[index].artists
+    .map((artist) => artist.name)
+    .join(", ");
+  setInterval(() => {
+    index++;
+    if (index > array.length) {
+      index = 0;
+    }
+    renderSingle(array, img, title, artist, index);
+  }, 10000);
+};
