@@ -1,5 +1,6 @@
-const url = " https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg"
+const url = " https://api.spotify.com/v1/artists/"
 const urlGenerico = "https://api.spotify.com/v1/search?q="
+let id = getIdFromBar();
 
 // class SpotifyApi {
 //     tokenBody
@@ -44,7 +45,7 @@ const token = leggiCookie()
 // SEZIONE PRENDI ARTISTA  E MOSTRALO NEL IMG DI PAGINA ARTISTA---------------------------------------------------------
 
 async function getArtists() {
-    return await fetch(url,
+    return await fetch(url+id,
         {
             headers: {
                 "Content-Type": "application/json",
@@ -59,11 +60,15 @@ async function renderArtist() {
     console.log(artist);
 
     const windowWidth = window.innerWidth;
-    let img = document.getElementById('artist-img-album-' + (windowWidth > 670 ? "lg" : "sm"));
-    let nomeArtista1 = document.getElementById('nomeArtista1');
-    nomeArtista1.innerText = artist.name;
+    let artistHeaderArea = document.querySelector('#artist-header');
+    let artistHeaderAreaLg = document.querySelector('#artist-lg-header');
+    let nameMobile = document.getElementById('artist-name');
+    let nameLg = document.getElementById('artist-lg-name');
+    nameMobile.innerText = artist.name;
+    nameLg.innerText = artist.name;
 
-    img.src = artist.images[1].url
+    artistHeaderArea.style.backgroundImage = `url(${artist.images[1].url})`;
+    artistHeaderAreaLg.style.backgroundImage = `url(${artist.images[0].url})`;
 
 
 }
