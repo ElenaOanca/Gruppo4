@@ -1,119 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/circular-font.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
     <title>Spotify</title>
 </head>
-<body>
-    <div class="container text-white bg-dark py-5 ">
- <header id="header"> <!--flex column  row gap -->
-    <div> <!-- flex con between tra buonasera e icone -->
-        <div>
-            <h3>
-                Buonasera
-            </h3>
+<body class="bg-dark text-white">
+ <div class="container">
+    <div class="mt-5 d-flex flex-column align-items-center">
+        <h1 class="mt-4 text-center">Benvenuto su "Spotify®"</h1>
+        <h4 class="mt-4 text-center">Se non hai ancora generato il tuo token clicca il tasto qui in basso e inizia a esplorare un mondo di musica</h4>
+        <p class="text-center mt-5 text-danger">Promettici solo che non sbircerai nei tuoi cookie provando malandrinamente a usare il nostro token, questo progetto è frutto del sangue di almeno 6 developers</p>
+        <div class="mt-5 d-flex align-items-center gap-4">
+            <input type="checkbox" name="promise" id="promise">
+            <label for="promise" class="text-white">Accetta i termini e condizioni</label>
         </div>
-        <div> <!--3 icone impostazioni flex -->
-            <i class="bi bi-bell"></i>
-            <i class="bi bi-clock-history"></i>
-            <i class="bi bi-gear"></i>
-        </div>
+        <button id="tokenGenerator" name="tokenGenerator" class="btn btn-transparent border border-white text-white mt-5">Genera Token</button>
     </div>
- </header>
-
- <main id="main"> 
- <div class="container-main"> <!-- flex column con gap row-->
-     <div class="d-flex">
-        <p class="offset-1 col-3" >
-            Musica
-        </p>
-        <p class="col-3">
-            Podcast e show
-        </p>
-    </div>
-    <section class="row home-artists-area">   <!-- col-6 flex mobile   -->
-  
-    </section>
-
-    <template id="home-artist-card">
-        <div class="col-6 mb-3 first-section-container"> <!-- flex  column gap-->
-            <img  alt="" class="img-first-section  rounded-start-4"> <!--rounded-start-->
-            <p class="name-first-section"> <!-- flex  align items center-->
-    </template>
-
-    <section>
-        <div class="container container-playlist"> <!-- rounded -->
-            <div> <!-- immagine  e p flex e column gap-->
-                <img src="" alt="">
-                <p class="playlist">
-                    Playlist
-                </p>
-                <p class="name-playlist">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                </p>
-            </div>
-            <div> <!-- space between -->
-                <div>
-                    <!-- cuore e tre puntini con space between con una max-width -->
-                </div>
-                <div> <!-- space between -->
-                    <p> <!-- sarà generata da js -->
-                        16 brani
-                    </p>
-                    <!--icona play -->
-                </div>
-            </div>
-        </div>
-    </section>
  </div>
-</main>
+ <audio id="audio" class="d-none" src="assets/sounds/entraa.mp3"></audio>
 
- <footer id="footer">
-    <div class="container-footer-fixed">
-        <div class="player">
-
-            <p>
-                Lorem ipsum dolor sit 
-            </p>
-            <i class="bi bi-speaker"></i>
-            <i class="bi bi-heart"></i>
-            <i class="bi bi-play-fill"></i> 
-        </div>
-        <div class="container"> <!--background trasparent-->
-            <div> <!--flex column row gap-->
-                <i class="bi bi-house-door-fill"></i>
-                <p>
-                    Home
-                </p>
-            </div>
-            <div> <!--flex column row gap-->
-                <i class="bi bi-search"></i>
-                <p>
-                    Cerca 
-                </p>
-            </div>
-            <div> <!--flex column row gap-->
-                <i class="bi bi-music-note-list"></i>
-                <p>
-                    La tua libreria
-                </p>
-            </div>
-        </div>
-    </div>
- </footer>
-</div> <!-- div chiusura container -->
-
-
-<script src="js/homePage.js"></script>
- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>   
  <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+ <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
+ <script src="js/utilities.js"></script>
+<script src="js/token.js"></script>
 </body>
 </html>
