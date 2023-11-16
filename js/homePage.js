@@ -109,33 +109,33 @@ async function renderNewReleases () {
 renderNewReleases();
 
 
-// // FUNZIONE CLONA TEMPLATE
-// function cloneTemplate (template) {
-//     let temp = document.querySelector(template)
-//     return temp.content.cloneNode(true)
-// }
+function buttonFooter() {
+    const home = document.querySelector('.home');
+    const search = document.querySelector('.search');
+    const library = document.querySelector('.library');
+    const searchPage= document.querySelector('.search-container');
+    const homePage = document.querySelector('.homeContainer');
 
-// function checkCookieOnPage() {
-//     if (leggiCookie() == null) {
-//         new Alert('INFO', 'La tua sessione è Scaduta stai per essere reinderizzato', 'info').showAlert();
-//         setTimeout(() => {location.href="index.html"}, 2500)
-//     }
-//     }
-
-// function leggiCookie() {
-//     let allCookies = document.cookie;
-//     let cookie = 'token';
-
-//     let arr = allCookies.split('; ');
-
-//     let res = '';
-
-//     for(let i = 0; i < arr.length; i++) {
-
-//        chiave = arr[i].split('=')[0];//"token"
-//        valore = arr[i].split('=')[1];//valore token
-//         if(cookie == chiave){
-//            res = valore;
-//            return res;
-//          }
-//     }}
+    home.addEventListener('click', () => {
+        location.href = "home.html";
+    });
+    search.addEventListener('click', () =>{
+        homePage.style.opacity='0.2'
+        searchPage.classList.toggle('d-none');
+        searchPage.style.zIndex='2'
+        searchPage.style.opacity='0.9'
+        window.addEventListener('scroll', ()=>{
+            if (window.scrollY > searchPage.offsetTop) {
+                // Se sì, aggiungi la classe per bloccare lo scroll
+                body.classList.add('stopScroll');
+              } else {
+                // Altrimenti, rimuovi la classe per consentire lo scroll
+                body.classList.remove('stopScroll');
+              }
+        })
+    });
+    library.addEventListener('click', () => {
+        location.href = "album.html"; // array in local storage di canzoni salvate
+    });
+}
+buttonFooter()

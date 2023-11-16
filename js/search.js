@@ -1,8 +1,8 @@
 const url = "https://api.spotify.com/v1/search?q=";
 // const token = "Bearer BQBrUC5en4gU5bWWN1JTWz7W7to6UEy2igL8j0LaLURJG4F_3_v_mOmiJYNB5WJv5M9qgYc6utQcYmlB9xdwbdJBYyboyDOmstOAeb7bwNKxh_KJCsc"
-const newAlbumUrl = "https://api.spotify.com/v1/browse/new-releases"
+const albumUrl = "https://api.spotify.com/v1/browse/new-releases"
 checkCookieOnPage();
-let token = leggiCookie();
+// let token = leggiCookie();
 const searchBox = document.querySelector('.searchForm input');
 
 //query aritsta
@@ -168,7 +168,7 @@ renderAlbumSearch()
 //query newReleases
 
 async function getNewReleases () {
-    return await fetch (newAlbumUrl ,
+    return await fetch (albumUrl ,
         {
             headers : {
                 "Content-Type": "application/json",

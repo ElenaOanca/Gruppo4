@@ -1,9 +1,15 @@
 *, ::after, ::before {
   box-sizing: none;
 }
-
-.main-container{
+.stopScroll{
+  overflow: hidden;
+}
+.search-container{
   background-color: #121212;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }   
 
 .searchValue,
@@ -173,7 +179,7 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    z-index: 2;
+    z-index: 99999;
    }
 
    .player{

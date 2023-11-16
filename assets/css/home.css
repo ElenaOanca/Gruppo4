@@ -265,6 +265,9 @@ column-gap: 15px;
     .icons-frase:hover {
     color:white;
 }
+.container-img-artist{
+  width: 200px;
+}
 
 @media (min-width: 768px) {
   .image1{
