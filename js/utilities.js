@@ -141,3 +141,14 @@ function leggiCookie() {
   }
 
   console.log(audioSrc);
+
+
+  //initialize variables
+//   let songIndex = 0;
+//   let masterPlay = document.getElementById('masterPlay')
+//   let myProgress = document.getElementById('myProgressBar')
+//   let songItems = document.querySelectorAll('.song-item')
+
+//   songItems.forEach((element), ()=>{
+//     ele
+//   })
