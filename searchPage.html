@@ -23,15 +23,15 @@
 <div class="container">
 
   <h2 class=" mt-3 fs-1 text-center text-white d-none" id="title-artist"> Artisti </h2>
-  <div class="targetSearchArtisti row ">
+  <div class="targetSearchArtisti row gap-3 justify-content-center">
   </div>
   
   <h2 class ="m-5 fs-1 text-center text-white d-none" id="title-song"> Cannzoni correlati </h2>
-  <div class="targetSearchsong row ">
+  <div class="targetSearchsong row gap-3 justify-content-center">
   </div>
   
   <h2 class= "mt-3 fs-1 text-center text-white d-none" id="title-album"> Album </h2>
-  <div class="targetSearchAlbum row ">
+  <div class="targetSearchAlbum row gap-5 justify-content-center">
   </div>
   
 </div>
@@ -41,7 +41,7 @@
     <div>
       <h3 class="text-center mt-4 sfogliaTitle ">Sfoglia tutto</h3>
     </div>
-    <div class="container-cards " id="targetTrendingAlbum">
+    <div class="container-cards row gy-3 my-2  " id="targetTrendingAlbum">
     </div>
 
 
@@ -89,7 +89,7 @@
    
    <template id="areaTrendingALbum">
 
-    <div class="row gy-3 my-2 container-cards">
+    
 
       <div class="col-6 col-md-4 col-lg-3">
         <div class="p-2 single-card">
@@ -108,11 +108,11 @@
               <img src="assets/imgs/search/image-4.jpg" alt="" class="img-artist " id="image2">
             </div>
           </div>
-        </div>
+        
   </template>
 
   <template id="risultatoSearchPage">
-    <div class="col-12 col-md-6 col-lg-3  p-3 my-3 single-card">
+    <div class="col-12 col-md-5  col-lg-4  p-3   single-card">
       <p class="frase-card text-white fw-bold fs-5 nome-artist">
       </p>
       <img src="assets/imgs/search/image-2.jpg" alt="" class="img-artist ">
@@ -120,7 +120,7 @@
     </div>
 </template>
 <template id="risultatoSearchPageSong">
-  <div class="col-12 col-md-6 col-lg-3  container-song">
+  <div class="col-12 col-md-5 col-lg-4  container-song">
     <img src="" alt="" class="img-song">
     <p class="nomi-song"> </p>
     <a href="#" class="btn-song"> </a>

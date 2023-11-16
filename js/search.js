@@ -1,5 +1,5 @@
 const url = "https://api.spotify.com/v1/search?q=";
-const token = "Bearer BQCJU3D_eApnQ10XkmL6KrQLv6s91RGO3h-g_ldtPSBM60FSXDnSlFZ2yMHhlZpxSrs26JSO9d7jYr3YWywj19kUQrOocHOlU1pp_yAJvXbZASvIA4M"
+const token = "Bearer BQBrUC5en4gU5bWWN1JTWz7W7to6UEy2igL8j0LaLURJG4F_3_v_mOmiJYNB5WJv5M9qgYc6utQcYmlB9xdwbdJBYyboyDOmstOAeb7bwNKxh_KJCsc"
 const newAlbumUrl = "https://api.spotify.com/v1/browse/new-releases"
 
 const searchBox = document.querySelector('.searchForm input');

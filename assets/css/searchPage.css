@@ -1,3 +1,7 @@
+*, ::after, ::before {
+  box-sizing: none;
+}
+
 .main-container{
   background-color: #121212;
 }   
