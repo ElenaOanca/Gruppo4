@@ -90,22 +90,23 @@ async function renderNewReleases() {
       artistLink.href = `artista.html?id=${album.artists[0].id}`;
       target.append(clone);
     }
-    renderSingle(singleArray, singleImg, singleTitle, singleArtist);
+    renderSingle(singleArray, singleImg, singleTitle, singleArtist, 0);
   });
 }
 
 renderNewReleases();
 
-let renderSingle = (array, img, title, artist) => {
-        let index = 0;
+let renderSingle = (array, img, title, artist, index) => {
         img.src = array[index].images[1].url;
         title.innerText = array[index].name;
         artist.innerText = array[index].artists.map(
           (artist) => artist.name
         ).join(", ");
-        setTimeout (() => {
-            for (index + 1; index < array.length; index++) {
-            renderSingle(array, img, title, artist);
+        setInterval (() => {
+            index++;
+            if (index > array.length) {
+                index = 0;
             }
+            renderSingle(array, img, title, artist, index);
         }, 10000)
 }
