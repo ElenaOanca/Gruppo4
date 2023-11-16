@@ -1,3 +1,8 @@
+/**** audio entra */
+let soundfile = "sounds/RedAlert.mp3";
+
+
+
 /**** SEZIONE TOKEN & COOKIES */
 function checkCookie() {
 if (leggiCookie()!= null) {
@@ -33,7 +38,17 @@ tokenButton.addEventListener('click', () => {
         new Alert('success', 'Token generato correttamente', 'success').showAlert();
         setTimeout(() => {location.href="home.html"}, 2500)
     } else {
-        new Alert('error', 'Eh no però così no eh!', 'error').showAlert();
+        Swal.fire({
+            title: 'Entraaa?!?!',
+            Text: 'Non penso proprio',
+            confirmButtonClass: 'btn btn-primary',
+            confirmButtonText: 'Your Text',
+            buttonsStyling: false,
+            onOpen: function () {
+                let audplay = new Audio(soundfile)
+                audplay.play();
+            }
+        })
     }
 });
 async function getToken () {
