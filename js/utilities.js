@@ -75,3 +75,13 @@ function leggiCookie() {
         var seconds = ((millis % 60000) / 1000).toFixed(0);
         return `${minutes} min  ${seconds} sec`;
     }
+    function getRandomColor() {
+        // Genera valori RGB casuali
+        let col1 = Math.floor(Math.random() * 256);
+        let col2 = Math.floor(Math.random() * 100);
+        let col3 = Math.floor(Math.random() * 156);
+    
+        
+        return `rgb(${col1}, ${col2}, ${col3})`;
+    }
+    

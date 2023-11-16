@@ -2,9 +2,10 @@ const artistsUrl = "https://api.spotify.com/v1/artists/";
 const newAlbumUrl = "https://api.spotify.com/v1/browse/new-releases";
 
 checkCookieOnPage();
+let token = leggiCookie();
 
 id = "0TnOYISbd1XYRBk9myaseg";
-let token = leggiCookie();
+
 
 // FUNZIONE PRENDI ARTISTA
 async function getArtist(id) {
@@ -38,10 +39,13 @@ async function renderArtists(id) {
       let img = clone.querySelector(".artist-img");
       let name = clone.querySelector(".artist-name");
       let artistLink = clone.querySelector(".artist-link");
-
+      let container = clone.querySelectorAll(".first-section-container");
+      container.forEach(
+        (card) => (card.style.backgroundColor = getRandomColor())
+      );
       img.src = artist.images[0].url;
       name.innerText = artist.name;
-      artistLink.href = `artista.html?id=${artist.id}`;
+      artistLink.href = `artist.html?id=${artist.id}`;
       target.append(clone);
     }
   });
@@ -80,7 +84,10 @@ async function renderNewReleases() {
       let tracks = clone.querySelector(".tracks");
       let albumLink = clone.querySelector(".album-link");
       let artistLink = clone.querySelector(".artist-link");
-
+      let container = clone.querySelectorAll(".container-album");
+      container.forEach(
+        (card) => (card.style.backgroundColor = getRandomColor())
+      );
       img1.src = album.images[1].url;
       img2.src = album.images[0].url;
       title.innerText = album.name;
@@ -97,16 +104,42 @@ async function renderNewReleases() {
 renderNewReleases();
 
 let renderSingle = (array, img, title, artist, index) => {
-        img.src = array[index].images[1].url;
-        title.innerText = array[index].name;
-        artist.innerText = array[index].artists.map(
-          (artist) => artist.name
-        ).join(", ");
-        setInterval (() => {
-            index++;
-            if (index > array.length) {
-                index = 0;
-            }
-            renderSingle(array, img, title, artist, index);
-        }, 10000)
+  img.src = array[index].images[1].url;
+  title.innerText = array[index].name;
+  artist.innerText = array[index].artists
+    .map((artist) => artist.name)
+    .join(", ");
+  setInterval(() => {
+    index++;
+    if (index > array.length) {
+      index = 0;
+    }
+    renderSingle(array, img, title, artist, index);
+  }, 10000);
+};
+
+function buttonFooter() {
+    const home = document.querySelector('.home');
+    const search = document.querySelector('.search');
+    const library = document.querySelector('.library');
+    const searchPage= document.querySelector('.search-container');
+    const homePage = document.querySelector('.homeContainer');
+
+    home.addEventListener('click', () => {
+        library.classList.toggle('puff-out-center');
+        searchPage.classList.toggle('puff-out-center');
+        location.href = "home.html";
+    });
+    search.addEventListener('click', () =>{
+       
+        homePage.classList.add('d-none');
+        searchPage.classList.remove('d-none');
+        searchPage.classList.toggle('slide-in-fwd-center')
+        searchPage.style.zIndex='5'
+    })
+    library.addEventListener('click', () => {
+        location.href = "album.html"; // array in local storage di canzoni salvate
+    });
 }
+
+buttonFooter()
