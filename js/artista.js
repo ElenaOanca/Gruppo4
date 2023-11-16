@@ -61,6 +61,7 @@ async function renderArtist() {
 
     const windowWidth = window.innerWidth;
     let artistHeaderArea = document.querySelector('#artist-header');
+    artistHeaderArea.style.height = '500px';
     let artistHeaderAreaLg = document.querySelector('#artist-lg-header');
     let nameMobile = document.getElementById('artist-name');
     let nameLg = document.getElementById('artist-lg-name');
