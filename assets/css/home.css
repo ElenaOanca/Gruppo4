@@ -106,8 +106,8 @@ a {
 .first-section-container{
 display: flex;
 column-gap: 15px;
-margin: 2px;
 width: 45%;
+margin: 2px;
 }
 .img-first-section {
     width: 40%;
@@ -295,8 +295,6 @@ width: 45%;
     width: 40%;
    }
   }
-  @media (min-width: 768px) and (max-width: 1023px){
-  }
 
   @media (min-width: 1024px) {
    body, .homeContainer {
@@ -345,40 +343,6 @@ width: 45%;
  .first-section-container{
   width: 25%;
  }
-  }
-
-  /*** animazione player footer **/
-
-  .scrolling-text-container {
-    width: 300px; 
-    overflow: hidden;
-  }
-  
-  .scrolling-text {
-    white-space: nowrap;
-    display: inline-block;
-    animation: scrollText 10s linear infinite;
-  }
-  
-  @keyframes scrollText {
-    0% {
-      transform: translateX(-100%);
-      opacity: 1;
-    }
-    25% {
-      opacity: 1;
-    }
-    50%{
-      opacity: 1s;
-    }
-    75% {
-      opacity:1 ;
-    }
-    100% {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-  }
 
  .container-album {
   width: 30%;
@@ -387,7 +351,7 @@ width: 45%;
   flex-grow: 0;
  }
 
-
+}
 
 
 /* SEZIONE NAV DI SX */
