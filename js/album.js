@@ -92,11 +92,7 @@ function cloneTemplate (template) {
     return temp.content.cloneNode(true)
 }
 
-function millisToMinutesAndSeconds(millis) {
-    var minutes = Math.floor(millis / 60000);
-    var seconds = ((millis % 60000) / 1000).toFixed(0);
-    return `${minutes} min  ${seconds} sec`;
-}
+
 
 /**** SEZIONE TOKEN & COOKIES */
 

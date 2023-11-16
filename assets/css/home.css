@@ -184,6 +184,7 @@ column-gap: 15px;
   cursor:pointer;
 }
 
+/* */
 
 /*  player position fixed */
 
@@ -280,6 +281,9 @@ column-gap: 15px;
     .icons-frase:hover {
     color:white;
 }
+.container-img-artist{
+  width: 200px;
+}
 
 @media (min-width: 768px) {
   .image1{
@@ -316,7 +320,6 @@ column-gap: 15px;
    }
 
    .first-section-container{
-    background-color:#2D2D2D;
     width: 272px;
     overflow:hidden;
    }
