@@ -29,8 +29,6 @@ async function getCategories () {
 
 async function renderCategories(){
     
-    
-    
     let target = document.querySelector('.home-artists-area')
     let categories = await getCategories()
     console.log(categories.categories.items[0]);
