@@ -365,6 +365,7 @@ column-gap: 15px;
   padding: 10px 25px;
   border-radius: 30px;
   background-color: green;
+  color: white;
 }
 .buttonSalva{
   border: none;
