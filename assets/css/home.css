@@ -292,8 +292,12 @@ column-gap: 15px;
   .container-album {
     width: 40%;
    }
-
-}
+  }
+  @media (min-width: 768px) and (max-width: 1023px){
+   .section1 {
+    margin-left: 150px;
+   }
+  }
 
   @media (min-width: 1024px) {
    body, .homeContainer {
@@ -351,6 +355,7 @@ column-gap: 15px;
  }
 
 }
+
 
 /* SEZIONE NAV DI SX */
 .heart-side{
@@ -423,4 +428,12 @@ column-gap: 15px;
 
 .friend-user-name,.bi.bi-x-lg,.mt-3,.bi.bi-person-add,.friend-song-artist,.friend-song,span,.friend-last-played{
   color: white;
+}
+
+.friend-user-name, .friend-song-artist, .friend-song, span, .friend-last-played {
+  font-size: 0.7rem;
+}
+
+.friends-activity {
+  font-size: 0.9rem;
 }
