@@ -103,10 +103,9 @@ function leggiCookie() {
     
    
    /***** barra del player */
-
-
    let playBtn = document.querySelector("#play");
    let audioSrc = document.querySelector('#audio-player-source');
+   let player = document.querySelector('.player');
 
    function playPause(mediaElement) { 
     if (mediaElement.paused) {
@@ -136,4 +135,48 @@ function leggiCookie() {
     }
   }
 
-  console.log(audioSrc);
+
+if (player === '') {
+        player.classList.toggle('d-none');
+}
+
+
+/****** sezione funzioni bottoni footer */
+function buttonFooter() {
+    const home = document.querySelectorAll('.home');
+    const search = document.querySelectorAll('.search');
+    const library = document.querySelectorAll('.library');
+    const searchPage= document.querySelector('.search-container');
+    const homePage = document.querySelector('.homeContainer');
+
+    homePage.addEventListener('click', () => {
+        homePage.classList.toggle('puff-out-center');
+        searchPage.classList.toggle('puff-out-center');
+        location.href = "home.html";
+    });
+    search.forEach((e) =>{
+        e.addEventListener('click', () =>{
+           
+            homePage.classList.add('d-none');
+            searchPage.classList.toggle('d-none');
+            searchPage.classList.toggle('slide-in-fwd-center')
+            searchPage.style.zIndex='5'
+        })
+
+    })
+    library.forEach((e) =>{
+        e.addEventListener('click', () =>{
+            location.href = "album.html"; // array in local storage di canzoni salvate
+
+        })
+    
+})
+}
+
+buttonFooter();
+
+function playerInOut() {
+    if (!player) {
+        
+    }
+}
