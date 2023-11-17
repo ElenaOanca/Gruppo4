@@ -85,3 +85,18 @@ function leggiCookie() {
         return `rgb(${col1}, ${col2}, ${col3})`;
     }
     
+   //funzione arrow history
+   function goBack() {
+
+    window.history.back();
+    
+}
+function goUp() {
+    window.history.forward();
+    
+}
+
+let forward = document.querySelector(".history-forward");
+let back = document.querySelector(".history-back");
+forward.addEventListener('click', goUp) ;
+back.addEventListener('click', goBack) ;
