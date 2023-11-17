@@ -103,7 +103,8 @@ function leggiCookie() {
     
    
    /***** barra del player */
-   let playBtn = document.querySelector(".play-mobile");
+   let playBtn = document.querySelectorAll(".play-button");
+   console.log(playBtn);
    let audioSrc = document.querySelector('#audio-player-source');
    let player = document.querySelector('.player');
 
@@ -119,26 +120,27 @@ function leggiCookie() {
   }
 
   /**** funzione bottone play */
-  if (playBtn!= null){
-      playBtn.addEventListener("click", () => {
+  playBtn.forEach((button) => {
+  if (button!= null){
+      button.addEventListener("click", () => {
           playPause(audioSrc);
         })
     }
+    })
+
 
   function toggleMediaIcons (){
+   playBtn.forEach((button) => {
     if (audioSrc.paused) {
-      playBtn.classList.toggle("bi-play-fill");
-      playBtn.classList.toggle("bi-pause-fill");
+    button.classList.toggle('bi-play-fill');
+    button.classList.toggle('bi-pause-fill');
     } else {
-        playBtn.classList.toggle("bi-play-fill");
-        playBtn.classList.toggle("bi-pause-fill");
+        button.classList.toggle('bi-play-fill');
+        button.classList.toggle('bi-pause-fill');
     }
-  }
-
-
-if (player === '') {
-        player.classList.toggle('d-none');
+  })
 }
+
 
 
 /****** sezione funzioni bottoni footer */
@@ -175,8 +177,3 @@ function buttonFooter() {
 
 buttonFooter();
 
-function playerInOut() {
-    if (!player) {
-        
-    }
-}

@@ -234,7 +234,7 @@ margin: 2px;
     padding-right: 10px;
    }
 
-   .bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
+   .bi-pause-fill:hover, .bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
     cursor:pointer;
    }
    
@@ -277,6 +277,7 @@ margin: 2px;
   }
 
   .title-player p,
+    .bi-pause-fill:hover,
     .bi-play-fill:hover,
     .bi-speaker:hover,
     .bi-heart:hover,
