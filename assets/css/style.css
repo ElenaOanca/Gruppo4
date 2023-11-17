@@ -1,196 +1,873 @@
+/*****************************************HOME PAGE*******************************************/
 body {
-    font-family: 'Arial', sans-serif;
     background-color: #121212;
-    color: #fff;
-    margin: 0;
-    padding: 8px;
-}
-
-.spotify-container {
-    max-width: 376px;
-    margin: auto;
-}
-
-
-.artist-section img {
     width: 100%;
-    border-radius: 4px;
 }
 
-.monthly-listeners {
-    font-size: 12px;
-    margin: 4px 0;
+a {
+    text-decoration: none;
+    color: white;
 }
 
-.artist-controls {
-    margin: 12px 0;
+.container-fluid {
+    width: 100%;
 }
 
-.btn-follow {
-    background-color: #1db954;
-    color: #fff;
-    border: none;
-    border-radius: 500px;
-    padding: 8px 24px;
-    font-size: 12px;
-    font-weight: bold;
+/*CONTAINER CANZONE SOPRA L'HEADER VERASIONE DESKTOP */
+.container-song-desk {
+    background: linear-gradient(0deg, black, rgb(30, 30, 30));
 }
 
-
-.liked-songs-section {
-    margin: 12px 0;
+.container-song-desk img {
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
 }
 
+.container-titolo-song {
+    margin-left: -200px;
 
-.popular-tracks-section p {
-    font-weight: bold;
 }
 
-.track-list {
-    margin: 12px 0;
+.singolo-desk {
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Black.otf);
+    font-weight: 500;
+    font-style: normal;
 }
 
-.track-item {
+.name-song-desk {
+    font-size: 3rem;
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Black.otf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.name-artist-desk {
+    margin-top: -20px;
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Black.otf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* MAIN*/
+.homeContainer {
+    background-color: #121212;
+    height: 100%;
+}
+
+.header-container {
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-content {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
 }
 
-.track-number {
-    margin-right: 8px;
+.buonaseraTitle {
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-BoldItalic.otf);
+    font-weight: 700;
+    font-style: normal;
 }
 
-.track-image {
-    width: 50px;
-    height: 50px;
-    margin-right: 8px;
-}
-
-.track-info p {
-    margin: 0;
-}
-
-.track-options {
-
-
-    margin-left: auto;
-}
-
-
-.spotify-footer {
-    position: fixed;
-    bottom: 0;
-
-
-    width: 100%;
-    background-color: #282828;
-
-
+.icons-container {
     display: flex;
-
-
-    justify-content: space-around;
-
-
-    padding: 12px 0;
+    gap: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    padding-left: 10px;
 }
 
-.nav-item {
-    text-align: center;
+/* FIRST SECTION */
+
+.category {
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Book.otf);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    cursor: pointer;
 }
 
-.nav-item i {
-
-
-    display: block;
-    margin-bottom: 4px;
+#artists-area {
+    justify-content: center;
 }
 
-.nav-item a {
-
-
-    color: #b3b3b3;
-
-
-
-
-    text-decoration: none;
-
-
-    font-size: 10px;
+#album-area {
+    justify-content: center;
+    margin: 1px;
 }
 
-.nav-item.active a {
-
-
-    color: #fff;
+.first-section-container {
+    display: flex;
+    column-gap: 15px;
 }
 
-
-@media (max-width: 768px) {
-
-
-    .spotify-container {
-
-
-        width: auto;
-
-
-        margin: 0 8px;
-    }
+.img-first-section {
+    width: 40%;
+    cursor: pointer;
 }
 
-
-.artistImg {
-    border-radius: 100%;
-
+.name-first-section {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    max-width: 120px;
+    margin-left: -10px;
+    cursor: pointer;
 }
-.songImg{
-    
+
+.icon-first-section {
+    color: grey;
+    cursor: pointer;
+}
+
+.icon-first-section:hover {
+    color: green;
+}
+
+/* SECOND SECTION*/
+
+.container-album {
+    background-color: #242424;
+}
+
+.container-album img {
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 10px white;
+}
+
+.image2 {
+    display: none;
+}
+
+.bi-arrow-left-circle,
+.bi-arrow-right-circle {
+    display: none;
+}
+
+.bi-heart-fill,
+.bi-three-dots-vertical,
+.bi-play-circle,
+.bi-arrow-left-circle,
+.bi-arrow-right-circle {
+    font-size: 25px;
+    color: grey;
+}
+
+.bi-heart-fill:hover,
+.bi-three-dots-vertical:hover {
+    font-size: 25px;
+    color: rgb(76, 254, 76);
+}
+
+.bi-play-circle:hover,
+.bi-arrow-left-circle:hover,
+.bi-arrow-right-circle:hover {
+    color: white;
+}
+
+.album,
+.tracks {
+    color: grey;
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Book.otf);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+
+.name-album {
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Book.otf);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* */
+
+/* PLAYER POSICTION FIXED */
+
+.container-footer-fixed {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
 }
 
 .player {
-    background-color: rgba(87, 82, 82, 0.466);
-    height: 40px;
-
+    display: flex;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #282828f5;
+    color: rgba(255, 255, 255, 0.603);
+    height: 50px;
 }
 
-.text-player {
-    font-size: 0.8rem;
+/* TITOLO CANZONE NEL PLAYER*/
+
+.title-player {
+    flex: 1;
     text-align: center;
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Medium.otf);
+    font-weight: 500;
+    font-style: normal;
 }
 
-.firtImage {
-    background-color: #b3b3b3;
+.title-player p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* ICONE LATERALI PLAYER */
+
+.icons-player {
+    font-size: 25px;
+    display: flex;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.bi-play-fill:hover,
+.bi-speaker:hover,
+.bi-heart:hover,
+.title-player p {
+    cursor: pointer;
+}
 
 
+.bi-speaker,
+.bi-heart {
+    color: rgba(255, 255, 255, 0.603);
+}
+
+/* NAVBAR FONDO PAGINA */
+
+.navbarBottom {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    color: rgba(255, 255, 255, 0.656);
 
 }
 
-.fixed {
-    font-size: 0.5rem
+/* ICONE NAVBAR FONDO PAGINA */
+
+.home-icon {
+    font-size: 20px;
+    align-items: center;
+}
+
+.icons-frase {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    font-size: 25px;
+}
+
+.icons-frase p {
+    margin-top: -5px;
+    font-size: 0.7rem;
+}
+
+.title-player p,
+.bi-play-fill:hover,
+.bi-speaker:hover,
+.bi-heart:hover,
+.icons-frase:hover {
+    color: white;
+}
+
+.container-img-artist {
+    width: 200px;
+}
+
+@media (min-width: 768px) {
+    .image1 {
+        display: none;
+    }
+    .image2 {
+        display: block;
+    }
+    .container-album {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    body,
+    .homeContainer {
+        background-color: #121212;
+    }
+
+    .bi-arrow-left-circle,
+    .bi-arrow-right-circle {
+        display: inline;
+    }
+
+    .icons-container,
+    .category {
+        display: none;
+    }
+
+    .buonaseraTitle {
+        margin-top: -30px;
+    }
+
+    .first-section-container {
+        width: 272px;
+        overflow: hidden;
+    }
+
+    .img-first-section {
+        margin-left: -15px;
+        width: 30%;
+        height: 100%;
+    }
+
+    .section1 {
+        margin-top: -20px;
+    }
+
+    .container-album {
+        width: 40%;
+    }
+
+    .contImage {
+        flex-grow: 1;
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    .first-section-container {
+        width: 25%;
+    }
+
+    .container-album {
+        width: 30%;
+    }
+
+    .contImage {
+        flex-grow: 0;
+    }
+
+}
+
+/* SEZIONE NAV DI SX */
+.heart-side {
+    padding: 1px 2px;
+    border-radius: 3px;
+    background: rgb(62, 33, 167);
+    background: linear-gradient(148deg, rgba(62, 33, 167, 1) 19%, rgba(255, 255, 255, 1) 62%);
+}
+
+.bi.bi-bookmark-fill {
+    padding: 4px;
+    background-color: #004537;
+    border-radius: 3px;
+}
+
+.bi.bi-plus-square {
+    padding: 4px;
+}
+
+.bt {
+    border: 0;
+    border-radius: 100%;
+    padding: 4px 10px;
+    opacity: 0.6;
+}
+
+.bt:hover {
+    opacity: 1;
+}
+
+.dropdown-toggle {
+    border-radius: 15px;
+}
+
+.round-image {
+    border-radius: 100%;
+}
+
+.controller-section-friends button {
+    border: 0;
+    background: none;
+    color: var(--ColorGrey);
+    font-size: 20px;
+}
+
+.dropdown-toggle {
+    border: none;
+}
+
+/* SEZIONE CENTRALE SEZIONE PULSANTI PLAY */
+.buttonPlay {
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background-color: green;
+    color: white;
+}
+
+.buttonSalva {
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.buttonSalva:hover {
+    background-color: white;
+    color: #000000;
+}
+
+.friend-user-name,
+.bi.bi-x-lg,
+.mt-3,
+.bi.bi-person-add,
+.friend-song-artist,
+.friend-song,
+span,
+.friend-last-played {
+    color: white;
+}
+
+/*****************************************FINE HOME PAGE*******************************************/
+/*****************************************INIZIO SEARCH PAGE*******************************************/
+
+/* ANIMAZIONE HOME PAGE TO SEARCH PAGE */
+.slide-in-fwd-center {
+	-webkit-animation: slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+/*ANIMAZIONE  SEARCH PAGE TO HOME PAGE */
+.puff-out-center {
+	-webkit-animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+	        animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+
+@-webkit-keyframes puff-out-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+@keyframes puff-out-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+
+
+/* SEARCH PAGE  */
+.search-container{
+  background-color: #121212;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transition: all 2s ease-in-out; 
+}   
+
+.searchValue,
+.title-player p,
+.bi-play-fill:hover,
+.bi-speaker:hover,
+.bi-heart:hover,
+.icons-frase:hover {
+  color:white;
+}
+
+   /* FORM DI RICERCA */
+.searchForm {
+  position: relative;
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+  
+}
+
+   /*icona form*/
+.searchIcons{
+  position: absolute;
+  font-size: 25px;
+  top: 12px;
+  left: 17px;
+  color: silver;
+}
+.searchValue {
+  background-color: #1b1b1b;
+  padding: 17px;
+
+  padding-left: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+   /*card centro pagina */
+
+.cercaTitle{
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-BoldItalic.otf);
+    font-weight: 700;
+    font-style: normal;
+   }
+
+.sfogliaTitle {
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Medium.otf);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+   }
+
+.single-card{
+  position: relative;
+  height: 80px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.img-artist {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  transform: rotate(25deg);
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px black;
+}
+
+.card-body{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+}
+
+.container-song {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 100px;
+  column-gap: 20px;
+}
+.img-song {
+  border-radius: 100%;
+  width: 50px;
+}
+.img-song:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 5px black;
+}
+.nomi-song {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nomi-song:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.btn-song {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 0px 8px;
+    box-shadow: 1px 1px 5px black;
+    margin: 10px;
+}
+.btn-song:hover {
+  text-decoration: underline;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.btn-artist {
+  background-color: green;
+  position: absolute;
+  bottom: 12px;
+  color: white;
+  margin-top: 205px;
+  text-decoration: none;
+  border-radius: 100px;
+  padding: 5px 8px;
+  box-shadow: 1px 1px 5px black;
 }
 
 
 
+.frase-card {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+  position: relative;
+  z-index: 1;
+  font-size: 0.8rem;
+  width: 130px;
+ }
 
-/* main */
-
-/* first section */
-
-/* second section */
-.first-section-container{
-display: flex;
-column-gap: 15px;
+.img-card{
+    width: 60px;
+    position: absolute;
+    bottom: 0px;
+    right: -15px;
+    transform: rotate(25deg);
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px black;
+    z-index: 0;
 }
-.img-first-section{
- max-width: 100px;
-}
-.name-first-section{
+
+   /*  player position fixed */
+
+/*  player position fixed */
+.container-footer-fixed {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 99999;
+   }
+
+   .player{
+    display: flex;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #282828f5;
+    color: rgba(255, 255, 255, 0.603);
+    height: 50px;
+   }
+
+   /*titolo canzone nel player*/
+
+   .title-player {
+    flex: 1;
+    text-align:center;
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Medium.otf);
+    font-weight: 500;
+    font-style: normal;
+   }
+
+   .title-player p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+   }
+
+   /*icone laterali player*/
+
+   .icons-player{
+    font-size: 25px;
+    display:flex;
+    gap: 10px;
+    padding-right: 10px;
+   }
+
+   .bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
+    cursor:pointer;
+   }
+   
+
+   .bi-speaker, .bi-heart{
+    color: rgba(255, 255, 255, 0.603);
+   }
+
+   /*navbar fondo pagina */
+
+   .navbarBottom{
+
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    color:rgba(255, 255, 255, 0.656);
+
+   }
+   
+      /*icone navbar fondo pagina */
+
+   .home-icon{
+    font-size: 20px;
+    align-items: center;
+   }
+
+   .icons-frase {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    font-size: 25px;
+  }
+  
+  .icons-frase p {
+    margin-top: -5px;
+    font-size: 0.7rem;
+  }
+
+
+
+  .single-card {
+    position: relative;
+    height: 130px;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+  .img-artist {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    transform: rotate(25deg);
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px black;
+  }
+  
+  .container-song {
+    display: flex;
+    background: linear-gradient(45deg, black, transparent);
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 100px;
+    column-gap: 20px;
+  }
+  .img-song {
+    border-radius: 100%;
+    width: 50px;
+  }
+  .img-song:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+  }
+  .nomi-song {
+    font-size: 10px;
     font-weight: bold;
+    margin: 0;
+    color: white;
     display: flex;
     align-items: center;
-    font-size: 20px;
-    max-width: 120px;
+    text-decoration: none;
+  }
+  
+  .nomi-song:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .btn-song {
+      background-color: green;
+      color: white;
+      text-decoration: none;
+      border-radius: 100px;
+      padding: 0px 8px;
+      box-shadow: 1px 1px 5px black;
+      margin: 10px;
+  }
+  .btn-song:hover {
+    text-decoration: underline;
+    box-shadow: none;
+    cursor: pointer;
+  }
+  
+  .btn-artist {
+    background-color: green;
+    position: absolute;
+    bottom: 12px;
+    color: white;
+    margin-top: 205px;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 5px 8px;
+    box-shadow: 1px 1px 5px black;
+  }
+.title-player p,
+.bi-play-fill:hover,
+.bi-speaker:hover,
+.bi-heart:hover,
+.icons-frase:hover {
+  color:white;
 }
-
