@@ -193,7 +193,7 @@ async function renderNewReleases() {
     let target = document.querySelector('#targetTrendingAlbum');
     
 
-    for (let i = 0; i < albums.albums.items.length; i++) {
+    for (let i = 0; i < 10; i++) {
         let album = albums.albums.items[i];
 
         if (album.album_type === "album") {
