@@ -81,8 +81,12 @@ function leggiCookie() {
         return `rgb(${col1}, ${col2}, ${col3})`;
     }
     
-   //funzione arrow history
- 
+    
+   async function getSongPreviews(query) {
+    return await fetch ("https://striveschool-api.herokuapp.com/api/deezer/search?q="+query,)
+    .then(res => res.json())
+}
+
 
    async function putReviews(query){
     let reviews = await getSongPreviews(query);

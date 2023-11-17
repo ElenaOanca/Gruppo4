@@ -87,7 +87,6 @@ async function renderSongsSearch() {
                     container.forEach(card => card.style.backgroundColor = getRandomColor());
             
                     img.src = item.album.images[0].url;
-                    btn.href = ''; // Aggiungi l'URL desiderato
                     btn.innerText = 'Ascolta ora';
                     name.innerText = item.name;
                     searchBox.value = '';

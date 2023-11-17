@@ -113,7 +113,7 @@ let renderSingle = (array, img, title, artist, index) => {
   artist.innerText = array[index].artists
     .map((artist) => artist.name)
     .join(", ");
-  setInterval(() => {
+  setTimeout(() => {
     index++;
     if (index > array.length) {
       index = 0;
@@ -121,6 +121,7 @@ let renderSingle = (array, img, title, artist, index) => {
     renderSingle(array, img, title, artist, index);
   }, 10000);
 };
+
 let headerPlayBtn = document.querySelector("#header-play-button");
 headerPlayBtn.addEventListener("click", async () => {
   let preview = await putReviews(document.querySelector('#single-title').innerText);
