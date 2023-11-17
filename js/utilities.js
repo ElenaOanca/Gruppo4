@@ -91,7 +91,7 @@ function leggiCookie() {
    async function putReviews(query){
     let reviews = await getSongPreviews(query);
     let target = document.querySelector('.player');
-    let currentTitle = document.querySelector('#current-playing');
+    let currentTitle = document.querySelector('.current-playing');
     console.log(reviews);
     audioSrc.src = reviews.data[0].preview;
     currentTitle.innerText = `${reviews.data[0].title} - ${reviews.data[0].artist.name}`;
@@ -103,7 +103,7 @@ function leggiCookie() {
     
    
    /***** barra del player */
-   let playBtn = document.querySelector("#play");
+   let playBtn = document.querySelector(".play-mobile");
    let audioSrc = document.querySelector('#audio-player-source');
    let player = document.querySelector('.player');
 

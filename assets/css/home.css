@@ -435,3 +435,7 @@ margin: 2px;
 .friends-activity {
   font-size: 0.9rem;
 }
+
+.search {
+  cursor: pointer;
+}
