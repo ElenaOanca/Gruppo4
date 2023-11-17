@@ -13,14 +13,14 @@
 
     <div class="row p-0">
         <!--parte sinistra-->
-        <div class="  d-none d-lg-block col-lg-2 m-0 p-0">
+        <div class=" nav-sinistra d-none d-lg-block col-lg-2 m-0 p-0">
             <div class="container bg-black text-white">
                 <div>
                     <i class="bi bi-three-dots p-3"></i>
                 </div>
 
                 <div class="nav flex-column mt-3">
-                    <a class="nav-link active text-white" href="#">
+                    <a class="nav-link active text-white" href="home.html">
                         <i class="bi bi-house-door-fill m-1"></i>
                         Home
                     </a>
@@ -79,8 +79,8 @@
         <div class="col-md-12 d-lg-none container-fluid m-0">
             
             <div id="artist-header" class="d-flex align-items-end justify-content-start">
-               <div class="fixed-top"> <a onclick="goBack()"><i class="bi bi-arrow-left-circle historyArtist"></i></a>
-                <a onclick="goUp()"><i class="bi bi-arrow-right-circle historyArtist"></i></a></div>
+               <div class="fixed-top"><i class="bi history-back bi-arrow-left-circle historyArtist"></i></a>
+             <i class="bi history-forward bi-arrow-right-circle historyArtist"></i></a></div>
                 <h1 id="artist-name"></h1>
             </div>
 
@@ -331,13 +331,13 @@
                 </div>
             </div>
         </div>
+        
         <script src="js/utilities.js"></script>
-
         <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
-        <script src="js/artista.js"></script>
+        <script src="js/artist.js"></script>
         <script src="js/popolaNavsinistra.js"></script>
         <script src="js/navBarDestra.js"></script>
-        <script src="js/arrowGo.js"></script>
+       
 </body>
 
 </html>

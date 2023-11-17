@@ -1,15 +1,13 @@
 const endpointPlaylist =  'https://api.spotify.com/v1/me/playlists';
 
 
-
-
 async function getAmici() {
     return await fetch(endpointPlaylist,
         {
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer BQAEy0CZo4gf7iBBGWey2FXaGwoYMyraBbchhi8dNZxk6bw4fKbh79cvdS5qOiOUw0D5TL1aQMuuLfRiSYATYMv8SCKwKiEBjRciG0LMV0HKbmPdt3j3PdWQeP9Gpd1RWVyPQW94gWCulhTc-Qsaela7twfnF1axD4PvcQVrU254ZH5U8OQ-cEGwekkvv-Xm1yP_tMM5U6vqGg
-                `
+                Authorization: `Bearer BQCtGUe2uL0Cxl9aOkwy3M7SCEUecEWeQr4gGjSFyBeoqNMTGLiD60AQ7R6IGpgJmPB03I_RyO0bcKvSYxM8uKM46LXN3M5suJdzopVZD2tpR3eiV9bI8xHXcm9MjMt7MMFKZ7pY7Z30gx1vWqPXGIJ6gf5b7ySlJjm3tWGWIafKTcy4JanRFKAOltxsqHvAVPGxMN0YVDCvu5Hw `
+               
             }
         })
         .then(res => res.json())

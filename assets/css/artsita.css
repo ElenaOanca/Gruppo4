@@ -540,11 +540,16 @@ i:hover {
   color:white;
 }
 
-#friends{
-    font-size: small;
-}
+
 .historyArtist{
     font-size: 1.75rem;
     color:grey;
     margin: 5px;
+}
+#friends{
+    font-size: small;
+}
+
+.nav-sinistra{
+    height: 100vh;
 }

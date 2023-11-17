@@ -255,7 +255,7 @@ box-shadow: 1px 1px 8px black;
     padding-right: 10px;
    }
 
-   .bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
+   .bi-pause-fill:hover, .bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
     cursor:pointer;
    }
    
@@ -289,6 +289,7 @@ box-shadow: 1px 1px 8px black;
     flex: 1;
     margin: 0 10px;
     font-size: 25px;
+    cursor: pointer;
   }
   
   .icons-frase p {
@@ -297,6 +298,7 @@ box-shadow: 1px 1px 8px black;
   }
 
   .title-player p,
+    .bi-pause-fill:hover,
     .bi-play-fill:hover,
     .bi-speaker:hover,
     .bi-heart:hover,
@@ -495,6 +497,7 @@ box-shadow: 1px 1px 8px black;
 cursor:pointer;
 }
 
+.friend
 /*----- Stile Player LG----*/
 
 
