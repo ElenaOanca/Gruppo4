@@ -413,13 +413,13 @@ i:hover {
     transform: translate(50%, calc(2px - 50%));
 }
 
-.other-features {
+/* .other-features {
     position: absolute;
     right: var(--padding);
     display: flex;
     flex-direction: row;
     gap: 1em;
-}
+} */
 
 .volume-bar {
     display: flex;

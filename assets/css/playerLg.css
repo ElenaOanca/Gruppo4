@@ -147,13 +147,16 @@ i:hover{
     background-color: var(--primary-color);
     transform: translate(50%, calc(2px - 50%));
 }
+
 .other-features{
     position: absolute;
     right: var(--padding);
+    bottom: 40px;
     display: flex;
     flex-direction: row;
     gap: 1em;
 }
+
 .volume-bar{
     display: flex;
     align-items: center;
