@@ -435,3 +435,116 @@ i:hover {
 .volume-bar .progress-bar:hover .progress::after {
     --size: .8em;
 }
+
+
+#nav-mobile-artist{
+    background-color: linear-gradient(90deg,black,#0000005e);
+}
+
+
+
+/*--------------player Simone-----------------------*/
+
+.container-footer-fixed {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+   }
+
+   .player{
+    display: flex;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #282828f5;
+    color: rgba(255, 255, 255, 0.603);
+    height: 50px;
+    margin-right: 20px;
+   }
+
+ 
+
+   .title-player {
+    flex: 1;
+    text-align:center;
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Medium.otf);
+    font-weight: 500;
+    font-style: normal;
+   }
+
+   .title-player p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+   }
+
+
+
+   .icons-player{
+    font-size: 25px;
+    display:flex;
+    gap: 10px;
+    padding-right: 10px;
+   }
+
+   .bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
+    cursor:pointer;
+   }
+
+
+   .bi-speaker, .bi-heart{
+    color: rgba(255, 255, 255, 0.603);
+   }
+
+
+
+   .navbarBottom1{
+
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    color:rgba(255, 255, 255, 0.656);
+
+   }
+
+
+
+   .home-icon{
+    font-size: 20px;
+    align-items: center;
+   }
+
+   .icons-frase {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    font-size: 25px;
+  }
+
+  .icons-frase p {
+    margin-top: -5px;
+    font-size: 0.7rem;
+  }
+
+.title-player p,
+.bi-play-fill:hover,
+.bi-speaker:hover,
+.bi-heart:hover,
+.icons-frase:hover {
+  color:white;
+}
+
+#friends{
+    font-size: small;
+}
+.historyArtist{
+    font-size: 1.75rem;
+    color:grey;
+    margin: 5px;
+}

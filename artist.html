@@ -77,8 +77,10 @@
         <!-- ---------------------------------------------------------------------------Mobile------------------------------------------------------------------------------------------ -->
         <!--parte centrale-->
         <div class="col-md-12 d-lg-none container-fluid m-0">
-
+            
             <div id="artist-header" class="d-flex align-items-end justify-content-start">
+               <div class="fixed-top"> <a onclick="goBack()"><i class="bi bi-arrow-left-circle historyArtist"></i></a>
+                <a onclick="goUp()"><i class="bi bi-arrow-right-circle historyArtist"></i></a></div>
                 <h1 id="artist-name"></h1>
             </div>
 
@@ -122,34 +124,52 @@
                 </tbody>
             </table>
 
-            <!-- ----------------player-------------------------------------------
-            <div class="d-lg-none">
+            <!-- ----------------player--------------------------------------------->
+            <!-- <div class="d-lg-none">
                 <div class="row">
                     <div class="col-5">Nome canzone</div>
                     <div class="col-1 offset-2"><i class="bi bi-music-player"></i></div>
                     <div class="col-1"><i class="bi bi-heart"></i></div>
                     <div class="col-1"><i class="bi bi-play-fill"></i></div>
                 </div>
-            </div> -->
-            <footer>
-                <nav>
-                    <div class=" d-flex d-lg-none text-center justify-content-around fixed-bottom">
-                        <div class="nav-icon">
-                            <i class="bi bi-house-door-fill"></i>
-                            <p class="navbar-a">Home</p>
-                        </div>
-                        <div class="nav-icon">
-                            <i class="bi bi-search"></i>
-                            <p class="navbar-a">Cerca</p>
-                        </div>
-                        <div class="nav-icon">
-                            <i class="bi bi-collection"></i>
-                            <p class="navbar-a">La tua libreria</p>
+            </div>  -->
+            <footer id="footer">
+                <div class="container-footer-fixed">
+                    <div class="player d-lg-none">
+                        <div class="title-player">
+                        <p>
+                            Lorem ipsum
+                        </p>
+                      </div>
+                        <div class="icons-player">
+            
+                          <i class="bi bi-speaker"></i>
+                          <i class="bi bi-heart"></i>
+                          <i class="bi bi-play-fill"></i> 
                         </div>
                     </div>
-                </nav>
-
-            </footer>
+                    <div class="container-footer d-lg-none navbarBottom1"> <!--background trasparent-->
+                        <div class="icons-frase"> <!--flex column row gap-->
+                            <i class="bi bi-house-door-fill"></i>
+                            <p>
+                                Home
+                            </p>
+                        </div>
+                        <div class="icons-frase"> <!--flex column row gap-->
+                            <i class="bi bi-search"></i>
+                            <p>
+                                Cerca 
+                            </p>
+                        </div>
+                        <div class="icons-frase"> <!--flex column row gap-->
+                            <i class="bi bi-music-note-list"></i>
+                            <p>
+                                La tua libreria
+                            </p>
+                        </div>
+                    </div>
+                </div>
+             </footer>
 
 
         </div>
@@ -158,8 +178,10 @@
             <!--sezione lg per nav following-->
 
 
-            <div id="artist-lg-header" class="d-flex flex-column align-items-start justify-content-end">
-                <h1 id="artist-lg-name"></h1>
+            <div id="artist-lg-header" class="d-flex flex-column align-items-start justify-content-end ">
+                <div> <i class="bi history-back bi-arrow-left-circle historyArtist"></i>
+                  <i class="bi history-forward bi-arrow-right-circle historyArtist"></i></div>
+                <h1 id="artist-lg-name"> </h1>
                 <p>3.90000000 ascoltattori mensili</p>
             </div>
 
@@ -208,9 +230,9 @@
 
         <!-- parte destra-->
         <div class="col-lg-2 d-none d-lg-block bg-black">
-            <div  id="friends" class="container">
+            <div id="friends" class="container">
                 <div class="d-flex justify-content-between">
-                    <p>AttivitÃ amici</p>
+                    <p>Attività amici</p>
                     <div class="controller-section-friends">
                         <button><i class="bi bi-x-lg"></i></button>
                         <button><i class="bi bi-person-add"></i></button>
@@ -262,7 +284,7 @@
         </div>
 
         <!-------------------------------Player----------------------------------------------------------------------->
-        <div class="music-player">
+        <div class="music-player d-md-none d-lg-block mb-1">
             <div class="song-bar">
                 <div class="song-infos">
                     <div class="image-container">
@@ -280,7 +302,7 @@
 
                 </div>
             </div>
-            <div class="progress-controller mt-1">
+            <div class="progress-controller ">
                 <div class="control-buttons">
                     <i class="bi bi-shuffle"></i>
                     <i class="bi bi-skip-backward-fill"></i>
@@ -310,11 +332,12 @@
             </div>
         </div>
         <script src="js/utilities.js"></script>
-      
+
         <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
         <script src="js/artista.js"></script>
         <script src="js/popolaNavsinistra.js"></script>
         <script src="js/navBarDestra.js"></script>
+        <script src="js/arrowGo.js"></script>
 </body>
 
 </html>
