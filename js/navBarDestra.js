@@ -52,11 +52,11 @@ function renderFriends(items) {
         
     //    friends.innerHTML += `<div class="p-2 mb-2 overflow-hidden">${item.userName}</div>` 
     friends.innerHTML += `
-    <div class="friends-card row">
-    <div class="col-2 pe-0">
-        <img class="round-image friend-profile-image" src="${item.profileImage}" alt="">
+    <div class="friends-card mt-3 row">
+    <div class="col-2 pe-0 me-1">
+        <img class="round-image friend-profile-image " src="${item.profileImage}" alt="">
     </div>
-    <div class="col-7 offset-1">
+    <div class="col-6   offset-1">
         <p class="m-0 friend-user-name">${item.userName}</p>
         <p class="m-0 friend-song-artist">${item.songArtist}</p>
         <i class="bi bi-disc friend-song"></i><span> ${item.songTitle}</span>
