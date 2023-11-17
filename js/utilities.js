@@ -96,7 +96,8 @@ function leggiCookie() {
     audioSrc.src = reviews.data[0].preview;
     currentTitle.innerText = `${reviews.data[0].title} - ${reviews.data[0].artist.name}`;
     audioSrc.play();
-    toggleMediaIcons();
+    playerPaused = false
+    togglePlayerPlayIcon ()
    }
 
  
@@ -107,15 +108,16 @@ function leggiCookie() {
    console.log(playBtn);
    let audioSrc = document.querySelector('#audio-player-source');
    let player = document.querySelector('.player');
+   let playerPaused = true;
 
    function playPause(mediaElement) { 
     if (mediaElement.paused) {
-        mediaElement.play();
-        toggleMediaIcons()
+        playerPaused = false
+        mediaElement.play();  
     }
     else{
+        playerPaused = true;
         mediaElement.pause();
-        toggleMediaIcons();
     } 
   }
 
@@ -124,19 +126,20 @@ function leggiCookie() {
   if (button!= null){
       button.addEventListener("click", () => {
           playPause(audioSrc);
+          togglePlayerPlayIcon ()
         })
     }
     })
 
 
-  function toggleMediaIcons (){
+  function togglePlayerPlayIcon (){
    playBtn.forEach((button) => {
-    if (audioSrc.paused) {
-    button.classList.toggle('bi-play-fill');
-    button.classList.toggle('bi-pause-fill');
+    if (!playerPaused) {
+    button.classList.remove('bi-play-fill');
+    button.classList.add('bi-pause-fill');
     } else {
-        button.classList.toggle('bi-play-fill');
-        button.classList.toggle('bi-pause-fill');
+        button.classList.add('bi-play-fill');
+        button.classList.remove('bi-pause-fill');
     }
   })
 }
