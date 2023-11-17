@@ -548,3 +548,11 @@ i:hover {
     color:grey;
     margin: 5px;
 }
+.following{
+    font-size: larger;
+    margin-top: 0.5cm;
+    border-style: groove;
+    border-color: white;
+
+
+}
