@@ -1,10 +1,15 @@
 body {
   background-color:#121212;
+  width: 100%;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+.container-fluid {
+  width: 100%;
 }
 /*container canzone sopra l'header versione desktop */
 .container-song-desk {
@@ -20,6 +25,7 @@ a {
 
 .container-titolo-song {
   margin-left: -200px;
+
 }
 
 .singolo-desk {
@@ -88,9 +94,20 @@ a {
     cursor:pointer;
 }
 
+#artists-area {
+  justify-content: center;
+}
+
+#album-area {
+  justify-content: center;
+  margin: 1px;
+}
+
 .first-section-container{
 display: flex;
 column-gap: 15px;
+width: 45%;
+margin: 2px;
 }
 .img-first-section {
     width: 40%;
@@ -169,7 +186,6 @@ column-gap: 15px;
   cursor:pointer;
 }
 
-/* */
 
 /*  player position fixed */
 
@@ -252,6 +268,7 @@ column-gap: 15px;
     flex: 1;
     margin: 0 10px;
     font-size: 25px;
+    cursor: pointer;
   }
   
   .icons-frase p {
@@ -266,9 +283,6 @@ column-gap: 15px;
     .icons-frase:hover {
     color:white;
 }
-.container-img-artist{
-  width: 200px;
-}
 
 @media (min-width: 768px) {
   .image1{
@@ -278,7 +292,10 @@ column-gap: 15px;
    .image2{
     display:block;
   }
-}
+  .container-album {
+    width: 40%;
+   }
+  }
 
   @media (min-width: 1024px) {
    body, .homeContainer {
@@ -297,16 +314,27 @@ column-gap: 15px;
    }
 
    .first-section-container{
+    background-color:#2D2D2D;
     width: 272px;
+    overflow:hidden;
    }
 
    .img-first-section{
     margin-left: -15px;
     width: 30%;
+    height: 100%;
    }
 
    .section1{
     margin-top: -20px;
+   }
+
+   .container-album {
+    width: 40%;
+   }
+
+   .contImage {
+    flex-grow: 1;
    }
 
   }
@@ -316,4 +344,98 @@ column-gap: 15px;
  .first-section-container{
   width: 25%;
  }
-  }
+
+ .container-album {
+  width: 30%;
+ }
+ .contImage {
+  flex-grow: 0;
+ }
+
+}
+
+
+/* SEZIONE NAV DI SX */
+.heart-side{
+  padding: 1px 2px;
+  border-radius: 3px;
+  background: rgb(62,33,167);
+  background: linear-gradient(148deg, rgba(62,33,167,1) 19%, rgba(255,255,255,1) 62%);
+}
+  
+.bi.bi-bookmark-fill{
+  padding: 4px;
+  background-color: #004537;
+  border-radius: 3px;
+}
+
+.bi.bi-plus-square{
+  padding: 4px;
+}
+
+.bt{
+  border: 0;
+  border-radius: 100%;
+  padding: 4px 10px;
+  opacity: 0.6;
+}
+
+.bt:hover{
+  opacity: 1;
+}
+
+.dropdown-toggle{
+  border-radius: 15px;
+}
+.round-image{
+  border-radius: 100%;
+}
+
+.controller-section-friends button{
+  border: 0;
+  background: none;
+  color: var(--ColorGrey);
+  font-size: 20px;
+}
+
+.dropdown-toggle{
+  border: none;
+}
+
+/* SEZIONE CENTRALE SEZIONE PULSANTI PLAY */
+.buttonPlay{
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background-color: green;
+  color: white;
+}
+.buttonSalva{
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.buttonSalva:hover{
+  background-color: white;
+  color: #000000;
+}
+
+.friend-user-name,.bi.bi-x-lg,.mt-3,.bi.bi-person-add,.friend-song-artist,.friend-song,span,.friend-last-played{
+  color: white;
+}
+
+.friend-user-name, .friend-song-artist, .friend-song, span, .friend-last-played {
+  font-size: 0.7rem;
+}
+
+.friends-activity {
+  font-size: 0.9rem;
+}
+
+.search {
+  cursor: pointer;
+}
