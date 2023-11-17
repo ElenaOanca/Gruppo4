@@ -255,7 +255,7 @@ box-shadow: 1px 1px 8px black;
     padding-right: 10px;
    }
 
-   .bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
+   .bi-pause-fill:hover, .bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
     cursor:pointer;
    }
    
@@ -289,6 +289,7 @@ box-shadow: 1px 1px 8px black;
     flex: 1;
     margin: 0 10px;
     font-size: 25px;
+    cursor: pointer;
   }
   
   .icons-frase p {
@@ -297,6 +298,7 @@ box-shadow: 1px 1px 8px black;
   }
 
   .title-player p,
+    .bi-pause-fill:hover,
     .bi-play-fill:hover,
     .bi-speaker:hover,
     .bi-heart:hover,
@@ -495,6 +497,10 @@ box-shadow: 1px 1px 8px black;
 cursor:pointer;
 }
 
+<<<<<<< HEAD
+=======
+.friend
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
 /*----- Stile Player LG----*/
 
 
@@ -678,13 +684,21 @@ i:hover {
     transform: translate(50%, calc(2px - 50%));
 }
 
+<<<<<<< HEAD
 .other-features {
+=======
+/* .other-features {
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
     position: absolute;
     right: var(--padding);
     display: flex;
     flex-direction: row;
     gap: 1em;
+<<<<<<< HEAD
 }
+=======
+} */
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
 
 .volume-bar {
     display: flex;
@@ -732,4 +746,8 @@ i:hover {
     transform: translateX(100%);
     opacity: 0;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214

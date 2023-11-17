@@ -254,7 +254,14 @@ thead tr td{
     font-size: 20px;
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+.nav-sx-list {
+    height: 100vh;
+    overflow-y: scroll;
+}
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214

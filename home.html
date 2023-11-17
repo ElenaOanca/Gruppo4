@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="assets/css/circular-font.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link rel="stylesheet" href="assets/css/home.css">
+<<<<<<< HEAD
+=======
+  <link rel="stylesheet" href="assets/css/searchPage.css">
+  <link rel="stylesheet" href="assets/css/playerLg.css">
+
+
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
   <title>Spotify - Homepage</title>
 </head>
 
@@ -22,18 +29,18 @@
                     <i class="bi bi-three-dots p-3 ps-0"></i>
                 </div>
 
-                <a class="nav-link active text-white ps-0" href="#">
+                <a class="nav-link active text-white ps-0 home" href="home.html">
                     <i class="bi bi-house-door-fill"></i>
                     Home
                 </a>
 
-                <a class="nav-link text-white ps-0" href="#">
+                <a class="nav-link text-white ps-0 search">
                     <i class="bi bi-search"></i>
                     Cerca
                 </a>
 
                 <a class="nav-link text-white mb-5 ps-0" href="#">
-                    <i class="bi bi-collection-fill"></i>
+                    <i class="bi bi-collection-fill library"></i>
                     La tua libreria
                 </a>
 
@@ -54,18 +61,17 @@
             </div>
 
             <hr>
-
-            <!--ul con li per la navbar con d-none su un li per l'icona-->
-            <ul class="text-white p-0 mt-5">
-                <li class=" d-flex justify-content-between">
-                    <p>Lorem ipsum dolor, sit amet consecte</p>
-                    <i class="bi bi-file-arrow-down-fill icon-right "></i>
-                </li>
-                <li class=" d-flex justify-content-between ">
-                    <p>Lorem ipsum dolor, sit amet consecte</p>
-                    <i class="bi bi-file-arrow-down-fill icon-right  d-none"></i>
-                </li>
-            </ul>
+   <!--ul con li per la navbar con d-none su un li per l'icona-->
+   <div id="navLeftPlayList" class="d-flex flex-column text-white mt-5">
+    <!-- <div class=" d-flex justify-content-between">
+         <p>Lorem ipsum dolor, sit amet consecte</p>
+        <i class="bi bi-file-arrow-down-fill icon-right "></i> 
+    </div>
+    <div class=" d-flex justify-content-between ">
+        <p>Lorem ipsum dolor, sit amet consecte</p>
+        <i class="bi bi-file-arrow-down-fill icon-right  d-none"></i>
+    </div> -->
+</div>
 
         </div>
         </div>
@@ -74,8 +80,13 @@
           <div class="d-none d-lg-flex justify-content-between mb-3 mt-2">
             <!-- SEZIONE FRECCIE NAV -->
             <div>
+<<<<<<< HEAD
                 <button class="bt butLeft"><i class="fas fa-chevron-left"></i></button>
                 <button class="bt butRight"><i class="fas fa-chevron-right"></i></button>
+=======
+                <button class="bt"><i class="fas history-back  fa-chevron-left"></i></button>
+                <button class="bt"><i class="fas history-forward  fa-chevron-right"></i></button>
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
             </div>
             <!-- SEZIONE PULSANTE DX DROPDOWN -->
             <div class="dropdown">
@@ -98,11 +109,15 @@
             <img src="https://picsum.photos/1000" id="single-img" alt="">
           </div>
           <div class="col-6 col-md-6 col-lg-6 d-flex flex-column container-titolo-song pt-3 align-self-start">
+<<<<<<< HEAD
             <p class="singolo-desk">SINGOLO</p>
+=======
+            <p class="singolo-desk" >SINGOLO</p>
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
             <p class="name-song-desk" id="single-title">TITOLO CANZONE</p>
             <p class="name-artist-desk" id="single-artists">Artista</p>
             <div class="buttons play d-flex align-items-center">
-              <button class="buttonPlay me-3">Play</button>
+              <button class="buttonPlay me-3" id="header-play-button">Play</button>
               <button class="buttonSalva me-3">Salva</button>
               <i class="bi bi-three-dots fs-4 threeDots"></i>
             </div>
@@ -151,7 +166,7 @@
       </div>
     </main>
   </div>
-
+<!-- SEARCH PAGE -->
   <div class="container text-white pb-5 search-container d-none">
     <h3 class="pt-5 pb-3 fs-1 cercaTitle">Cerca</h3>
     <div class="searchForm">
@@ -211,7 +226,7 @@
         <p class="frase-card text-white fw-bold fs-5 nome-artist">
         </p>
         <img src="assets/imgs/search/image-2.jpg" alt="" class="img-artist ">
-        <a href="#" class="btn-artist mt-3"> </a>
+        <a class="btn-artist mt-3"> </a>
       </div>
     </template>
     <template id="risultatoSearchPageSong">
@@ -233,7 +248,7 @@
           <h5 class="card-title nome-album"></h5>
           <p class="card-text releaseDate-album">Some quick example text to build on the card title and make up the bulk
             of the card's content.</p>
-          <a href="#" class="btn btn-success btn-album"></a>
+          <a class="btn btn-success btn-album"></a>
         </div>
       </div>
     </template>
@@ -242,21 +257,89 @@
 
   
   <footer id="footer">
+<<<<<<< HEAD
+=======
+ 
+      
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
     <audio id="audio-player-source">
       <source type="audio/ogg">
       <source type="audio/mpeg">
     </audio>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
     <div class="container-footer-fixed">
+      <div class="music-player player d-none d-lg-block">
+        <div class="song-bar">
+            <div class="song-infos">
+                <div class="image-container">
+                    <img id="player-lg-img" src="assets/imgs/search/image-10.jpg" alt="" />
+                </div>
+                <div class="song-description">
+                    <p class="title current-playing">
+                        Nome canzone
+                    </p>
+                    <p class="artist current-playing-artist">Nome Artista</p>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="bi bi-heart"></i>
+                
+            </div>
+        </div>
+        <div class="progress-controller mt-1">
+            <div class="control-buttons">
+                <i class="bi bi-shuffle"></i>
+                <i class="bi bi-skip-backward-fill"></i>
+                <i class="bi bi-play-circle-fill play play-button"></i>
+                <i class="bi bi-skip-forward-fill"></i>
+                <i class="bi bi-arrow-counterclockwise"></i>
+            </div>
+            <div class="progress-container">
+                <span>0:50</span>
+                <div class="progress-bar" id="my-progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <span>3:20</span>
+         
+
+            </div>
+        </div>
+        <div class="other-features">
+            <i class="fas fa-list-ul"></i>
+            
+            <div class="volume-bar">
+                <i class="bi bi-list"></i>
+                <i class="bi bi-music-player"></i>
+                <i class="bi bi-volume-up"></i>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
       <div class="player mx-2 d-lg-none">
         <div class="scrolling-text-container title-player">
+<<<<<<< HEAD
           <p class="scrolling-text" id="current-playing">
             Lorem ipsum
+=======
+          <p class="scrolling-text current-playing-mobile" >
+             
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
           </p>
         </div>
         <div class="icons-player">
           <i class="bi bi-speaker"></i>
+<<<<<<< HEAD
           <i class="bi bi-heart" id="like"></i>
           <i class="bi bi-play-fill" id="play"></i>
+=======
+          <i class="bi bi-heart like"></i>
+          <i class="bi bi-play-fill play-button" ></i>
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
           <!-- <i class="bi bi-pause d-none" id="pause"></i> -->
         </div>
       </div>
@@ -321,13 +404,20 @@
       <div class="col-lg-2 d-none d-lg-block bg-black ps-0 navRight">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
+<<<<<<< HEAD
                 <p class="mt-3 col-lg-8 col-xl-8 friends-activity">Attività amici</p>
                 <div class="controller-section-friends col-lg-4 d-flex offset-xl-1">
                     <button><i class="bi bi-person-add"></i></button>
+=======
+                <p class="mt-3 col-lg-4 col-xl-8">Attività amici</p>
+                <div class="controller-section-friends col-lg-4 d-flex">
+                    <button><i class="bi bi-person-add"s></i></button>
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
                     <button><i class="bi bi-x-lg"></i></button>
                 </div>
             </div>
             <!-- SEZIONE CARD ATTIVITA` AMICI -->
+<<<<<<< HEAD
             <div class="friends-card row justify-content-between">
                 <div class="col-2 col-lg-2 pe-0">
                     <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
@@ -369,6 +459,23 @@
                     <p class="friend-last-played">4 ore</p>
                 </div>
             </div>
+=======
+   <!-- parte destra-->
+<!-- parte destra-->
+<div class="col-lg-12 d-none d-lg-block bg-black">
+  <div id="friends" class="container">
+      <div class="d-flex justify-content-between">
+        
+          <div class="controller-section-friends">
+            
+          </div>
+      </div>
+     
+      
+  </div>
+</div>
+
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
           </div>
         </div>
     </div>
@@ -425,6 +532,12 @@
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/utilities.js"></script>
   <script src="js/homePage.js"></script>
+<<<<<<< HEAD
+=======
+  <script src="js/search.js"></script>
+  <script src="js/popolaNavsinistra.js"></script>
+  <script src="js/navBarDestra.js"></script>
+>>>>>>> 2d32524f94debe70f6670e2d399ca83cf0ce2214
 </body>
 
 </html>

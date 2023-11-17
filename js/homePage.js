@@ -6,7 +6,6 @@ let token = leggiCookie();
 
 id = "0TnOYISbd1XYRBk9myaseg";
 
-
 // FUNZIONE PRENDI ARTISTA
 async function getArtist(id) {
   return await fetch(`${artistsUrl}${id}`, {
@@ -32,7 +31,6 @@ async function renderArtists(id) {
   let artist = await getArtist(id);
   let relatedArtists = await getArtistsRelated(id);
   relatedArtists.artists.push(artist);
-  console.log(relatedArtists);
   relatedArtists.artists.forEach((artist) => {
     if (artist.popularity > 60) {
       let clone = cloneTemplate("#artist-template");
@@ -45,6 +43,7 @@ async function renderArtists(id) {
       );
       img.src = artist.images[0].url;
       name.innerText = artist.name;
+      artistLink.href = `artist.html?id=${artist.id}`;
       artistLink.href = `artist.html?id=${artist.id}`;
       target.append(clone);
     }
@@ -70,7 +69,7 @@ async function renderNewReleases() {
     (album) => album.album_type == "single"
   );
   console.log(singleArray);
-  let singleImg = document.querySelector("#single-img");
+   let singleImg = document.querySelector("#single-img");
   let singleTitle = document.querySelector("#single-title");
   let singleArtist = document.querySelector("#single-artists");
 
@@ -85,6 +84,8 @@ async function renderNewReleases() {
       let albumLink = clone.querySelector(".album-link");
       let artistLink = clone.querySelector(".artist-link");
       let container = clone.querySelectorAll(".container-album");
+      let headerPlayBtn = document.querySelector("#header-play-button");
+
       container.forEach(
         (card) => (card.style.backgroundColor = getRandomColor())
       );
@@ -94,7 +95,7 @@ async function renderNewReleases() {
       artist.innerText = album.artists.map((artist) => artist.name).join(", ");
       tracks.innerText = album.total_tracks;
       albumLink.href = `album.html?id=${album.id}`;
-      artistLink.href = `artista.html?id=${album.artists[0].id}`;
+      artistLink.href = `artist.html?id=${album.artists[0].id}`;
       target.append(clone);
     }
     renderSingle(singleArray, singleImg, singleTitle, singleArtist, 0);
@@ -103,13 +104,16 @@ async function renderNewReleases() {
 
 renderNewReleases();
 
+
+
+/*** funzione renderizzazione singoli  */
 let renderSingle = (array, img, title, artist, index) => {
   img.src = array[index].images[1].url;
   title.innerText = array[index].name;
   artist.innerText = array[index].artists
     .map((artist) => artist.name)
     .join(", ");
-  setInterval(() => {
+  setTimeout(() => {
     index++;
     if (index > array.length) {
       index = 0;
@@ -118,28 +122,10 @@ let renderSingle = (array, img, title, artist, index) => {
   }, 10000);
 };
 
-function buttonFooter() {
-    const home = document.querySelector('.home');
-    const search = document.querySelector('.search');
-    const library = document.querySelector('.library');
-    const searchPage= document.querySelector('.search-container');
-    const homePage = document.querySelector('.homeContainer');
+let headerPlayBtn = document.querySelector("#header-play-button");
+headerPlayBtn.addEventListener("click", async () => {
+  let preview = await putReviews(document.querySelector('#single-title').innerText);
+})
 
-    home.addEventListener('click', () => {
-        library.classList.toggle('puff-out-center');
-        searchPage.classList.toggle('puff-out-center');
-        location.href = "home.html";
-    });
-    search.addEventListener('click', () =>{
-       
-        homePage.classList.add('d-none');
-        searchPage.classList.remove('d-none');
-        searchPage.classList.toggle('slide-in-fwd-center')
-        searchPage.style.zIndex='5'
-    })
-    library.addEventListener('click', () => {
-        location.href = "album.html"; // array in local storage di canzoni salvate
-    });
-}
 
-buttonFooter()
+

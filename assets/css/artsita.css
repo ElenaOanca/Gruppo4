@@ -413,13 +413,13 @@ i:hover {
     transform: translate(50%, calc(2px - 50%));
 }
 
-.other-features {
+/* .other-features {
     position: absolute;
     right: var(--padding);
     display: flex;
     flex-direction: row;
     gap: 1em;
-}
+} */
 
 .volume-bar {
     display: flex;
@@ -540,11 +540,25 @@ i:hover {
   color:white;
 }
 
-#friends{
-    font-size: small;
-}
+
 .historyArtist{
     font-size: 1.75rem;
     color:grey;
     margin: 5px;
+}
+#friends{
+    font-size: small;
+}
+
+.nav-sinistra{
+    height: 100vh;
+}
+
+.following{
+    font-size: larger;
+    margin-top: 0.5cm;
+    border-style: groove;
+    border-color: white;
+
+
 }

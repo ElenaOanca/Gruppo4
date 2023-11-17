@@ -1,11 +1,7 @@
 const url = "https://api.spotify.com/v1/search?q=";
-// const token = "Bearer BQBrUC5en4gU5bWWN1JTWz7W7to6UEy2igL8j0LaLURJG4F_3_v_mOmiJYNB5WJv5M9qgYc6utQcYmlB9xdwbdJBYyboyDOmstOAeb7bwNKxh_KJCsc"
 const albumUrl = "https://api.spotify.com/v1/browse/new-releases"
-checkCookieOnPage();
-// let token = leggiCookie();
 const searchBox = document.querySelector('.searchForm input');
 
-//query aritsta
 async function searchByQueryArtist (query) {
     return await fetch (`${url}${query}&type=artist` , {
         headers : {
@@ -79,16 +75,18 @@ async function renderSongsSearch() {
                 let item = items[index];
                 if (item.popularity > 50) {
                     let clone = cloneTemplate ('#risultatoSearchPageSong')
-                    
-            
                     let img = clone.querySelector('.img-song');
                     let btn = clone.querySelector('.btn-song');
+                
+                    btn.addEventListener('click', async ()  => {
+                        let preview = await putReviews(item.name);
+                    })
+
                     let name = clone.querySelector('.nomi-song');
                     let container = clone.querySelectorAll('.container-song');
                     container.forEach(card => card.style.backgroundColor = getRandomColor());
             
                     img.src = item.album.images[0].url;
-                    btn.href = ''; // Aggiungi l'URL desiderato
                     btn.innerText = 'Ascolta ora';
                     name.innerText = item.name;
                     searchBox.value = '';
@@ -123,11 +121,11 @@ async function renderAlbumSearch() {
             let title = document.querySelector('#title-album');
             title.classList.remove('d-none');
             title.innerText = 'Album';
-            console.log(title);
+
             target.innerHTML = '';
             let album = await searchByQueryAlbum(searchBox.value);
             let items = album.albums.items;
-            console.log(album);
+
             
             for (let index = 0; index < 3; index++) {
                 // Clona il contenuto del template con ID 'risultatoSearchAlbum'
@@ -180,12 +178,12 @@ async function getNewReleases () {
 
 async function renderNewReleases() {
     let albums = await getNewReleases();
-    console.log(albums);
+
 
     let target = document.querySelector('#targetTrendingAlbum');
     
 
-    for (let i = 0; i < albums.albums.items.length; i++) {
+    for (let i = 0; i < 10; i++) {
         let album = albums.albums.items[i];
 
         if (album.album_type === "album") {
