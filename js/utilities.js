@@ -80,13 +80,9 @@ function leggiCookie() {
         
         return `rgb(${col1}, ${col2}, ${col3})`;
     }
-
-    /**** funzione snitcha le vere preview da deezer */
     
-    async function getSongPreviews(query) {
-        return await fetch ("https://striveschool-api.herokuapp.com/api/deezer/search?q="+query,)
-        .then(res => res.json())
-    }
+   //funzione arrow history
+   function goBack() {
 
    async function putReviews(query){
     let reviews = await getSongPreviews(query);
@@ -195,3 +191,15 @@ function buttonFooter() {
 
 buttonFooter();
 
+    window.history.back();
+    
+}
+function goUp() {
+    window.history.forward();
+    
+}
+
+let forward = document.querySelector(".history-forward");
+let back = document.querySelector(".history-back");
+forward.addEventListener('click', goUp) ;
+back.addEventListener('click', goBack) ;

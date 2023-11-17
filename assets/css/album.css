@@ -64,40 +64,96 @@ ul{
     padding: 0;
 }
 /* PLAYER BAR */
-.playing-info-area{
-    justify-content: end;
-    padding: 12px;
-    background-color: #262626;
-    border-radius: 15px;
+.container-footer-fixed {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.player{
     display: flex;
+    border-radius: 7px;
     align-items: center;
+    justify-content: space-between;
+    background-color: #282828f5;
+    color: rgba(255, 255, 255, 0.603);
+    height: 50px;
 }
 
-.playing-info-area i{
-    font-size: 28px;
-    margin-left: 20px;
+/*TITOLO CANZONE NEL PLAYER*/
+
+.title-player {
+    flex: 1;
+    text-align:center;
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Medium.otf);
+    font-weight: 500;
+    font-style: normal;
 }
 
-.bi.bi-play-fill.play{
-font-size: 35px; 
-padding: 0;
-color: var(--ColorWhite);
+.title-player p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
 
-.controllers .bi.bi-heart:hover{
-    color: var(--ColorGreen);
-}
-/* NAV BAR IN MOBILE */
-.nav-icon i{
-    font-size: 22px;
-}
-.nav-icon p{
-    margin-bottom: 15px;
+/*ICONE LATERALE PLAYER*/
+
+.icons-player{
+    font-size: 25px;
+    display:flex;
+    gap: 10px;
+    padding-right: 10px;
 }
 
-.nav-bar{
-    background: rgb(62,33,167);
-    background: linear-gradient(180deg, rgba(62,33,167,0) 0%, rgba(0,0,0,1) 40%);
+.bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
+    cursor:pointer;
+}
+.bi.bi-play-fill.started{
+    font-size: 33px;
+}
+
+.bi-speaker, .bi-heart{
+    color: rgba(255, 255, 255, 0.603);
+}
+
+/*NAVBAR IN FONDO ALLA PAGINA*/
+
+.navbarBottom{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    color:rgba(255, 255, 255, 0.656);
+}
+   
+/*ICONE IN FONDO ALLA PAGINA*/
+
+.home-icon{
+ font-size: 20px;
+ align-items: center;
+}
+.icons-frase {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.icons-frase p {
+  margin-top: -5px;
+  font-size: 0.7rem;
+}
+.title-player p,
+.bi-play-fill:hover,
+.bi-speaker:hover,
+.bi-heart:hover,
+.icons-frase:hover {
+  color:white;
 }
 /* BREKPOINT */
 @media screen and (min-width : 978px) {

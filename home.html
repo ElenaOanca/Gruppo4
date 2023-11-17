@@ -58,18 +58,17 @@
             </div>
 
             <hr>
-
-            <!--ul con li per la navbar con d-none su un li per l'icona-->
-            <ul class="text-white p-0 mt-5">
-                <li class=" d-flex justify-content-between">
-                    <p>Lorem ipsum dolor, sit amet consecte</p>
-                    <i class="bi bi-file-arrow-down-fill icon-right "></i>
-                </li>
-                <li class=" d-flex justify-content-between ">
-                    <p>Lorem ipsum dolor, sit amet consecte</p>
-                    <i class="bi bi-file-arrow-down-fill icon-right  d-none"></i>
-                </li>
-            </ul>
+   <!--ul con li per la navbar con d-none su un li per l'icona-->
+   <div id="navLeftPlayList" class="d-flex flex-column text-white mt-5">
+    <!-- <div class=" d-flex justify-content-between">
+         <p>Lorem ipsum dolor, sit amet consecte</p>
+        <i class="bi bi-file-arrow-down-fill icon-right "></i> 
+    </div>
+    <div class=" d-flex justify-content-between ">
+        <p>Lorem ipsum dolor, sit amet consecte</p>
+        <i class="bi bi-file-arrow-down-fill icon-right  d-none"></i>
+    </div> -->
+</div>
 
         </div>
         </div>
@@ -78,8 +77,8 @@
           <div class="d-none d-lg-flex justify-content-between mb-3 mt-2">
             <!-- SEZIONE FRECCIE NAV -->
             <div>
-                <button class="bt"><i class="fas fa-chevron-left"></i></button>
-                <button class="bt"><i class="fas fa-chevron-right"></i></button>
+                <button class="bt"><i class="fas history-back  fa-chevron-left"></i></button>
+                <button class="bt"><i class="fas history-forward  fa-chevron-right"></i></button>
             </div>
             <!-- SEZIONE PULSANTE DX DROPDOWN -->
             <div class="dropdown">
@@ -99,12 +98,12 @@
       <div class="container-song-desk">
         <div class="row">
           <div class="col-6 col-md-6 col-lg-6 d-flex align-items-center pb-5 contImage">
-            <img src="https://picsum.photos/1000" id="single-img" alt="">
+            <img src="https://picsum.photos/1000" alt="">
           </div>
           <div class="col-6 col-md-6 col-lg-6 d-flex flex-column container-titolo-song pt-3 align-self-start">
             <p class="singolo-desk">SINGOLO</p>
-            <p class="name-song-desk" id="single-title">TITOLO CANZONE</p>
-            <p class="name-artist-desk" id="single-artists">Artista</p>
+            <p class="name-song-desk">TITOLO CANZONE</p>
+            <p class="name-artist-desk">Artista</p>
             <div class="buttons play d-flex align-items-center">
               <button class="buttonPlay me-3" id="header-play-button">Play</button>
               <button class="buttonSalva me-3">Salva</button>
@@ -222,7 +221,7 @@
       <div class="col-12 col-md-5 col-lg-4  container-song">
         <img src="" alt="" class="img-song">
         <p class="nomi-song"> </p>
-        <a class="btn-song"> </a>
+        <a href="#" class="btn-song"> </a>
 
 
 
@@ -246,6 +245,7 @@
 
   
   <footer id="footer">
+<<<<<<< HEAD
  
       
     <audio id="audio-player-source">
@@ -253,6 +253,8 @@
       <source type="audio/mpeg">
     </audio>
 
+=======
+>>>>>>> pronto-main-Elena
     <div class="container-footer-fixed">
       <div class="music-player player d-none d-lg-block">
         <div class="song-bar">
@@ -304,16 +306,28 @@
         </div>
     </div>
       <div class="player mx-2 d-lg-none">
+<<<<<<< HEAD
         <div class="scrolling-text-container title-player">
           <p class="scrolling-text current-playing-mobile" >
              
+=======
+        <div class="title-player">
+          <p>
+            Lorem ipsum
+>>>>>>> pronto-main-Elena
           </p>
         </div>
         <div class="icons-player">
+
           <i class="bi bi-speaker"></i>
+<<<<<<< HEAD
           <i class="bi bi-heart like"></i>
           <i class="bi bi-play-fill play-button" ></i>
           <!-- <i class="bi bi-pause d-none" id="pause"></i> -->
+=======
+          <i class="bi bi-heart"></i>
+          <i class="bi bi-play-fill"></i>
+>>>>>>> pronto-main-Elena
         </div>
       </div>
       <div class="container-footer d-lg-none navbarBottom"> <!--background trasparent-->
@@ -377,54 +391,28 @@
       <div class="col-lg-2 d-none d-lg-block bg-black ps-0">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
-                <p class="mt-3 col-lg-8 col-xl-8 friends-activity">Attività amici</p>
-                <div class="controller-section-friends col-lg-4 d-flex offset-xl-1">
+                <p class="mt-3 col-lg-4 col-xl-8">Attività amici</p>
+                <div class="controller-section-friends col-lg-4 d-flex">
                     <button><i class="bi bi-person-add"></i></button>
                     <button><i class="bi bi-x-lg"></i></button>
                 </div>
             </div>
             <!-- SEZIONE CARD ATTIVITA` AMICI -->
-            <div class="friends-card row justify-content-between">
-                <div class="col-2 col-lg-2 pe-0">
-                    <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
-                </div>
-                <div class="col-6 col-lg-5 col-xl-6 mx-2">
-                    <p class="m-0 friend-user-name">Charlie Hookham</p>
-                    <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
-                    <i class="bi bi-disc friend-song"></i><span> EP III</span>
-                </div>
-                <div class="col-2 col-lg-2 p-0">
-                    <p class="friend-last-played">4 ore</p>
-                </div>
-            </div>
-            <!-- SEZIONE CARD ATTIVITA` AMICI -->
-            <div class="friends-card row justify-content-between my-4">
-                <div class="col-2 col-lg-2 pe-0">
-                    <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
-                </div>
-                <div class="col-6 col-lg-5 col-xl-6 mx-2">
-                    <p class="m-0 friend-user-name">Charlie Hookham</p>
-                    <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
-                    <i class="bi bi-disc friend-song"></i><span> EP III</span>
-                </div>
-                <div class="col-2 col-lg-2 p-0">
-                    <p class="friend-last-played">4 ore</p>
-                </div>
-            </div>
-            <!-- SEZIONE CARD ATTIVITA` AMICI -->
-            <div class="friends-card row justify-content-between">
-                <div class="col-2 col-lg-2 pe-0">
-                    <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
-                </div>
-                <div class="col-6 col-lg-5 col-xl-6 mx-2">
-                    <p class="m-0 friend-user-name">Charlie Hookham</p>
-                    <p class="m-0 friend-song-artist">in Camera  Yumi Zouma</p>
-                    <i class="bi bi-disc friend-song"></i><span> EP III</span>
-                </div>
-                <div class="col-2 col-lg-2 p-0">
-                    <p class="friend-last-played">4 ore</p>
-                </div>
-            </div>
+   <!-- parte destra-->
+<!-- parte destra-->
+<div class="col-lg-8 d-none d-lg-block bg-black">
+  <div id="friends" class="container">
+      <div class="d-flex justify-content-between">
+        
+          <div class="controller-section-friends">
+            
+          </div>
+      </div>
+     
+      
+  </div>
+</div>
+
           </div>
         </div>
     </div>
@@ -434,6 +422,8 @@
   <script src="js/utilities.js"></script>
   <script src="js/homePage.js"></script>
   <script src="js/search.js"></script>
+  <script src="js/popolaNavsinistra.js"></script>
+  <script src="js/navBarDestra.js"></script>
 </body>
 
 </html>
