@@ -549,3 +549,7 @@ i:hover {
 #friends{
     font-size: small;
 }
+
+.nav-sinistra{
+    height: 100vh;
+}
