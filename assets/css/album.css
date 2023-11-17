@@ -1,0 +1,260 @@
+/* INIZIO MOBILE ALBUM */
+/* ROOT per i colori */
+:root{
+    --ColorWhite: white;
+    --ColorGrey: grey;
+    --ColorGreen:green;
+    --ColorBlack:black;
+}
+/* FRECCIA SINISTRA MOBILE */
+.bi.bi-arrow-left{
+font-size: 25px;
+color: var(--ColorWhite);
+}
+/* ALBUM IMMAGINE */
+.album-img{
+    box-shadow: 0px  0px 15px black;
+}
+.round-image {
+    border-radius: 100%;
+}
+/*SCRITTA ALBUM PRESENTE SOLO IN MOBILE E INFORMAZIONI VARIE DELL'ALBUM */
+.tempo-totale{
+    opacity: 0.5;
+}
+/* RIGA CON IMMAGINE ROTONDA E NOME ARTISTA */
+.secondary-title a{
+    text-decoration: none;
+    color: var(--ColorWhite);
+}
+/* SEZIONE CONTROLLERS MOBILE */
+.controllers i{
+    font-size: 23px;
+    color: var(--ColorGrey);
+}
+
+.controllers i:hover{
+    color: var(--ColorWhite)
+}
+/* TASTO PLAY BIANCO A VERDE */
+.bi.bi-caret-right-fill{
+    padding: 4px 12px;
+    font-size: 30px;
+    color: var(--ColorWhite);
+    border-radius: 100%;
+    background-color: var(--ColorGreen);
+}
+.bi.bi-caret-right-fill:hover{
+    cursor: pointer;
+}
+/* LISTA CANZONI DELL'ALBUM IN MOBILE */
+.list-main-title{
+    margin-bottom: 0px;
+}
+.song-item:hover{
+    color: var(--ColorGreen);
+}
+.list-second-title{
+color: var(--ColorGrey);
+}
+/* LISTE GENERALI DI TUTTO HTML */
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/* PLAYER BAR */
+.container-footer-fixed {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.player{
+    display: flex;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #282828f5;
+    color: rgba(255, 255, 255, 0.603);
+    height: 50px;
+}
+
+/*TITOLO CANZONE NEL PLAYER*/
+
+.title-player {
+    flex: 1;
+    text-align:center;
+    font-family: "Circular";
+    src: url(../fonts/CircularStd-Medium.otf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+.title-player p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/*ICONE LATERALE PLAYER*/
+
+.icons-player{
+    font-size: 25px;
+    display:flex;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.bi-play-fill:hover, .bi-speaker:hover, .bi-heart:hover, .title-player p {
+    cursor:pointer;
+}
+.bi.bi-play-fill.started{
+    font-size: 33px;
+}
+
+.bi-speaker, .bi-heart{
+    color: rgba(255, 255, 255, 0.603);
+}
+
+/*NAVBAR IN FONDO ALLA PAGINA*/
+
+.navbarBottom{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    color:rgba(255, 255, 255, 0.656);
+}
+   
+/*ICONE IN FONDO ALLA PAGINA*/
+
+.home-icon{
+ font-size: 20px;
+ align-items: center;
+}
+.icons-frase {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.icons-frase p {
+  margin-top: -5px;
+  font-size: 0.7rem;
+}
+.title-player p,
+.bi-play-fill:hover,
+.bi-speaker:hover,
+.bi-heart:hover,
+.icons-frase:hover {
+  color:white;
+}
+/* BREKPOINT */
+@media screen and (min-width : 978px) {
+    .main-title {
+        font-size: 80px;
+    }
+}
+/* SEZIONE AMICI */
+.user-name {
+    overflow-x: hidden;
+}
+/* FINE ALBUM MOBILE */
+/* INIZIO ALBUM DESKTOP */
+/* SEZIONE NAV DI SX */
+.bi.bi-heart-fill{
+padding: 4px;
+border-radius: 3px;
+background: rgb(62,33,167);
+background: linear-gradient(148deg, rgba(62,33,167,1) 19%, rgba(255,255,255,1) 62%);
+}
+
+.bi.bi-plus-square{
+    padding: 4px;
+}
+
+.bi.bi-bookmark-fill{
+    padding: 4px;
+    background-color: #004537;
+    border-radius: 3px;
+}
+
+/* SEZIONE CENTRALE NAV IN ALTO CON LE FRECCE E IL DROPDOWN */
+.bt{
+    border: 0;
+    border-radius: 100%;
+    padding: 4px 10px;
+    opacity: 0.6;
+}
+
+.bt:hover{
+    opacity: 1;
+}
+
+.dropdown-toggle{
+    border-radius: 15px;
+    border: none;
+}
+/* SEZIONE CENTRALE CONTROLLERS DESKTOP */
+.desktop-controllers{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.desktop-controllers a{
+    color: var(--ColorWhite);
+    margin-right: 20px;
+}
+.desktop-controllers a:hover{
+    color: var(--ColorGreen);
+}
+
+.desktop-controllers .bi.bi-play-fill{
+    padding: 4px 10px;
+    border-radius: 100%;
+    background-color: var(--ColorGreen);
+}
+/* TABELLA ALBUM DESKTOP */
+.table>:not(caption)>*>* {
+    padding: 0;
+}
+
+td.song-id{
+    text-align: center;
+}
+
+.song-id,td{
+    border-bottom: 0;
+}
+
+td.reproductions{
+    color: var(--ColorGrey);
+    padding-top: 25px;
+}
+
+td.song-length{
+    color: var(--ColorGrey);
+    padding-top: 25px;
+}
+
+thead tr td{
+    border-bottom: 1px solid var(--ColorGrey);
+}
+
+/* SEZIONE NAV DI DX */
+.controller-section-friends button{
+    border: 0;
+    background: none;
+    color: var(--ColorGrey);
+    font-size: 20px;
+}
+
+.nav-sx-list {
+    height: 100vh;
+    overflow-y: scroll;
+}
