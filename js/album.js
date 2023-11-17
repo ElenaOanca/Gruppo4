@@ -44,6 +44,7 @@ async function renderAlbumHeader(id) {
     album.tracks.items.forEach(track => {
         albumDuration += track.duration_ms;
     });
+
     img.src = album.images[1].url
     title.innerText = album.name
     artist.innerText = album.artists[0].name
@@ -57,7 +58,7 @@ async function renderAlbumHeader(id) {
     let tracks = await getAlbumTracks(id)
     let target = document.querySelector('#tracks-list-tabel');
     let target2 = document.querySelector('#track-list-area');
- 
+
     console.log(tracks);
 
     tracks.items.forEach((track) => {
@@ -66,11 +67,15 @@ async function renderAlbumHeader(id) {
     let title = clone.querySelector('.track-title');
     let artists = clone.querySelector('.track-artists');
     let length = clone.querySelector('.track-length');
+    let playBtn = clone.querySelector('.play');
     
     let clone2 = cloneTemplate("#tracks-mobile-list")
     let title2 = clone2.querySelector('.track-title-list');
     let artists2 = clone2.querySelector('.track-artists-list');
 
+    playBtn.addEventListener('click', async ()  => {
+        let preview = await putReviews(track.name);
+    })
 
     trackId.innerText = track.track_number;
     title.innerText = track.name;

@@ -175,11 +175,6 @@ function buttonFooter() {
     const searchPage= document.querySelector('.search-container');
     const homePage = document.querySelector('.homeContainer');
 
-    // homePage.addEventListener('click', () => {
-    //     homePage.classList.toggle('puff-out-center');
-    //     searchPage.classList.toggle('puff-out-center');
-    //     location.href = "home.html";
-    // });
     search.forEach((e) =>{
         e.addEventListener('click', () =>{
            
@@ -193,7 +188,6 @@ function buttonFooter() {
     library.forEach((e) =>{
         e.addEventListener('click', () =>{
             location.href = "album.html"; // array in local storage di canzoni salvate
-
         })
     
 })

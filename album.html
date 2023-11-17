@@ -301,41 +301,97 @@
                                 <p class="track-artists"></p>
                             </div>
                         </td>
-                        <td class="reproductions text-white"><i class="bi bi-play-circle-fill"></i></td>
+                        <td class="reproductions text-white"><i class="bi bi-play-circle-fill play"></i></td>
                         <td class="track-length"></td>
                     </tr>
                 </template>
             </div>
             <!-- FOOTER -->
             <footer id="footer">
+ 
+      
+                <audio id="audio-player-source">
+                  <source type="audio/ogg">
+                  <source type="audio/mpeg">
+                </audio>
+            
                 <div class="container-footer-fixed">
+                  <div class="music-player player d-none d-lg-block">
+                    <div class="song-bar">
+                        <div class="song-infos">
+                            <div class="image-container">
+                                <img id="player-lg-img" src="assets/imgs/search/image-10.jpg" alt="" />
+                            </div>
+                            <div class="song-description">
+                                <p class="title current-playing">
+                                    Nome canzone
+                                </p>
+                                <p class="artist current-playing-artist">Nome Artista</p>
+                            </div>
+                        </div>
+                        <div class="icons">
+                            <i class="bi bi-heart"></i>
+                            
+                        </div>
+                    </div>
+                    <div class="progress-controller mt-1">
+                        <div class="control-buttons">
+                            <i class="bi bi-shuffle"></i>
+                            <i class="bi bi-skip-backward-fill"></i>
+                            <i class="bi bi-play-circle-fill play play-button"></i>
+                            <i class="bi bi-skip-forward-fill"></i>
+                            <i class="bi bi-arrow-counterclockwise"></i>
+                        </div>
+                        <div class="progress-container">
+                            <span>0:50</span>
+                            <div class="progress-bar" id="my-progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <span>3:20</span>
+                     
+            
+                        </div>
+                    </div>
+                    <div class="other-features">
+                        <i class="fas fa-list-ul"></i>
+                        
+                        <div class="volume-bar">
+                            <i class="bi bi-list"></i>
+                            <i class="bi bi-music-player"></i>
+                            <i class="bi bi-volume-up"></i>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                   <div class="player mx-2 d-lg-none">
-                    <div class="title-player">
-                      <p>
-                        Lorem ipsum
+                    <div class="scrolling-text-container title-player">
+                      <p class="scrolling-text current-playing-mobile" >
+                         
                       </p>
                     </div>
-                    <div class="icons-player d-flex align-items-center">
-            
+                    <div class="icons-player">
                       <i class="bi bi-speaker"></i>
-                      <i class="bi bi-heart"></i>
-                      <i class="bi bi-play-fill started"></i>
+                      <i class="bi bi-heart like"></i>
+                      <i class="bi bi-play-fill play-button" ></i>
+                      <!-- <i class="bi bi-pause d-none" id="pause"></i> -->
                     </div>
                   </div>
                   <div class="container-footer d-lg-none navbarBottom"> <!--background trasparent-->
-                    <div class="icons-frase"> <!--flex column row gap-->
+                    <div class="icons-frase home"> <!--flex column row gap-->
                       <i class="bi bi-house-door-fill"></i>
                       <p>
                         Home
                       </p>
                     </div>
-                    <div class="icons-frase"> <!--flex column row gap-->
+                    <div class="icons-frase search"> <!--flex column row gap-->
                       <i class="bi bi-search"></i>
                       <p>
                         Cerca
                       </p>
                     </div>
-                    <div class="icons-frase"> <!--flex column row gap-->
+                    <div class="icons-frase library"> <!--flex column row gap-->
                       <i class="bi bi-music-note-list"></i>
                       <p>
                         La tua libreria
@@ -344,6 +400,7 @@
                   </div>
                 </div>
               </footer>
+            
             </div>
             <!-- SEZIONE NAV DI DX -->
             <div class="col-lg-2 d-none d-lg-block bg-black ps-0">
