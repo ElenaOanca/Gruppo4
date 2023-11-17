@@ -45,7 +45,7 @@ async function renderArtists(id) {
       );
       img.src = artist.images[0].url;
       name.innerText = artist.name;
-      artistLink.href = `artista.html?id=${artist.id}`;
+      artistLink.href = `artist.html?id=${artist.id}`;
       target.append(clone);
     }
   });
@@ -94,7 +94,7 @@ async function renderNewReleases() {
       artist.innerText = album.artists.map((artist) => artist.name).join(", ");
       tracks.innerText = album.total_tracks;
       albumLink.href = `album.html?id=${album.id}`;
-      artistLink.href = `artista.html?id=${album.artists[0].id}`;
+      artistLink.href = `artist.html?id=${album.artists[0].id}`;
       target.append(clone);
     }
     renderSingle(singleArray, singleImg, singleTitle, singleArtist, 0);

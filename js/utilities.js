@@ -48,13 +48,9 @@ function checkCookieOnPage() {
 function leggiCookie() {
     let allCookies = document.cookie;
     let cookie = 'token';
-
     let arr = allCookies.split('; ');
-
     let res = '';
-
     for(let i = 0; i < arr.length; i++) {
-
        chiave = arr[i].split('=')[0];//"token"
        valore = arr[i].split('=')[1];//valore token
         if(cookie == chiave){
