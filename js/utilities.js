@@ -81,7 +81,7 @@ function leggiCookie() {
         return `rgb(${col1}, ${col2}, ${col3})`;
     }
     
-    
+
    async function getSongPreviews(query) {
     return await fetch ("https://striveschool-api.herokuapp.com/api/deezer/search?q="+query,)
     .then(res => res.json())
@@ -193,13 +193,13 @@ function buttonFooter() {
 }
 
 buttonFooter();
+
 function goBack() {
     window.history.back();
     
 }
 function goUp() {
-    window.history.forward();
-    
+    window.history.forward();  
 }
 
 let forward = document.querySelector(".history-forward");

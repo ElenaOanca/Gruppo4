@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/artsita.css">
+    <link rel="stylesheet" href="assets/css/playerLg.css">
     <title>Document</title>
 
 </head>
@@ -243,104 +244,110 @@
                         <button><i class="bi bi-person-add"></i></button>
                     </div>
                 </div>
-                <!-- SEZIONE CARD ATTIVITA` AMICI -->
-                <!-- <div class="friends-card row">
-                    <div class="col-2 pe-0">
-                        <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
-                    </div>
-                    <div class="col-8">
-                        <p class="m-0 friend-user-name">Charlie Hookham</p>
-                        <p class="m-0 friend-song-artist">in Camera Yumi Zouma</p>
-                        <i class="bi bi-disc friend-song"></i><span> EP III</span>
-                    </div>
-                    <div class="col-2 p-0">
-                        <p class="friend-last-played">4 ore</p>
-                    </div>
-                </div> -->
-                <!-- SEZIONE CARD ATTIVITA` AMICI -->
-                <!-- <div class="friends-card row">
-                    <div class="col-2 pe-0">
-                        <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
-                    </div>
-                    <div class="col-8">
-                        <p class="m-0 friend-user-name">Charlie Hookham</p>
-                        <p class="m-0 friend-song-artist">in Camera Yumi Zouma</p>
-                        <i class="bi bi-disc friend-song"></i><span> EP III</span>
-                    </div>
-                    <div class="col-2 p-0">
-                        <p class="friend-last-played">4 ore</p>
-                    </div>
-                </div> -->
-                <!-- SEZIONE CARD ATTIVITA` AMICI -->
-                <!-- <div class="friends-card row">
-                    <div class="col-2 pe-0">
-                        <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
-                    </div>
-                    <div class="col-8">
-                        <p class="m-0 friend-user-name">Charlie Hookham</p>
-                        <p class="m-0 friend-song-artist">in Camera Yumi Zouma</p>
-                        <i class="bi bi-disc friend-song"></i><span> EP III</span>
-                    </div>
-                    <div class="col-2 p-0">
-                        <p class="friend-last-played">4 ore</p>
-                    </div>
-                </div> -->
             </div>
         </div>
 
         <!-------------------------------Player----------------------------------------------------------------------->
-        <div class="music-player d-md-none d-lg-block mb-1">
-            <div class="song-bar">
-                <div class="song-infos">
-                    <div class="image-container">
-                        <img src="assets/imgs/search/image-10.jpg" alt="" />
+        
+        <footer id="footer">
+ 
+      
+            <audio id="audio-player-source">
+              <source type="audio/ogg">
+              <source type="audio/mpeg">
+            </audio>
+        
+            <div class="container-footer-fixed">
+              <div class="music-player player d-none d-lg-block">
+                <div class="song-bar">
+                    <div class="song-infos">
+                        <div class="image-container">
+                            <img id="player-lg-img" src="assets/imgs/search/image-10.jpg" alt="" />
+                        </div>
+                        <div class="song-description">
+                            <p class="title current-playing">
+                                Nome canzone
+                            </p>
+                            <p class="artist current-playing-artist">Nome Artista</p>
+                        </div>
                     </div>
-                    <div class="song-description">
-                        <p class="title">
-                            Nome canzone
-                        </p>
-                        <p class="artist">Nome Artista</p>
+                    <div class="icons">
+                        <i class="bi bi-heart"></i>
+                        
                     </div>
                 </div>
-                <div class="icons">
-                    <i class="bi bi-heart"></i>
-
+                <div class="progress-controller mt-1">
+                    <div class="control-buttons">
+                        <i class="bi bi-shuffle"></i>
+                        <i class="bi bi-skip-backward-fill"></i>
+                        <i class="bi bi-play-circle-fill play play-button"></i>
+                        <i class="bi bi-skip-forward-fill"></i>
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                    </div>
+                    <div class="progress-container">
+                        <span>0:50</span>
+                        <div class="progress-bar" id="my-progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <span>3:20</span>
+                 
+        
+                    </div>
+                </div>
+                <div class="other-features">
+                    <i class="fas fa-list-ul"></i>
+                    
+                    <div class="volume-bar">
+                        <i class="bi bi-list"></i>
+                        <i class="bi bi-music-player"></i>
+                        <i class="bi bi-volume-up"></i>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="progress-controller ">
-                <div class="control-buttons">
-                    <i class="bi bi-shuffle"></i>
-                    <i class="bi bi-skip-backward-fill"></i>
-                    <i class="bi bi-play-circle-fill play"></i>
-                    <i class="bi bi-skip-forward-fill"></i>
-                    <i class="bi bi-arrow-counterclockwise"></i>
+              <div class="player mx-2 d-lg-none">
+                <div class="scrolling-text-container title-player">
+                  <p class="scrolling-text current-playing-mobile" >
+                     
+                  </p>
                 </div>
-                <div class="progress-container">
-                    <span>0:50</span>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                    <span>3:20</span>
+                <div class="icons-player">
+        
+                  <i class="bi bi-speaker"></i>
+                  <i class="bi bi-heart like"></i>
+                  <i class="bi bi-play-fill play-button" ></i>
+                  <!-- <i class="bi bi-pause d-none" id="pause"></i> -->
                 </div>
+              </div>
+              <div class="container-footer d-lg-none navbarBottom"> <!--background trasparent-->
+                <div class="icons-frase home"> <!--flex column row gap-->
+                  <i class="bi bi-house-door-fill"></i>
+                  <p>
+                    Home
+                  </p>
+                </div>
+                <div class="icons-frase search"> <!--flex column row gap-->
+                  <i class="bi bi-search"></i>
+                  <p>
+                    Cerca
+                  </p>
+                </div>
+                <div class="icons-frase library"> <!--flex column row gap-->
+                  <i class="bi bi-music-note-list"></i>
+                  <p>
+                    La tua libreria
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="other-features">
-                <i class="fas fa-list-ul"></i>
-
-                <div class="volume-bar">
-                    <i class="bi bi-list"></i>
-                    <i class="bi bi-music-player"></i>
-                    <i class="bi bi-volume-up"></i>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+          </footer>
         
         <script src="js/utilities.js"></script>
         <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
         <script src="js/artist.js"></script>
-        <script src="js/popolaNavsinistra.js"></script>
+        <!-- <script src="js/popolaNavsinistra.js"></script> -->
         <script src="js/navBarDestra.js"></script>
        
 </body>
