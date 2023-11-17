@@ -45,7 +45,7 @@ async function renderArtists(id) {
       );
       img.src = artist.images[0].url;
       name.innerText = artist.name;
-      artistLink.href = `artist.html?id=${artist.id}`;
+      artistLink.href = `artista.html?id=${artist.id}`;
       target.append(clone);
     }
   });
@@ -62,7 +62,7 @@ async function getNewReleases() {
     },
   }).then((res) => res.json());
 }
-
+/***** funzione nuove uscite */
 async function renderNewReleases() {
   let target = document.querySelector("#album-area");
   let albums = await getNewReleases();
@@ -100,24 +100,25 @@ async function renderNewReleases() {
     renderSingle(singleArray, singleImg, singleTitle, singleArtist, 0);
   });
 }
-
+/**** lancio funzione delle nuove uscite */
 renderNewReleases();
-
+/*** funzione renderizzazione singoli  */
 let renderSingle = (array, img, title, artist, index) => {
   img.src = array[index].images[1].url;
   title.innerText = array[index].name;
   artist.innerText = array[index].artists
     .map((artist) => artist.name)
     .join(", ");
-  setInterval(() => {
+  setTimeout(() => {
     index++;
-    if (index > array.length) {
-      index = 0;
-    }
+    if (index == array.length) {
+        index = 0;
+      }
     renderSingle(array, img, title, artist, index);
+
   }, 10000);
 };
-
+/****** sezione funzioni bottoni footer */
 function buttonFooter() {
     const home = document.querySelector('.home');
     const search = document.querySelector('.search');
@@ -142,4 +143,6 @@ function buttonFooter() {
     });
 }
 
-buttonFooter()
+buttonFooter();
+
+
