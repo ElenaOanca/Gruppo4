@@ -435,3 +435,8 @@ i:hover {
 .volume-bar .progress-bar:hover .progress::after {
     --size: .8em;
 }
+
+
+#nav-mobile-artist{
+    background-color: linear-gradient(90deg,black,#0000005e);
+}
