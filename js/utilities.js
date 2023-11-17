@@ -198,7 +198,7 @@ function setBraniCheTiPiacciono(id) {
     );
   }
 
-  // Aggiungi l'event listener utilizzando la funzione di gestione degli eventi
+  // Aggiunto l'event listener utilizzando la funzione di gestione degli eventi
   heart.addEventListener("click", handleClick);
 }
 
