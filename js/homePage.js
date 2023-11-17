@@ -6,7 +6,6 @@ let token = leggiCookie();
 
 id = "0TnOYISbd1XYRBk9myaseg";
 
-
 // FUNZIONE PRENDI ARTISTA
 async function getArtist(id) {
   return await fetch(`${artistsUrl}${id}`, {
@@ -85,6 +84,8 @@ async function renderNewReleases() {
       let albumLink = clone.querySelector(".album-link");
       let artistLink = clone.querySelector(".artist-link");
       let container = clone.querySelectorAll(".container-album");
+      let headerPlayBtn = document.querySelector("#header-play-button");
+
       container.forEach(
         (card) => (card.style.backgroundColor = getRandomColor())
       );
@@ -104,6 +105,9 @@ async function renderNewReleases() {
 renderNewReleases();
 /*** funzione renderizzazione singoli  */
 let renderSingle = (array, img, title, artist, index) => {
+  headerPlayBtn.addEventListener("click", async () => {
+    
+  });
   img.src = array[index].images[1].url;
   title.innerText = array[index].name;
   artist.innerText = array[index].artists

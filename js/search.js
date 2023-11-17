@@ -82,12 +82,9 @@ async function renderSongsSearch() {
                 let item = items[index];
                 if (item.popularity > 50) {
                     let clone = cloneTemplate ('#risultatoSearchPageSong')
-                    
-            
                     let img = clone.querySelector('.img-song');
                     let btn = clone.querySelector('.btn-song');
-                    
-
+                
                     btn.addEventListener('click', async ()  => {
                         let preview = await putReviews(item.name);
                     })
