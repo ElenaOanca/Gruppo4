@@ -82,11 +82,10 @@ function leggiCookie() {
     }
     
    //funzione arrow history
-   function goBack() {
+ 
 
    async function putReviews(query){
     let reviews = await getSongPreviews(query);
-    // let target = document.querySelectorAll('.player');
 
     let currentTitle = document.querySelector('.current-playing');
     let currentTitleMobile = document.querySelector('.current-playing-mobile');
@@ -190,7 +189,7 @@ function buttonFooter() {
 }
 
 buttonFooter();
-
+function goBack() {
     window.history.back();
     
 }

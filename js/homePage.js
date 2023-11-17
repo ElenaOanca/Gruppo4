@@ -111,7 +111,6 @@ let renderSingle = (array, img, title, artist, index) => {
   img.src = array[index].images[1].url;
   title.innerText = array[index].name;
   artist.innerText = array[index].artists
- 
     .map((artist) => artist.name)
     .join(", ");
   setInterval(() => {
