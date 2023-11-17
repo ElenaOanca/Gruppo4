@@ -91,13 +91,20 @@ function leggiCookie() {
    async function putReviews(query){
     let reviews = await getSongPreviews(query);
     // let target = document.querySelectorAll('.player');
-    let currentTitle = document.querySelectorAll('.current-playing');
-    console.log(currentTitle);
+
+    let currentTitle = document.querySelector('.current-playing');
+    let currentTitleMobile = document.querySelector('.current-playing-mobile');
+    let artist = document.querySelector('.current-playing-artist');
+    let playerImg = document.querySelector('#player-lg-img');
+    
+    
     audioSrc.src = reviews.data[0].preview;
 
-    currentTitle.forEach((title) => {
-    title.innerText = `${reviews.data[0].title} - ${reviews.data[0].artist.name}`;
-    })
+    playerImg.src = reviews.data[0].album.cover_small
+    currentTitleMobile.innerText = `${reviews.data[0].title} - ${reviews.data[0].artist.name}`;
+    currentTitle.innerText = `${reviews.data[0].title}`;
+    artist.innerText = `${reviews.data[0].artist.name}`;
+
     
     audioSrc.play();
     playerPaused = false
@@ -105,13 +112,16 @@ function leggiCookie() {
    }
 
  
+  
     
    
    /***** barra del player */
    let playBtn = document.querySelectorAll(".play-button");
-
    let audioSrc = document.querySelector('#audio-player-source');
+
+
    let player = document.querySelector('.player');
+   let myProgressBar = document.querySelector('#my-progress-bar');
    let playerPaused = true;
 
    function playPause(mediaElement) { 
@@ -124,6 +134,9 @@ function leggiCookie() {
         mediaElement.pause();
     } 
   }
+
+  
+
 
   /**** funzione bottone play */
   playBtn.forEach((button) => {
@@ -141,9 +154,13 @@ function leggiCookie() {
     if (!playerPaused) {
     button.classList.remove('bi-play-fill');
     button.classList.add('bi-pause-fill');
+    button.classList.remove('bi-play-circle-fill');
+    button.classList.add('bi-pause-circle-fill');
     } else {
         button.classList.add('bi-play-fill');
         button.classList.remove('bi-pause-fill');
+        button.classList.add('bi-play-circle-fill');
+        button.classList.remove('bi-pause-circle-fill');
     }
   })
 }
@@ -158,11 +175,11 @@ function buttonFooter() {
     const searchPage= document.querySelector('.search-container');
     const homePage = document.querySelector('.homeContainer');
 
-    homePage.addEventListener('click', () => {
-        homePage.classList.toggle('puff-out-center');
-        searchPage.classList.toggle('puff-out-center');
-        location.href = "home.html";
-    });
+    // homePage.addEventListener('click', () => {
+    //     homePage.classList.toggle('puff-out-center');
+    //     searchPage.classList.toggle('puff-out-center');
+    //     location.href = "home.html";
+    // });
     search.forEach((e) =>{
         e.addEventListener('click', () =>{
            

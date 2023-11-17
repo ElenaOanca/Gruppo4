@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="assets/css/searchPage.css">
   <link rel="stylesheet" href="assets/css/playerLg.css">
 
+
   <title>Spotify - Homepage</title>
 </head>
 
@@ -105,7 +106,7 @@
             <p class="name-song-desk" id="single-title">TITOLO CANZONE</p>
             <p class="name-artist-desk" id="single-artists">Artista</p>
             <div class="buttons play d-flex align-items-center">
-              <p class="buttonPlay me-3" id="header-play-button">Play</p>
+              <button class="buttonPlay me-3" id="header-play-button">Play</button>
               <button class="buttonSalva me-3">Salva</button>
               <i class="bi bi-three-dots fs-4"></i>
             </div>
@@ -257,13 +258,13 @@
         <div class="song-bar">
             <div class="song-infos">
                 <div class="image-container">
-                    <img src="assets/imgs/search/image-10.jpg" alt="" />
+                    <img id="player-lg-img" src="assets/imgs/search/image-10.jpg" alt="" />
                 </div>
                 <div class="song-description">
                     <p class="title current-playing">
                         Nome canzone
                     </p>
-                    <p class="artist">Nome Artista</p>
+                    <p class="artist current-playing-artist">Nome Artista</p>
                 </div>
             </div>
             <div class="icons">
@@ -275,16 +276,18 @@
             <div class="control-buttons">
                 <i class="bi bi-shuffle"></i>
                 <i class="bi bi-skip-backward-fill"></i>
-                <i class="bi bi-play-circle-fill play"></i>
+                <i class="bi bi-play-circle-fill play play-button"></i>
                 <i class="bi bi-skip-forward-fill"></i>
                 <i class="bi bi-arrow-counterclockwise"></i>
             </div>
             <div class="progress-container">
                 <span>0:50</span>
-                <div class="progress-bar">
+                <div class="progress-bar" id="my-progress-bar">
                     <div class="progress"></div>
                 </div>
                 <span>3:20</span>
+         
+
             </div>
         </div>
         <div class="other-features">
@@ -302,7 +305,7 @@
     </div>
       <div class="player mx-2 d-lg-none">
         <div class="scrolling-text-container title-player">
-          <p class="scrolling-text current-playing" >
+          <p class="scrolling-text current-playing-mobile" >
              
           </p>
         </div>
