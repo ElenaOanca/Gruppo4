@@ -1,164 +1,442 @@
-
-
 body {
     color: white;
     background-color: black;
+    box-sizing: border-box;
+    margin: -2px;
 
+}
+/* CONTAINER PARTE CENTRALE CON FOTO ARTISTA E H1--*/
+ #artist-lg-header{
+    height : 100%;
+    background-repeat: no-repeat;
+    background-size:100%;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+}
+#artist-lg-name{
+    font-weight: 900;
+    font-family:   'Arial Narrow Bold', sans-serif;
+}
+
+#artist-header{
+    height : 50%;
+    background-repeat: no-repeat;
+    background-size:100%;
+    padding: 0;
+    margin: 0;
+
+}
+
+/*---- STILE PER NUMERO FOLLOWER IN SM E LG-----*/
+.ascoltatori, .follow {
+    font-size: 0.7rem;
+    
 }
 
 .ascoltatori{
-    font-size: 0.7rem;
     color: grey;
 }
-.follow{ 
-    font-size: 0.7rem;
+.follow {
+    
     font-weight: 700;
 
 }
 
-
-
-
-.icons{
+.iPlay{
+    font-size: 45px;
+    color: #2d5;
+}
+/*----SEZIONE MOBILE PER NAV FOLLOWING--*/
+.icons {
     cursor: pointer;
 }
 
 .enlarged-icon {
     font-size: 2.1rem;
-    
-    
+
+
 }
-.enlarged-icons{
+
+.enlarged-icons {
     font-size: 1.1rem;
 }
+
 .enlarged-icons:active,
-        .enlarged-icon:active {
-            color: green;
-        }
+.enlarged-icon:active {
+    color: green;
+}
+
+/***** SEZIONE BRANI CHE TI PIACCIONO****************************************/
+.imgArtist img {
+    border-radius: 50%;
+    /* Rende l'immagine rotonda */
+}
+.imgContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.imgArtist img {
+    width: 50px;
+    height: 50px;
+    display: block; 
+}
+
+.heartIcon {
+    position: relative;
+    bottom: 20px;
+   left: 35px; 
+  font-size: 20px;
+    color:white; 
+  
+}
 
 
-        .imgArtist img {
-            border-radius: 50%; /* Rende l'immagine rotonda */
-        }
 
 
-        .imgContainer {
-            position: relative;
-        }
 
-        .heartIcon {
-            position: absolute;
-            bottom: 2px;
-             right: 12px;
-             }
-        
 
-        .sottotitoli{
-            color:white;
-            font-size: 0.7rem;
-            line-height: 0;
-            font-weight: 700;
-    
-        }
 
-        .titoloCanzoneArtista{
-            color:grey;
-            font-size: 0.7rem;
-            line-height: 0;
-        }
-        .section{margin-top:20px;
-            
 
-        }
-        .desktop-table {
-            background-color: black;
-        }
+.sottotitoli {
+    color: white;
+    font-size: 0.7rem;
+    line-height: 0;
+    font-weight: 700;
 
-.descrizioneTab{
+}
+
+.titoloCanzoneArtista {
+    color: grey;
+    font-size: 0.7rem;
+    line-height: 0;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+/******DESCRIZIONE TAB**********************************************/
+.desktop-table {
+    background-color: black;
+}
+
+.descrizioneTab {
     font-size: 0.9rem;
     font-weight: 700;
 
 }
-.tabColor{
+
+.tabColor {
     background-color: black;
 }
-.navbar-a{
+
+
+/*****LINK DEL FOOTER********************************************/
+.navbar-a {
     font-size: 0.5rem;
 }
-.player{
-   font-size:  0.9rem;
-   color: white;
-   font-weight: bold;
 
-}
-.songId{
+.songId {
     font-size: 0.7rem;
-    
+
 }
 
-.titoloCanzone{font-size: 0.7rem;}
+.titoloCanzone {
+    font-size: 0.7rem;
+}
 
-.titoloArtistaAscolti{
-    color:grey;
+.titoloArtistaAscolti {
+    color: grey;
     font-size: 1rem;
     line-height: 0;
 
 }
-.ascolti{color:grey;
+
+.ascolti {
+    color: grey;
     font-size: 0.7rem;
     line-height: 0;
 
 }
+/********* FOOTER MOBILE*********************************************/
 
-.inputRicerca{
-    color: grey;
-    font-size: 1.1rem;
+
+
+
+
+.footerArtist {
+    /* background: linear-gradient(0deg, black, grey 50%); */
+    background-color: black;
+    opacity: 0.5;
+
 }
-    h4{
-        color:white;
-        font-size: 1.2rem;
-    }
 
+.navbar {
 
-
-
-.navbar{
-    background-color: transparent;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
-    
-   
+
+
+
 }
 
 .navbar i {
-    font-size: 1.3rem; 
+    font-size: 1.3rem;
 }
-.navbarIcons:hover{
-    color:green;
+
+.navbarIcons:hover {
+    color: green;
     cursor: pointer;
 
-    
+
 }
+
 .navbar a {
-    font-size: 0.8rem; 
-    
-    
+    font-size: 0.8rem;
+
+
 }
 
-
-
-
-
-
-
-
+/********LINK FOOTER************************************************/
 .af {
     color: white;
 }
-.round-image {border-radius: 100%;}
+
+
+/*********SEZIONE CARD***********************************************/
+.round-image {
+    border-radius: 100%;
+}
+
+
+/******PLAYER MOBILE PICCOLO SOTTO IMAGINE GRANDE ARTISTA*****/
+.player {
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
+
+}
+/*----- Stile Player LG----*/
 
 
 
+
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+
+* {
+    box-sizing: border-box;
+    font-family: "circular std book", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    font-size: 14px;
+}
+
+.music-player {
+    --primary-color: #ddd;
+    --secondary-color: #999;
+    --green-color: #2d5;
+    --padding: 1em;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    height: 6rem;
+    padding: var(--padding);
+    color: var(--primary-color);
+}
+
+/* Nascondi su schermi piccoli (sm) */
+@media (max-width: 767px) {
+    .music-player {
+        display: none;
+    }
+}
+
+/* Posiziona in fondo alla pagina su schermi grandi (lg e xl) */
+@media (min-width: 992px) {
+    .music-player {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+i {
+    color: var(--secondary-color);
+}
+
+i:hover {
+    color: var(--primary-color);
+}
+
+.song-bar {
+    position: absolute;
+    left: var(--padding);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 25%;
+}
+
+.song-infos {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.image-container {
+    --size: 4.5em;
+    flex-shrink: 0;
+    width: var(--size);
+    height: var(--size);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-description p {
+    margin: 0.2em;
+}
+
+.title,
+.artist {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.title:hover,
+.artist:hover {
+    text-decoration: underline;
+}
+
+.artist {
+    color: var(--secondary-color);
+}
+
+.icons {
+    display: flex;
+    gap: 1em;
+    font-size: larger;
+}
+
+.progress-controller {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    color: var(--secondary-color);
+    font-size: larger;
+}
+
+.play {
+    font-size: xx-large;
+}
+
+.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    font-size: larger;
+}
+
+.play-pause {
+    display: inline-block;
+    padding: 1em;
+    background-color: var(--primary-color);
+    color: #111;
+    border-radius: 50%;
+
+}
+
+.play-pause:hover {
+    transform: scale(1.1);
+    color: #111;
+}
+
+.progress-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.progress-bar {
+    height: 4px;
+    border-radius: 10px;
+    width: 30%;
+    background-color: #ccc4;
+}
+
+.progress {
+    position: relative;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+}
+
+.progress-bar:hover .progress {
+    background-color: var(--green-color);
+}
+
+.progress-bar:hover .progress::after {
+    content: "";
+    position: absolute;
+    --size: 1em;
+    width: var(--size);
+    height: var(--size);
+    right: 0;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transform: translate(50%, calc(2px - 50%));
+}
+
+.other-features {
+    position: absolute;
+    right: var(--padding);
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.volume-bar {
+    display: flex;
+    align-items: center;
+    gap: .7em;
+    font-size: larger;
+}
+
+.volume-bar .progress-bar {
+    width: 6em;
+}
+
+.volume-bar .progress-bar:hover .progress::after {
+    --size: .8em;
+}
+
+
+#nav-mobile-artist{
+    background-color: linear-gradient(90deg,black,#0000005e);
+}

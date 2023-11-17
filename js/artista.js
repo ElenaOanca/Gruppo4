@@ -67,7 +67,7 @@ async function renderArtist() {
     nameMobile.innerText = artist.name;
     nameLg.innerText = artist.name;
 
-    artistHeaderArea.style.backgroundImage = `url(${artist.images[1].url})`;
+    artistHeaderArea.style.backgroundImage = `url(${artist.images[0].url})`;
     artistHeaderAreaLg.style.backgroundImage = `url(${artist.images[0].url})`;
 
 
@@ -79,7 +79,7 @@ renderArtist();
 // SEZIONE PER PRENDERE FOLLOWERS E METTERLO DENTRO IL P --------------------------------------------------------------------
 
 async function getFollower() {
-    return await fetch(url,
+    return await fetch(url+id,
         {
             headers: {
                 "Content-Type": "application/json",
@@ -108,7 +108,7 @@ renderFollower();
 
 
 async function getTracks() {
-    return await fetch(`https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/top-tracks?market=US`, {
+    return await fetch(`${url}${id}/top-tracks?market=IT`, {
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`
@@ -174,11 +174,7 @@ async function renderTracks1() {
 
         
     });
-    function formatDuration(ms) {
-        const minutes = Math.floor(ms / 60000);
-        const seconds = ((ms % 60000) / 1000).toFixed(0);
-        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
-    }
+
     // Per schermi lg------------------------------------------------------------------------------------------------------
     let lgTableBody = document.querySelector('.lg-table tbody');
     tracks.tracks.slice(0,5).forEach((track, index) => {

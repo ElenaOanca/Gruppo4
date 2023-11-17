@@ -28,7 +28,7 @@ async function getToken () {
             headers : {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body :  "grant_type=client_credentials&client_id=3d95631fa2714b63a86360548af955cd&client_secret=8f03a40917cb4cca9c4c5a9c476fa168"
+            body : "grant_type=client_credentials&client_id=3d95631fa2714b63a86360548af955cd&client_secret=8f03a40917cb4cca9c4c5a9c476fa168"
         })
    .then(res => res.json())
 }
