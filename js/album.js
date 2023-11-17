@@ -46,6 +46,7 @@ async function renderAlbumHeader(id) {
     });
 
     img.src = album.images[1].url
+    document.title = album.name;
     title.innerText = album.name
     artist.innerText = album.artists[0].name
     year.innerText = album.release_date.slice(0,4)

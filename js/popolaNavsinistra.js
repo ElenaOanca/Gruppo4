@@ -6,7 +6,7 @@ async function getAmici() {
         {
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer BQChSwVSPdnWj3etYZQE_vWPvrEl6MnR0Yf_I6QCFGkhBOarfFX95tG_jPPUkq8D59rl88WT1-R1nXvUIZW-Saf11_xbhqWD-IL1Mmx60EaGDfcjlyiDfj9BmFNwhRTgxbYDYPUqtd1r6rVJS_M_sPO946g7pDAbAd2IKQyRyGP1F-FkmGN6qVs0xGpgxAl9rDObcntlYsRAOGHu `
+                Authorization: `Bearer BQDdhCNyYoS1rBlHb__dGmi4Iv1migPWO1V8XU9w9MOFwhqgSUoUsIpBTgOdi8y89iznuTEfwOeBQoMkqCJlt1b2guPjHi-qpdmTjuF0jQA0bQuFsZM7FkLIv3_hI9khyvao8InVuwKH6I29L1D8zhPRf2SkR6PtlMhf8YaHDdwO6W1MB5yAR4v_xQpgWBiT6fH3Yp08ObPAK6oW`
                
             }
         })
