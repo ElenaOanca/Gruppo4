@@ -553,3 +553,12 @@ i:hover {
 .nav-sinistra{
     height: 100vh;
 }
+
+.following{
+    font-size: larger;
+    margin-top: 0.5cm;
+    border-style: groove;
+    border-color: white;
+
+
+}

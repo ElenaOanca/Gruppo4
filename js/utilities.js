@@ -194,15 +194,15 @@ function buttonFooter() {
 
 buttonFooter();
 
+
 function goBack() {
     window.history.back();
-    
 }
 function goUp() {
     window.history.forward();  
 }
 
-let forward = document.querySelector(".history-forward");
-let back = document.querySelector(".history-back");
-forward.addEventListener('click', goUp) ;
-back.addEventListener('click', goBack) ;
+let forward = document.querySelectorAll(".history-forward");
+let back = document.querySelectorAll(".history-back");
+forward.forEach((e) => e.addEventListener('click', goUp))
+back.forEach((e) => e.addEventListener('click', goBack)) ;
