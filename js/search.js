@@ -102,6 +102,22 @@ async function renderSongsSearch() {
 renderSongsSearch()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //query album
 
 async function searchByQueryAlbum(query) {
