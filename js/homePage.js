@@ -32,7 +32,6 @@ async function renderArtists(id) {
   let artist = await getArtist(id);
   let relatedArtists = await getArtistsRelated(id);
   relatedArtists.artists.push(artist);
-  console.log(relatedArtists);
   relatedArtists.artists.forEach((artist) => {
     if (artist.popularity > 60) {
       let clone = cloneTemplate("#artist-template");
@@ -69,7 +68,7 @@ async function renderNewReleases() {
   let singleArray = albums.albums.items.filter(
     (album) => album.album_type == "single"
   );
-  console.log(singleArray);
+ 
   let singleImg = document.querySelector("#single-img");
   let singleTitle = document.querySelector("#single-title");
   let singleArtist = document.querySelector("#single-artists");

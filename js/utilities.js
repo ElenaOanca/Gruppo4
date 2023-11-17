@@ -140,9 +140,7 @@ function leggiCookie() {
   }
 
 
-if (player === '') {
-        player.classList.toggle('d-none');
-}
+
 
 
 /****** sezione funzioni bottoni footer */
@@ -179,8 +177,37 @@ function buttonFooter() {
 
 buttonFooter();
 
-function playerInOut() {
-    if (!player) {
-        
-    }
+//inizializzazione array di canzoni preferite
+let canzoniPreferite =  [];
+
+function setBraniCheTiPiacciono(id) {
+  const heart = document.querySelector(".heart");
+
+  // Rimuovi l'event listener precedente
+  heart.removeEventListener("click", handleClick);
+
+  // Definisci la funzione di gestione degli eventi
+  function handleClick() {
+    // Aggiunto l'ID dell'item all'array
+    canzoniPreferite.push(id);
+
+    // Salvato l'array nel localStorage
+    localStorage.setItem(
+      "CanzoniPreferiteArray",
+      JSON.stringify(canzoniPreferite)
+    );
+  }
+
+  // Aggiungi l'event listener utilizzando la funzione di gestione degli eventi
+  heart.addEventListener("click", handleClick);
 }
+
+
+let canzoniPreferiteArray = JSON.parse(localStorage.getItem('CanzoniPreferiteArray'));
+
+let braniCheTiPiacciono = {
+    name: "Brani che ti piacciono",
+    img: "https://th.bing.com/th/id/OIP.tXfUfPx9mQUVxghIyAzWtQAAAA?rs=1&pid=ImgDetMain",
+    canzoni: canzoniPreferiteArray
+  };
+console.log(braniCheTiPiacciono);
