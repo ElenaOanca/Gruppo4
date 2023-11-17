@@ -23,8 +23,9 @@ body {
     align-items: center;
     position: relative;
 
-    height: 6rem;
+    height: 7rem;
     padding: var(--padding);
+
     color: var(--primary-color);
 }
 i{
