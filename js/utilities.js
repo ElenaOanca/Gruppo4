@@ -90,11 +90,15 @@ function leggiCookie() {
 
    async function putReviews(query){
     let reviews = await getSongPreviews(query);
-    let target = document.querySelector('.player');
-    let currentTitle = document.querySelector('.current-playing');
-    console.log(reviews);
+    // let target = document.querySelectorAll('.player');
+    let currentTitle = document.querySelectorAll('.current-playing');
+    console.log(currentTitle);
     audioSrc.src = reviews.data[0].preview;
-    currentTitle.innerText = `${reviews.data[0].title} - ${reviews.data[0].artist.name}`;
+
+    currentTitle.forEach((title) => {
+    title.innerText = `${reviews.data[0].title} - ${reviews.data[0].artist.name}`;
+    })
+    
     audioSrc.play();
     playerPaused = false
     togglePlayerPlayIcon ()
@@ -105,7 +109,7 @@ function leggiCookie() {
    
    /***** barra del player */
    let playBtn = document.querySelectorAll(".play-button");
-   console.log(playBtn);
+
    let audioSrc = document.querySelector('#audio-player-source');
    let player = document.querySelector('.player');
    let playerPaused = true;

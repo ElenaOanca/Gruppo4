@@ -128,11 +128,11 @@ async function renderAlbumSearch() {
             let title = document.querySelector('#title-album');
             title.classList.remove('d-none');
             title.innerText = 'Album';
-            console.log(title);
+
             target.innerHTML = '';
             let album = await searchByQueryAlbum(searchBox.value);
             let items = album.albums.items;
-            console.log(album);
+
             
             for (let index = 0; index < 3; index++) {
                 // Clona il contenuto del template con ID 'risultatoSearchAlbum'
@@ -185,7 +185,7 @@ async function getNewReleases () {
 
 async function renderNewReleases() {
     let albums = await getNewReleases();
-    console.log(albums);
+
 
     let target = document.querySelector('#targetTrendingAlbum');
     
