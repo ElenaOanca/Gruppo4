@@ -17,7 +17,7 @@
 
     <div class="row p-0">
         <!--parte sinistra-->
-        <div class="  d-none d-lg-block col-lg-2 m-0 p-0" >
+        <div class="  d-none d-lg-block col-lg-2 m-0 p-0">
             <div class="container bg-black text-white">
                 <div>
                     <i class="bi bi-three-dots p-3"></i>
@@ -58,23 +58,26 @@
                 <hr>
 
                 <!--ul con li per la navbar con d-none su un li per l'icona-->
-                <ul class="text-white mt-5">
-                    <li class=" d-flex justify-content-between">
-                        <p>Lorem ipsum dolor, sit amet consecte</p>
-                        <i class="bi bi-file-arrow-down-fill icon-right "></i>
-                    </li>
-                    <li class=" d-flex justify-content-between ">
+                <div id="navLeftPlayList" class="d-flex flex-column text-white mt-5">
+                    <!-- <div class=" d-flex justify-content-between">
+                         <p>Lorem ipsum dolor, sit amet consecte</p>
+                        <i class="bi bi-file-arrow-down-fill icon-right "></i> 
+                    </div>
+                    <div class=" d-flex justify-content-between ">
                         <p>Lorem ipsum dolor, sit amet consecte</p>
                         <i class="bi bi-file-arrow-down-fill icon-right  d-none"></i>
-                    </li>
-                </ul>
+                    </div> -->
+                </div>
+
+
+
 
             </div>
         </div>
 
 
 
-        
+
         <!-- ---------------------------------------------------------------------------Mobile------------------------------------------------------------------------------------------ -->
         <!--parte centrale-->
         <div class="col-md-12 d-lg-none container-fluid m-0">
@@ -161,11 +164,11 @@
 
             <div id="artist-lg-header" class="d-flex flex-column align-items-start justify-content-end">
                 <h1 id="artist-lg-name"></h1>
-                <p >3.90000000 ascoltattori mensili</p>
+                <p>3.90000000 ascoltattori mensili</p>
             </div>
-            
+
             <div class="row">
-                <div class="col-1 text-center"><i  class="iPlay bi bi-play-circle-fill"></i></div>
+                <div class="col-1 text-center"><i class="iPlay bi bi-play-circle-fill"></i></div>
                 <div class="col-2 text-start"><button class="bg-black text-white">Following</button></div>
                 <div class="col-1 text-start"><i class="bi bi-three-dots"></i></div>
 
@@ -209,7 +212,7 @@
 
         <!-- parte destra-->
         <div class="col-lg-2 d-none d-lg-block bg-black">
-            <div class="container">
+            <div  id="friends" class="container">
                 <div class="d-flex justify-content-between">
                     <p>Attività amici</p>
                     <div class="controller-section-friends">
@@ -218,7 +221,7 @@
                     </div>
                 </div>
                 <!-- SEZIONE CARD ATTIVITA` AMICI -->
-                <div class="friends-card row">
+                <!-- <div class="friends-card row">
                     <div class="col-2 pe-0">
                         <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
                     </div>
@@ -230,9 +233,9 @@
                     <div class="col-2 p-0">
                         <p class="friend-last-played">4 ore</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- SEZIONE CARD ATTIVITA` AMICI -->
-                <div class="friends-card row">
+                <!-- <div class="friends-card row">
                     <div class="col-2 pe-0">
                         <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
                     </div>
@@ -244,9 +247,9 @@
                     <div class="col-2 p-0">
                         <p class="friend-last-played">4 ore</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- SEZIONE CARD ATTIVITA` AMICI -->
-                <div class="friends-card row">
+                <!-- <div class="friends-card row">
                     <div class="col-2 pe-0">
                         <img class="round-image friend-profile-image" src="https://picsum.photos/40" alt="">
                     </div>
@@ -258,7 +261,7 @@
                     <div class="col-2 p-0">
                         <p class="friend-last-played">4 ore</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -310,10 +313,12 @@
                 </div>
             </div>
         </div>
-
-        <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
         <script src="js/utilities.js"></script>
+      
+        <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
         <script src="js/artista.js"></script>
+        <script src="js/popolaNavsinistra.js"></script>
+        <script src="js/navBarDestra.js"></script>
 </body>
 
 </html>
