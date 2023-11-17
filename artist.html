@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/artsita.css">
     <title>Document</title>
-   
 </head>
 
 <body>
@@ -16,9 +15,9 @@
 
 
 
-    <div class="row ">
+    <div class="row p-0">
         <!--parte sinistra-->
-        <div class="  d-none d-lg-block col-lg-2">
+        <div class="  d-none d-lg-block col-lg-2 m-0 p-0" >
             <div class="container bg-black text-white">
                 <div>
                     <i class="bi bi-three-dots p-3"></i>
@@ -72,11 +71,15 @@
 
             </div>
         </div>
+
+
+
+        
         <!-- ---------------------------------------------------------------------------Mobile------------------------------------------------------------------------------------------ -->
         <!--parte centrale-->
-        <div class="col-md-12 d-lg-none container-fluid">
+        <div class="col-md-12 d-lg-none container-fluid m-0">
 
-            <div id="artist-header"> 
+            <div id="artist-header" class="d-flex align-items-end justify-content-start">
                 <h1 id="artist-name"></h1>
             </div>
 
@@ -95,8 +98,10 @@
             <div class="row mb-3 d-lg-none ">
                 <div class="col-3 text-center imgContainer">
                     <div class="col-3 text-center imgArtist"><img src="assets/imgs/main/image-11.jpg" width="50"
-                            height="50"></div>
-                    <i class="bi bi-suit-heart-fill heartIcon"></i>
+                            height="50">
+                        <i class="bi bi-suit-heart-fill heartIcon"></i>
+                    </div>
+
                 </div>
                 <div class="col-9 section">
                     <p class="sottotitoli">Brani che ti piacciono</p>
@@ -150,16 +155,17 @@
 
         </div>
         <!---------------------------------------------------------------------------sezione per lg----------------------------------------------------------------------------------------------->
-        <div class="col-lg-7 col-xl-8 d-none d-lg-block">
+        <div class="col-lg-8 d-none d-lg-block mt-3 p">
             <!--sezione lg per nav following-->
 
 
-            <div id="artist-lg-header">
+            <div id="artist-lg-header" class="d-flex flex-column align-items-start justify-content-end">
                 <h1 id="artist-lg-name"></h1>
+                <p >3.90000000 ascoltattori mensili</p>
             </div>
-            <p>3.90000000 ascoltattori mensili</p>
+            
             <div class="row">
-                <div class="col-1 text-center"><i class="bi bi-play-circle-fill"></i></div>
+                <div class="col-1 text-center"><i  class="iPlay bi bi-play-circle-fill"></i></div>
                 <div class="col-2 text-start"><button class="bg-black text-white">Following</button></div>
                 <div class="col-1 text-start"><i class="bi bi-three-dots"></i></div>
 
@@ -175,34 +181,34 @@
                     <!-- TABELLA CANZONI ALBUM IN DESKTOP -->
                     <table class="lg-table table table-dark ">
                         <tbody>
-    
+
                         </tbody>
                     </table>
                 </div>
-                <p>3.90000000 ascoltattori mensili</p>
-                <div class="row">
-                    <div class="col-1 text-center"><i class="bi bi-play-circle-fill enlarged-icon "></i></div>
-                    <div class="col-2 text-start"><button class="bg-black text-white">Following</button></div>
-                    <div class="col-1 text-start"><i class="bi bi-three-dots"></i></div>
-
-                            <p>8 brani di Pinguini tattici Nucleari</p>
-                            <i class="bi bi-suit-heart-fill"></i>
+                <div class="col-4">
+                    <!--sezione brani che ti piacciono-->
+                    <div class="row mb-3  ">
+                        <p>Brani che ti piacciono</p>
+                        <div class="col-3 text-center imgContainer">
+                            <div class="col-3 text-center imgArtist"><img src="assets/imgs/main/image-11.jpg" width="50"
+                                    height="50">
+                                <i class="bi bi-suit-heart-fill heartIcon"></i>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <p>8 brani che ti piacciono</p>
                         </div>
                     </div>
 
                 </div>
 
-
-
             </div>
 
-
-        
         </div>
-        
+
 
         <!-- parte destra-->
-        <div class="col-lg-2 d-none d-lg-block bg-black ps-0">
+        <div class="col-lg-2 d-none d-lg-block bg-black">
             <div class="container">
                 <div class="d-flex justify-content-between">
                     <p>Attività amici</p>
@@ -256,9 +262,7 @@
             </div>
         </div>
 
-<!----------------- Player--------------->
-
-
+        <!-------------------------------Player----------------------------------------------------------------------->
         <div class="music-player">
             <div class="song-bar">
                 <div class="song-infos">
@@ -274,7 +278,7 @@
                 </div>
                 <div class="icons">
                     <i class="bi bi-heart"></i>
-        
+
                 </div>
             </div>
             <div class="progress-controller mt-1">
@@ -295,7 +299,7 @@
             </div>
             <div class="other-features">
                 <i class="fas fa-list-ul"></i>
-        
+
                 <div class="volume-bar">
                     <i class="bi bi-list"></i>
                     <i class="bi bi-music-player"></i>

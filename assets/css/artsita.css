@@ -1,9 +1,40 @@
 body {
     color: white;
     background-color: black;
+    box-sizing: border-box;
+    margin: -2px;
+
+}
+/* CONTAINER PARTE CENTRALE CON FOTO ARTISTA E H1--*/
+ #artist-lg-header{
+    height : 100%;
+    background-repeat: no-repeat;
+    background-size:100%;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+}
+#artist-lg-name{
+    font-weight: 900;
+    font-family:   'Arial Narrow Bold', sans-serif;
+}
+
+#artist-header{
+    height : 50%;
+    background-repeat: no-repeat;
+    background-size:100%;
+    padding: 0;
+    margin: 0;
 
 }
 
+/*---- STILE PER NUMERO FOLLOWER IN SM E LG-----*/
+.ascoltatori, .follow {
+    font-size: 0.7rem;
+    
+}
+
+<<<<<<< HEAD
 .ascoltatori {
     font-size: 0.7rem;
     color: grey;
@@ -11,12 +42,27 @@ body {
 
 .follow {
     font-size: 0.7rem;
+=======
+.ascoltatori{
+    color: grey;
+}
+.follow {
+    
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
     font-weight: 700;
 
 }
 
+<<<<<<< HEAD
 
 
+=======
+.iPlay{
+    font-size: 45px;
+    color: #2d5;
+}
+/*----SEZIONE MOBILE PER NAV FOLLOWING--*/
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
 .icons {
     cursor: pointer;
 }
@@ -35,6 +81,7 @@ body {
 .enlarged-icon:active {
     color: green;
 }
+<<<<<<< HEAD
 
 
 .imgArtist img {
@@ -60,6 +107,47 @@ body {
     line-height: 0;
     font-weight: 700;
 
+=======
+
+/***** SEZIONE BRANI CHE TI PIACCIONO****************************************/
+.imgArtist img {
+    border-radius: 50%;
+    /* Rende l'immagine rotonda */
+}
+.imgContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.imgArtist img {
+    width: 50px;
+    height: 50px;
+    display: block; 
+}
+
+.heartIcon {
+    position: relative;
+    bottom: 20px;
+   left: 35px; 
+  font-size: 20px;
+    color:white; 
+  
+}
+
+
+
+
+
+
+
+
+.sottotitoli {
+    color: white;
+    font-size: 0.7rem;
+    line-height: 0;
+    font-weight: 700;
+
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
 }
 
 .titoloCanzoneArtista {
@@ -70,10 +158,16 @@ body {
 
 .section {
     margin-top: 20px;
+<<<<<<< HEAD
 
 
 }
 
+=======
+}
+
+/******DESCRIZIONE TAB**********************************************/
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
 .desktop-table {
     background-color: black;
 }
@@ -88,6 +182,7 @@ body {
     background-color: black;
 }
 
+<<<<<<< HEAD
 .navbar-a {
     font-size: 0.5rem;
 }
@@ -99,6 +194,14 @@ body {
 
 }
 
+=======
+
+/*****LINK DEL FOOTER********************************************/
+.navbar-a {
+    font-size: 0.5rem;
+}
+
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
 .songId {
     font-size: 0.7rem;
 
@@ -121,7 +224,18 @@ body {
     line-height: 0;
 
 }
+/********* FOOTER MOBILE*********************************************/
 
+
+
+
+
+.footerArtist {
+    /* background: linear-gradient(0deg, black, grey 50%); */
+    background-color: black;
+    opacity: 0.5;
+
+<<<<<<< HEAD
 .inputRicerca {
     color: grey;
     font-size: 1.1rem;
@@ -131,12 +245,19 @@ h4 {
     color: white;
     font-size: 1.2rem;
 }
+=======
+}
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
 
+.navbar {
 
+<<<<<<< HEAD
 
 
 .navbar {
     background-color: transparent;
+=======
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -163,23 +284,48 @@ h4 {
 
 }
 
+<<<<<<< HEAD
 
+=======
+/********LINK FOOTER************************************************/
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
 .af {
     color: white;
 }
 
+<<<<<<< HEAD
+.round-image {
+    border-radius: 100%;
+}
+=======
+
+/*********SEZIONE CARD***********************************************/
 .round-image {
     border-radius: 100%;
 }
 
 
+/******PLAYER MOBILE PICCOLO SOTTO IMAGINE GRANDE ARTISTA*****/
+.player {
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
+
+}
+/*----- Stile Player LG----*/
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
 
 
+
+
+<<<<<<< HEAD
 /*----- Stile Player LG----*/
 
 
 
 
+=======
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
 @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
 
 * {
@@ -210,6 +356,26 @@ body {
     color: var(--primary-color);
 }
 
+<<<<<<< HEAD
+=======
+/* Nascondi su schermi piccoli (sm) */
+@media (max-width: 767px) {
+    .music-player {
+        display: none;
+    }
+}
+
+/* Posiziona in fondo alla pagina su schermi grandi (lg e xl) */
+@media (min-width: 992px) {
+    .music-player {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+>>>>>>> a44ee19aa90ece260f7c5e16c94d758202ea2523
 i {
     color: var(--secondary-color);
 }

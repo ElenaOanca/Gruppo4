@@ -1,3 +1,177 @@
+<<<<<<< HEAD
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 8px;
+}
+
+.spotify-container {
+    max-width: 376px;
+    margin: auto;
+}
+
+
+.artist-section img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.monthly-listeners {
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+.artist-controls {
+    margin: 12px 0;
+}
+
+.btn-follow {
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    border-radius: 500px;
+    padding: 8px 24px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.liked-songs-section {
+    margin: 12px 0;
+}
+
+
+.popular-tracks-section p {
+    font-weight: bold;
+}
+
+.track-list {
+    margin: 12px 0;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.track-number {
+    margin-right: 8px;
+}
+
+.track-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+}
+
+.track-info p {
+    margin: 0;
+}
+
+.track-options {
+
+
+    margin-left: auto;
+}
+
+
+.spotify-footer {
+    position: fixed;
+    bottom: 0;
+
+
+    width: 100%;
+    background-color: #282828;
+
+
+    display: flex;
+
+
+    justify-content: space-around;
+
+
+    padding: 12px 0;
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.nav-item i {
+
+
+    display: block;
+    margin-bottom: 4px;
+}
+
+.nav-item a {
+
+
+    color: #b3b3b3;
+
+
+
+
+    text-decoration: none;
+
+
+    font-size: 10px;
+}
+
+.nav-item.active a {
+
+
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+
+
+    .spotify-container {
+
+
+        width: auto;
+
+
+        margin: 0 8px;
+    }
+}
+
+
+.artistImg {
+    border-radius: 100%;
+
+}
+.songImg{
+    
+}
+
+.player {
+    background-color: rgba(87, 82, 82, 0.466);
+    height: 40px;
+
+}
+
+.text-player {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.firtImage {
+    background-color: #b3b3b3;
+
+
+
+}
+
+.fixed {
+    font-size: 0.5rem
+}
+=======
 
 
 
@@ -22,3 +196,4 @@ column-gap: 15px;
     max-width: 120px;
 }
 
+>>>>>>> b569aac147b9251cc2d9becb3a3b70f56e7c61bd
